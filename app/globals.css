@@ -7,8 +7,8 @@
   --background: #171717;
 }
 ::selection {
-    color: var(--background);
-    background-color: var(--foreground);
+    color: var(--foreground);
+    background-color: #F97316;
 }
 body {
   color: var(--foreground);
