@@ -1,3 +1,5 @@
+import DarkButton from "../DarkButton/DarkButton";
+
 interface CopyProps {
   component: string;
 }
@@ -21,19 +23,10 @@ const Copy: React.FC<CopyProps> = ({ component }) => {
   };
 
   return (
-    <button
+    <DarkButton
       onClick={handleCopy}
-      style={{
-        padding: '10px 20px',
-        cursor: 'pointer',
-        backgroundColor: '#007BFF',
-        color: '#fff',
-        border: 'none',
-        borderRadius: '5px',
-      }}
-    >
-      Copy
-    </button>
+      label={"copy"}
+    />
   );
 };
 

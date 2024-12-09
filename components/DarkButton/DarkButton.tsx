@@ -8,12 +8,14 @@ interface DarkButtonProps {
       <button
         onClick={onClick}
         className={`
-          rounded-lg border border-transparent px-3 py-2 text-base font-medium bg-neutral-900 text-white cursor-pointer transition-colors duration-250 hover:border-yellow-300 focus:outline-none focus:ring-4 focus:ring-orange-500 focus:ring-opacity-50
+            bg-[#F7F7F7] text-[#393E46] hover:bg-[#fff] transition-all hover:text-[#000] w-fit px-4 py-2 rounded-md
           `}
       >
         {label}
       </button>
     );
   };
-
+//   className={`
+//     bg-[#1976D2] text-[#FFFFFF] hover:bg-[#0D47A1] transition-all hover:text-[#000] w-fit px-4 py-2 rounded-md
+//   `}
   export default DarkButton;
