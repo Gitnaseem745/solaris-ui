@@ -1,5 +1,3 @@
-import DarkButton from "../DarkButton/DarkButton";
-
 interface CopyProps {
   component: string;
 }
@@ -23,10 +21,7 @@ const Copy: React.FC<CopyProps> = ({ component }) => {
   };
 
   return (
-    <DarkButton
-      onClick={handleCopy}
-      label={"copy"}
-    />
+    <p onClick={handleCopy} className="size-5 cursor-pointer">@</p>
   );
 };
 

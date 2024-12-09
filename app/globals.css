@@ -4,7 +4,7 @@
 
 :root {
   --foreground: #ffffff;
-  --background: #171717;
+  --background: #09090B;
 }
 ::selection {
     color: var(--foreground);
@@ -14,4 +14,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes shine {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 10px 3px #00bfff;
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px 5px #00bfff;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px 3px #00bfff;
+    }
+}
+
+.animate-shine {
+    animation: shine 1.5s infinite;
 }
