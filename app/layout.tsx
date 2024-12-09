@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Philosopher } from 'next/font/google'
 import "./globals.css";
 
-export const philosopher = Philosopher({
+const philosopher = Philosopher({
     subsets: ["latin"],
     weight: ["400", "700"],
     style: "normal",
