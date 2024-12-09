@@ -15,7 +15,4 @@ interface DarkButtonProps {
       </button>
     );
   };
-//   className={`
-//     bg-[#1976D2] text-[#FFFFFF] hover:bg-[#0D47A1] transition-all hover:text-[#000] w-fit px-4 py-2 rounded-md
-//   `}
   export default DarkButton;

@@ -8,7 +8,7 @@ interface BlueButtonProps {
       <button
         onClick={onClick}
         className={`
-            bg-[#1976D2] text-[#FFFFFF] hover:bg-[#0D47A1] transition-all w-fit px-4 py-2 rounded-md
+            bg-[#1976D2] text-[#FFFFFF] hover:bg-[#0D47A1] transition-all ease-in w-fit px-4 py-2 rounded-md
         `}
       >
         {label}

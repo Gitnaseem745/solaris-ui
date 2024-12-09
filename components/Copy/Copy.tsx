@@ -11,14 +11,14 @@ const Copy: React.FC<CopyProps> = ({ component }) => {
     try {
       const response = await fetch(fileUrl);
       if (!response.ok) {
-        throw new Error('Failed to fetch the file content');
+        throw new Error(`Failed to copy ${component}`);
       }
       const text = await response.text();
       await navigator.clipboard.writeText(text);
-      alert('Component code copied to clipboard!');
+      alert(`${component} copied to clipboard!`);
     } catch (error) {
-      console.error('Error copying file content:', error);
-      alert('Failed to copy code. Please try again later.');
+      console.error(`Error copying ${component}:`, error);
+      alert(`Failed to copy ${component}. Please try again later.`);
     }
   };
 
