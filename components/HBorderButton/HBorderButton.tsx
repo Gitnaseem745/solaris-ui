@@ -8,7 +8,7 @@ const HBorderButton: React.FC<HBorderButtonProps> = ({ label, onClick }) => {
     <button
       onClick={onClick}
       className={`
-        rounded-lg border-2 border-transparent px-6 py-2 w-fit text-base font-medium bg-black/70 text-white cursor-pointer transition-colors duration-250 hover:border-yellow-300 focus:outline-none
+        rounded border border-transparent px-6 py-2 w-fit text-base font-medium bg-black/70 text-white cursor-pointer transition-colors duration-250 hover:border-yellow-300 focus:outline-none
         `}
     >
       {label}
