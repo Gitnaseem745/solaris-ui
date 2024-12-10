@@ -8,7 +8,7 @@ interface LightButtonProps {
       <button
         onClick={onClick}
         className={`
-            bg-[#393E46] text-[#FFFFFF] hover:bg-[#000] transition-all ease-in w-fit px-4 py-2 rounded-md
+            bg-[#393E46] text-[#FFFFFF] hover:bg-[#000] transition-all ease-in w-fit px-6 py-2 rounded-md
           `}
       >
         {label}

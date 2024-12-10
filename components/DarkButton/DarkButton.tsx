@@ -8,7 +8,7 @@ interface DarkButtonProps {
       <button
         onClick={onClick}
         className={`
-            bg-[#F7F7F7] text-[#393E46] hover:bg-[#fff] transition-all hover:text-[#000] w-fit px-4 py-2 rounded-md
+            bg-[#F7F7F7] text-[#393E46] hover:bg-[#fff] transition-all hover:text-[#000] w-fit px-6 py-2 rounded-md
           `}
       >
         {label}
