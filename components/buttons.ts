@@ -1,4 +1,4 @@
-export { default as Copy } from '../sitecomponents/Copy/Copy';
+export { default as Copy } from './site/Copy/Copy';
 export { default as DarkButton } from './DarkButton/DarkButton';
 export { default as DefaultButton } from './DefaultButton/DefaultButton';
 export { default as DisabledButton } from './DisabledButton/DisabledButton';

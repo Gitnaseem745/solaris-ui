@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Philosopher } from 'next/font/google'
 import "./globals.css";
+import Navbar from "@/components/site/Navbar/Navbar";
 
 const philosopher = Philosopher({
     subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
       className={philosopher.className}
       >
+        <Navbar />
         {children}
       </body>
     </html>
