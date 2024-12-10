@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GoCopy } from "react-icons/go";
 import { TbCopyCheckFilled, TbCopyXFilled } from "react-icons/tb";
 
