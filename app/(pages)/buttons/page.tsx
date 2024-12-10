@@ -1,6 +1,6 @@
 'use client';
+import { DarkButton, DefaultButton, DisabledButton, GBButton, GlassButton, HBorderButton, HFBButton, HFTButton, HGBGButton, HGlowButton, HGSButton, HShineButton, HUButton, LightButton, NeonButton } from "@/components/buttons";
 import Copy from "@/components/site/Copy/Copy";
-import * as Components from "@/components/buttons"
 const Page = () => {
   return (
     <div className="w-full min-h-fit py-20">
@@ -30,21 +30,21 @@ const Page = () => {
 }
 const label = "Button";
 const componentShowcase = [
-    { component: Components.DisabledButton, props: { label: `${label}` } },
-    { component: Components.DefaultButton, props: { label: `${label}` } },
-    { component: Components.HShineButton, props: { label: `${label}` } },
-    { component: Components.HGlowButton, props: { label: `${label}` } },
-    { component: Components.NeonButton, props: { label: `${label}` } },
-    { component: Components.HFBButton, props: { label: `${label}` } },
-    { component: Components.HFTButton, props: { label: `${label}` } },
-    { component: Components.HUButton, props: { label: `${label}` } },
-    { component: Components.DarkButton, props: { label: `${label}` } },
-    { component: Components.LightButton, props: { label: `${label}` } },
-    { component: Components.GlassButton, props: { label: `${label}` } },
-    { component: Components.HGSButton, props: { label: `${label}` } },
-    { component: Components.HGBGButton, props: { label: `${label}` } },
-    { component: Components.HBorderButton, props: { label: `${label}` } },
-    { component: Components.GBButton, props: { label: `${label}` } },
+    { component: DisabledButton, props: { label: `${label}` } },
+    { component: DefaultButton, props: { label: `${label}` } },
+    { component: HShineButton, props: { label: `${label}` } },
+    { component: HGlowButton, props: { label: `${label}` } },
+    { component: NeonButton, props: { label: `${label}` } },
+    { component: HFBButton, props: { label: `${label}` } },
+    { component: HFTButton, props: { label: `${label}` } },
+    { component: HUButton, props: { label: `${label}` } },
+    { component: DarkButton, props: { label: `${label}` } },
+    { component: LightButton, props: { label: `${label}` } },
+    { component: GlassButton, props: { label: `${label}` } },
+    { component: HGSButton, props: { label: `${label}` } },
+    { component: HGBGButton, props: { label: `${label}` } },
+    { component: HBorderButton, props: { label: `${label}` } },
+    { component: GBButton, props: { label: `${label}` } },
 ];
 
 export default Page
