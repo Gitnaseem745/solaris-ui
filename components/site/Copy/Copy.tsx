@@ -9,21 +9,21 @@ interface CopyProps {
 const Copy: React.FC<CopyProps> = ({ component }) => {
   const [copyStatus, setCopyStatus] = useState("initial");
   const handleCopy = async () => {
-      const fileUrl = `https://raw.githubusercontent.com/gitnaseem745/solaris-ui/main/components/${component}/${component}.tsx`;
+    const apiUrl = `/api?componentName=${component}`;
 
-      try {
-          const response = await fetch(fileUrl);
-          if (!response.ok) {
-              throw new Error(`Failed to copy ${component}`);
-            }
-            const text = await response.text();
-      await navigator.clipboard.writeText(text);
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch component: ${component}`);
+      }
+      const { source } = await response.json();
+      await navigator.clipboard.writeText(source || "");
       copiedSuccessfully();
     } catch (error) {
-        console.error(`Error copying ${component}:`, error);
-        errorcopyStatus();
+      console.error(`Error copying ${component}:`, error);
+      errorcopyStatus();
     }
-};
+  };
 
 const copiedSuccessfully = () => {
     setCopyStatus("success");
