@@ -8,48 +8,43 @@ interface CopyProps {
 
 const Copy: React.FC<CopyProps> = ({ component }) => {
   const [copyStatus, setCopyStatus] = useState("initial");
-
   const handleCopy = async () => {
-      const apiUrl = `/api/?componentName=${encodeURIComponent(component)}`;
+      const fileUrl = `https://raw.githubusercontent.com/gitnaseem745/solaris-ui/main/components/${component}/${component}.tsx`;
+
       try {
-      console.log("Component prop received:", component);
-      const response = await fetch(apiUrl);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch component: ${component}`);
-      }
-      const { source } = await response.json();
-      await navigator.clipboard.writeText(source || "");
+          const response = await fetch(fileUrl);
+          if (!response.ok) {
+              throw new Error(`Failed to copy ${component}`);
+            }
+            const text = await response.text();
+      await navigator.clipboard.writeText(text);
       copiedSuccessfully();
     } catch (error) {
-      console.error(`Error copying ${component}:`, error);
-      errorCopyStatus();
+        console.error(`Error copying ${component}:`, error);
+        errorcopyStatus();
     }
-  };
+};
 
-  const copiedSuccessfully = () => {
+const copiedSuccessfully = () => {
     setCopyStatus("success");
     setTimeout(() => {
-      setCopyStatus("initial");
+        setCopyStatus("initial");
     }, 5000);
-  };
-
-  const errorCopyStatus = () => {
+}
+const errorcopyStatus = () => {
     setCopyStatus("error");
     setTimeout(() => {
-      setCopyStatus("initial");
+        setCopyStatus("initial");
     }, 5000);
-  };
-
+}
   return (
-    <p onClick={handleCopy} className="mt-1 mr-1 cursor-pointer">
-      {copyStatus === "initial" ? (
-        <GoCopy />
-      ) : copyStatus === "success" ? (
-        <TbCopyCheckFilled className="text-green-500" />
-      ) : (
-        <TbCopyXFilled className="text-red-600" />
-      )}
-    </p>
+    <p onClick={handleCopy} className={`mt-1 mr-1 cursor-pointer`}
+        >
+          { copyStatus === "initial" ? <GoCopy /> :
+            copyStatus === "success" ? <TbCopyCheckFilled className="text-green-500" /> :
+            <TbCopyXFilled className="text-red-600" />
+          }
+        </p>
   );
 };
 
