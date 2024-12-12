@@ -15,11 +15,11 @@ const Page = () => {
                     Copy Paste Button Components</span></p>
             </div>
             <div className="grid grid-cols-4 max-sm:grid-cols-2 max-[400px]:grid-cols-1 max-md:grid-cols-3 items-center gap-6">
-                {componentShowcase.map(({ component: Component, props }, i) => (
+                {componentShowcase.map(({ component: Component, name, props }, i) => (
                     <div key={i} className="w-[180px] h-[120px] bg-white/10 backdrop-blur-sm rounded-2xl p-4 flex justify-center items-center gap-10 py-5 relative overflow-hidden">
                         <Component {...props} />
                         <div className="absolute top-2 right-2">
-                            <Copy component={Component.name || 'Unknown Component'} />
+                        <Copy component={name} />
                         </div>
                     </div>
                 ))}
@@ -30,21 +30,21 @@ const Page = () => {
 }
 const label = "Button";
 const componentShowcase = [
-    { component: DisabledButton, props: { label: `${label}` } },
-    { component: DefaultButton, props: { label: `${label}` } },
-    { component: HShineButton, props: { label: `${label}` } },
-    { component: HGlowButton, props: { label: `${label}` } },
-    { component: NeonButton, props: { label: `${label}` } },
-    { component: HFBButton, props: { label: `${label}` } },
-    { component: HFTButton, props: { label: `${label}` } },
-    { component: HUButton, props: { label: `${label}` } },
-    { component: DarkButton, props: { label: `${label}` } },
-    { component: LightButton, props: { label: `${label}` } },
-    { component: GlassButton, props: { label: `${label}` } },
-    { component: HGSButton, props: { label: `${label}` } },
-    { component: HGBGButton, props: { label: `${label}` } },
-    { component: HBorderButton, props: { label: `${label}` } },
-    { component: GBButton, props: { label: `${label}` } },
+    { component: DisabledButton, name: "DisabledButton", props: { label: label } },
+    { component: DefaultButton, name: "DefaultButton", props: { label: label } },
+    { component: HShineButton, name: "HShineButton", props: { label: label } },
+    { component: HGlowButton, name: "HGlowButton", props: { label: label } },
+    { component: NeonButton, name: "NeonButton", props: { label: label } },
+    { component: HFBButton, name: "HFBButton", props: { label: label } },
+    { component: HFTButton, name: "HFTButton", props: { label: label } },
+    { component: HUButton, name: "HUButton", props: { label: label } },
+    { component: DarkButton, name: "DarkButton", props: { label: label } },
+    { component: LightButton, name: "LightButton", props: { label: label } },
+    { component: GlassButton, name: "GlassButton", props: { label: label } },
+    { component: HGSButton, name: "HGSButton", props: { label: label } },
+    { component: HGBGButton, name: "HGBGButton", props: { label: label } },
+    { component: HBorderButton, name: "HBorderButton", props: { label: label } },
+    { component: GBButton, name: "GBButton", props: { label: label } },
 ];
 
 export default Page
