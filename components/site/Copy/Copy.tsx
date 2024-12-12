@@ -10,8 +10,9 @@ const Copy: React.FC<CopyProps> = ({ component }) => {
   const [copyStatus, setCopyStatus] = useState("initial");
 
   const handleCopy = async () => {
-    const apiUrl = `/api/?componentName=${component}`;
-    try {
+      const apiUrl = `/api/?componentName=${encodeURIComponent(component)}`;
+      try {
+      console.log("Component prop received:", component);
       const response = await fetch(apiUrl);
       if (!response.ok) {
         throw new Error(`Failed to fetch component: ${component}`);
