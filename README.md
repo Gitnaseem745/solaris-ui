@@ -37,6 +37,8 @@ Currently, Solaris provide various button components such as:
 Inside your project, create a new `.tsx` file, e.g., `MyCustomButton.tsx`.
 
 ### Step 3: Paste the Copied Component Code
+Change the component name according to your preference.
+
 Example:
 
 ```tsx
