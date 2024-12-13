@@ -4,7 +4,7 @@ import RoundedButton from "@/components/RoundedButton/RoundedButton";
 import Copy from "@/components/site/Copy/Copy";
 import { useState } from "react";
 const Page = () => {
-    const [activeComponent, setActiveComponent] = useState<Number | null>(null);
+    const [activeComponent, setActiveComponent] = useState<number | null>(null);
   return (
     <div className="w-full min-h-fit py-20">
         <div className="relative w-full min-h-full flex flex-col justify-start items-center flex-wrap">
