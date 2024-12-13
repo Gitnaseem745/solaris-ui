@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa"
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="w-full max-sm:h-10 max-sm:pt-6 h-24 px-20 py-10 flex justify-between items-center max-sm:px-6">
+    <nav className="w-full max-sm:h-20 max-sm:pt-6 h-24 px-20 py-10 flex justify-between items-center max-sm:px-6">
         <h1 className="text-2xl max-sm:text-xl font-bold text-center bg-gradient-to-r from-yellow-300 to-orange-500 bg-clip-text text-transparent cursor-pointer">
         <Link href="/">
             Solaris
