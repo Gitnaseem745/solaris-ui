@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solaris UI Library
 
-## Getting Started
+Welcome to Solaris UI, a collection of customizable and beautifully designed UI components for your React projects. I have launched only the Button components, but more will be launched soon. 
 
-First, run the development server:
+## Features
+- **Button Components**: A set of stylish and functional button components to enhance your application’s UI.
+- **Built with TypeScript & Tailwind CSS**: The library is developed using TypeScript and Tailwind CSS, ensuring easy integration and customization.
+- **Customizable**: Fully customizable to match your project’s design requirements.
+- **Growing Library**: Expect more components like form elements, modals, cards, etc., in future releases.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Prerequisites
+Before using **Solaris UI**, make sure you have the following installed in your project:
+- **TypeScript**: Ensure TypeScript is set up in your project.
+- **Tailwind CSS**: Ensure Tailwind CSS is properly configured and installed.
+
+## Usage
+
+### Step 1: Choose and Copy Your Component
+Currently, Solaris provide various button components such as:
+- `DisabledButton`
+- `DefaultButton`
+- `HShineButton`
+- `HGlowButton`
+- `NeonButton`
+- `HFBButton`
+- `HFTButton`
+- `HUButton`
+- `DarkButton`
+- `LightButton`
+- `GlassButton`
+- `HGSButton`
+- `HGBGButton`
+- `HBorderButton`
+- `GBButton`
+
+### Step 2: Create a New `.tsx` File
+Inside your project, create a new `.tsx` file, e.g., `MyCustomButton.tsx`.
+
+### Step 3: Paste the Copied Component Code
+Change the component name according to your preference.
+
+Example:
+
+```tsx
+interface DefaultButtonProps {
+    label: string;
+    onClick?: () => void;
+}
+
+const DefaultButton: React.FC<DefaultButtonProps> = ({ label, onClick }) => {
+    return (
+        <button
+            onClick={onClick}
+            className={`
+                bg-yellow-300 text-black hover:bg-yellow-400 transition-all ease-in w-fit px-6 py-2 rounded-md
+            `}
+        >
+            {label}
+        </button>
+    );
+};
+
+export default DefaultButton;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Step 4: Import and Use the Component
+Import and use the newly created component anywhere in your project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+import DefaultButton from './MyCustomButton';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+const App = () => {
+    return (
+        <div>
+            <DefaultButton label="Click Me" />
+        </div>
+    );
+};
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+export default App;
+```
