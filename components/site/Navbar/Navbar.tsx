@@ -1,14 +1,16 @@
+import Image from "next/image"
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="w-full max-sm:h-20 max-sm:pt-6 h-24 px-20 py-10 flex justify-between items-center max-sm:px-6">
-        <h1 className="text-2xl max-sm:text-xl font-bold text-center bg-gradient-to-r from-yellow-300 to-orange-500 bg-clip-text text-transparent cursor-pointer">
-        <Link href="/">
-            Solaris
-        </Link>
+    <nav className="w-full max-sm:h-20 max-sm:pt-6 h-24 px-20 py-10 flex justify-between items-center max-sm:pr-6 max-sm:pl-4">
+    <Link href="/" className="flex items-center cursor-pointer">
+        <Image src="/solaris.png" width={60} height={60} alt="Solaris Icon" />
+        <h1 className="text-xl max-sm:text-xl -ml-2 font-bold bg-gradient-to-r from-yellow-300 to-orange-500 bg-clip-text text-transparent">
+          Solaris
         </h1>
+      </Link>
         <div className="menu flex flow-row gap-10 justify-center items-center">
             <Link href={'https://github.com/Gitnaseem745'} target="_blank" className="rounded-md text-[16px] max-sm:text-sm font-semibold max-sm:hidden text-white/50 transition-all ease-in-out hover:text-white">Dev</Link>
             <Link href={'https://github.com/Gitnaseem745/solaris-ui'} target="_blank" className="text-sm font-semibold font-sans">
