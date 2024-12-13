@@ -12,21 +12,18 @@ export default function Home() {
         <span className="font-sans text-neutral-100"></span>
       </h1>
 
-      {window.innerWidth >= 640 && (
-        <p className="font-sans text-xl text-center w-8/12 max-lg:w-10/12 -mt-10 tracking-wide text-neutral-400">
+        <p className="font-sans max-sm:hidden text-xl text-center w-8/12 max-lg:w-10/12 -mt-10 tracking-wide text-neutral-400">
           Solaris UI is a{" "}
           <span className="font-semibold bg-gradient-to-r from-yellow-300 to-orange-500 bg-clip-text text-transparent">
             React component library built with TypeScript and Tailwind CSS
           </span>{" "}
           designed for developers who value efficiency. Quickly select, copy, and paste components into your project to accelerate development seamlessly. :)
         </p>
-      )}
 
-      {window.innerWidth < 640 && (
-        <p className="font-sans text-xl text-center w-10/12 px-2 tracking-normal -mt-12 text-neutral-400">
+
+        <p className="font-sans hidden max-sm:block text-xl text-center w-10/12 px-2 tracking-normal -mt-12 text-neutral-400">
           React component library built with TypeScript and Tailwind CSS
         </p>
-      )}
 
       <div className="w-[700px] max-lg:w-[400px] max-sm:w-[200px]">
         <ul className="flex flex-col gap-2">
