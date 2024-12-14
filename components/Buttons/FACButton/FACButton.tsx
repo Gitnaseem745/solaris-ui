@@ -7,7 +7,7 @@ import { useState } from "react";
 
 interface FACButtonProps {
     label: string;
-    secondryLabel: string;
+    secondryLabel?: string;
     onClick?: () => void;
   }
 
