@@ -9,13 +9,13 @@ interface FACButtonProps {
     label: string;
     secondryLabel?: string;
     onClick?: () => void;
-  }
+}
 
-  const FACButton: React.FC<FACButtonProps> = ({ label, secondryLabel, onClick }) => {
+const FACButton: React.FC<FACButtonProps> = ({ label, secondryLabel, onClick }) => {
     const [clicked, setClicked] = useState<boolean>(false);
     return (
         <div
-        onClick={onClick}
+            onClick={onClick}
         >
             <motion.div
                 animate={{
@@ -25,7 +25,7 @@ interface FACButtonProps {
                     ease: "easeInOut",
                     duration: 0.2
                 }}
-                onClick={() => setClicked(true)}
+                onClick={() => setClicked((prev) => !prev)}
                 className="relative overflow-hidden bg-[#2654FF] text-[#FFFFFF] w-fit px-6 py-3 rounded-full cursor-pointer flex justify-center items-center"
             >
                 <motion.div
@@ -47,6 +47,16 @@ interface FACButtonProps {
                         {label}
                     </p>
                 </motion.div>
+                <motion.div
+                    animate={{
+                        scale: clicked ? 100 : 1,
+                        backgroundColor: clicked ? "#1E88E5" : "#2654FF"
+                    }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1.35,
+                    }}
+                    className="size-[6px] rounded-full absolute left-0"></motion.div>
                 <motion.div
                     initial={{
                         x: -110
@@ -79,7 +89,7 @@ interface FACButtonProps {
                     {secondryLabel}
                 </motion.p>
             </motion.div>
-    </div>
+        </div>
     );
-  };
-  export default FACButton;
+};
+export default FACButton;
