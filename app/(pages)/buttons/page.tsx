@@ -1,5 +1,5 @@
 'use client';
-import { DarkButton, DefaultButton, DisabledButton, GBButton, GlassButton, HBorderButton, HFBButton, HFTButton, HGBGButton, HGlowButton, HGSButton, HShineButton, HUButton, LightButton, NeonButton, FIFButton, RoundedButton, FDButton, FSUButton, FEButton, FUPButton, FDLButton, FHButton } from "@/components/Buttons/buttons";
+import { DarkButton, DefaultButton, DisabledButton, GBButton, GlassButton, HBorderButton, HFBButton, HFTButton, HGBGButton, HGlowButton, HGSButton, HShineButton, HUButton, LightButton, NeonButton, FIFButton, RoundedButton, FDButton, FSUButton, FEButton, FUPButton, FDLButton, FHButton, FACButton } from "@/components/Buttons/buttons";
 import Copy from "@/components/site/Copy/Copy";
 import { useState } from "react";
 const Page = () => {
@@ -52,6 +52,7 @@ const componentShowcase = [
     { component: FIFButton, name: "FIFButton", props: { label: "Motion" } },
     { component: FDButton, name: "FDButton", props: { label: "Delete" } },
     { component: FSUButton, name: "FSUButton", props: { label: "Scale " } },
+    { component: FACButton, name: "FACButton", props: { label: "Add to cart", secondryLabel: "Added"} },
     { component: FEButton, name: "FEButton", props: { label: "Email" } },
     { component: FUPButton, name: "FUPButton", props: { label: "Upload" } },
     { component: FDLButton, name: "FDLButton", props: { label: "Download" } },

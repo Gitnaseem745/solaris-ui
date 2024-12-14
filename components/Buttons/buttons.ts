@@ -21,3 +21,4 @@ export { default as FEButton } from './FEButton/FEButton';
 export { default as FUPButton } from './FUPButton/FUPButton';
 export { default as FDLButton } from './FDLButton/FDLButton';
 export { default as FHButton } from './FHButton/FHButton';
+export { default as FACButton } from './FACButton/FACButton';
