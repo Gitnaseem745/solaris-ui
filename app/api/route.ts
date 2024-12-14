@@ -4,10 +4,11 @@ import path from "path";
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const componentName = searchParams.get("componentName");
+  const directoryName = searchParams.get("directoryName");
 
-  if (!componentName) {
+  if (!componentName || !directoryName) {
     return new Response(
-      JSON.stringify({ error: "Component name is required." }),
+      JSON.stringify({ error: `${componentName} path is incorrect.` }),
       { status: 400 }
     );
   }
@@ -15,6 +16,7 @@ export async function GET(request: Request) {
   const filePath = path.join(
     process.cwd(),
     "components",
+    directoryName,
     componentName,
     `${componentName}.tsx`
   );
@@ -26,9 +28,9 @@ export async function GET(request: Request) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error(`Error reading file ${filePath}:`, error);
+    console.error(`Error reading ${componentName} file ${filePath}:`, error);
     return new Response(
-      JSON.stringify({ error: "Failed to read file." }),
+      JSON.stringify({ error: `Failed to read ${componentName} file.` }),
       { status: 500 }
     );
   }

@@ -4,13 +4,13 @@ import { TbCopyCheckFilled, TbCopyXFilled } from "react-icons/tb";
 
 interface CopyProps {
   component: string;
+  dir: string;
 }
 
-const Copy: React.FC<CopyProps> = ({ component }) => {
+const Copy: React.FC<CopyProps> = ({ component, dir }) => {
   const [copyStatus, setCopyStatus] = useState("initial");
   const handleCopy = async () => {
-    const apiUrl = `/api?componentName=${component}`;
-
+    const apiUrl = `/api?directoryName=${dir}&componentName=${component}`;
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) {

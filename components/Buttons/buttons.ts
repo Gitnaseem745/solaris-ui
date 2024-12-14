@@ -1,4 +1,3 @@
-export { default as Copy } from './site/Copy/Copy';
 export { default as DarkButton } from './DarkButton/DarkButton';
 export { default as DefaultButton } from './DefaultButton/DefaultButton';
 export { default as DisabledButton } from './DisabledButton/DisabledButton';
@@ -14,3 +13,11 @@ export { default as HGSButton } from './HGSButton/HGSButton';
 export { default as NeonButton } from './NeonButton/NeonButton';
 export { default as HGBGButton } from './HGBGButton/HGBGButton';
 export { default as GBButton } from './GBButton/GBButton';
+export { default as FIFButton } from './FIFButton/FIFButton';
+export { default as FDButton } from './FDButton/FDButton';
+export { default as RoundedButton } from './RoundedButton/RoundedButton';
+export { default as FSUButton } from './FSUButton/FSUButton';
+export { default as FEButton } from './FEButton/FEButton';
+export { default as FUPButton } from './FUPButton/FUPButton';
+export { default as FDLButton } from './FDLButton/FDLButton';
+export { default as FHButton } from './FHButton/FHButton';

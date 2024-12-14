@@ -15,6 +15,13 @@ body {
   background: var(--background);
 }
 
+.container:hover .dot {
+  left: 225px;
+  border-radius: 5px;
+  transform: rotate(90deg);
+}
+
+
 /* glowing border button animation  */
 @keyframes border-glow {
     0% {
