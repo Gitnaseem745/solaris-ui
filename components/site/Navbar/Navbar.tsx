@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
             <Link href={'https://github.com/Gitnaseem745/solaris-ui'} target="_blank" className="text-sm font-semibold font-sans">
             <div className="bg-gradient-to-r from-yellow-100 cursor-pointer to-white rounded-full py-1 px-4 max-w-fit text-black/50 hover:text-black transition-all ease-in-out flex justify-center items-center gap-2">
             <FaGithub size={18} />
-            <p className="max-sm:hidden">Give Star</p>
+            <p className="max-sm:hidden">Guide</p>
             </div>
             </Link>
         </div>
