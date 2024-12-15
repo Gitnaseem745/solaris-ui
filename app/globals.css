@@ -15,23 +15,16 @@ body {
   background: var(--background);
 }
 
-.container:hover .dot {
-  left: 225px;
-  border-radius: 5px;
-  transform: rotate(90deg);
-}
-
-
 /* glowing border button animation  */
 @keyframes border-glow {
     0% {
-      border-color: #F97316;
+      border-color: #fff;
     }
     50% {
-      border-color: orange;
+      border-color: #000;
     }
     100% {
-      border-color: #F97316;
+      border-color: #fff;
     }
 }
 .animate-border-glow {

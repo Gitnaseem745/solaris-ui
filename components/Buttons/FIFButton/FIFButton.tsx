@@ -17,11 +17,11 @@ const FIFButton: React.FC<FIFButtonProps> = ({ label, onClick }) => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         onClick={onClick}
-        className="cursor-pointer flex justify-center items-center bg-black rounded-3xl py-3 px-9 relative overflow-clip">
+        className="cursor-pointer flex justify-center items-center bg-black rounded-3xl py-2 px-9 relative overflow-clip">
             <motion.div
             animate={{
                 scale: isHover ? 100 : 1,
-                backgroundColor: isHover ? "#FFBB3B" : "#FFFFFF"
+                backgroundColor: isHover ? "#FFFFFF" : "#FFFFFF"
             }}
             transition={{
                 ease: "easeIn",
@@ -38,7 +38,7 @@ const FIFButton: React.FC<FIFButtonProps> = ({ label, onClick }) => {
             </motion.div>
             <motion.div
             animate={{
-                x: isHover ? 0 : 24,
+                x: isHover ? 0 : 26,
             }}
             className="absolute flex justify-center items-center right-6">
                 <FaArrowRight className="size-[16px] text-black" />

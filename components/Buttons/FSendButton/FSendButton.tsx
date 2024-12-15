@@ -1,17 +1,16 @@
 // framer-motion and React Icons are needed before using this button
 
-import { FaPlus } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
+import { CiPaperplane  } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-interface FACButtonProps {
+interface FSendButtonProps {
     label: string;
     secondryLabel?: string;
     onClick?: () => void;
 }
 
-const FACButton: React.FC<FACButtonProps> = ({ label, secondryLabel, onClick }) => {
+const FSendButton: React.FC<FSendButtonProps> = ({ label, secondryLabel, onClick }) => {
     const [clicked, setClicked] = useState<boolean>(false);
     return (
         <div
@@ -26,60 +25,49 @@ const FACButton: React.FC<FACButtonProps> = ({ label, secondryLabel, onClick }) 
                     duration: 0.2
                 }}
                 onClick={() => setClicked(true)}
-                className="relative overflow-hidden bg-[#2654FF] text-[#FFFFFF] w-fit px-6 py-3 rounded-full cursor-pointer flex justify-center items-center"
+                className="relative overflow-hidden bg-teal-500 text-[#FFFFFF] w-fit px-10 py-2 rounded-full cursor-pointer flex justify-center items-center gap-1"
             >
-                <motion.div
+                    <motion.div
+                    animate={{
+                        rotate: clicked ? 0 : -50,
+                        scale: clicked ? 1.2 : 1.2,
+                        x: clicked ? 100 : 0,
+                    }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1.5
+                    }}
+                    >
+                        <CiPaperplane />
+                    </motion.div>
+                    <motion.p
                     animate={{
                         opacity: clicked ? 0 : 1,
                         scale: clicked ? 0 : 1,
                     }}
                     transition={{
                         ease: "easeInOut",
-                        duration: 1,
+                        duration: 0.8,
                     }}
-                    className="flex justify-center items-center gap-2">
-                    <motion.div animate={{
-                        rotate: clicked ? 280 : 0,
-                    }}>
-                        <FaPlus />
-                    </motion.div>
-                    <p>
+                    className="mt-1"
+                    >
                         {label}
-                    </p>
-                </motion.div>
+                    </motion.p>
                 <motion.div
                     animate={{
                         scale: clicked ? 100 : 1,
-                        backgroundColor: clicked ? "#1E88E5" : "#2654FF"
+                        backgroundColor: clicked ? "#4CAF50" : "#14b8a6"
                     }}
                     transition={{
                         ease: "easeInOut",
-                        duration: 1.35,
+                        duration: 2.15,
                     }}
                     className="size-[6px] rounded-full absolute left-0"></motion.div>
-                <motion.div
-                    initial={{
-                        x: -110
-                    }}
-                    animate={{
-                        x: clicked ? 110 : -110,
-                        opacity: clicked ? 1 : 0,
-                        scale: clicked ? 2 : 2,
-                        rotate: clicked ? -30 : 0,
-                    }}
-                    transition={{
-                        ease: "easeIn",
-                        duration: 1
-                    }}
-                    className="absolute"
-                >
-                    <IoCartOutline />
-                </motion.div>
-                <motion.p
+                 <motion.p
                     animate={{
                         opacity: clicked ? 1 : 0,
                         scale: clicked ? 1.1 : 1,
-                        y: clicked ? 0 : 100,
+                        y: clicked ? 0 : 30,
                     }}
                     transition={{
                         ease: "easeInOut",
@@ -92,4 +80,4 @@ const FACButton: React.FC<FACButtonProps> = ({ label, secondryLabel, onClick }) 
         </div>
     );
 };
-export default FACButton;
+export default FSendButton;

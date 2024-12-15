@@ -8,7 +8,7 @@ interface DefaultButtonProps {
       <button
         onClick={onClick}
         className={`
-            bg-yellow-300 text-black hover:bg-yellow-400 transition-all ease-in w-fit px-6 py-2 rounded-md
+            bg-white text-black hover:bg-neutral-200 transition-all ease-in w-fit px-6 py-2 rounded-md
         `}
       >
         {label}

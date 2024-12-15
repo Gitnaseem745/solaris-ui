@@ -17,7 +17,7 @@ const FDButton: React.FC<FDButtonProps> = ({ label, onClick }) => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         onClick={onClick}
-        className="cursor-pointer flex justify-between items-center bg-black rounded-3xl py-3 px-9 relative overflow-clip">
+        className="cursor-pointer flex justify-between items-center bg-black rounded-3xl py-2 px-9 relative overflow-clip">
             <motion.div
             animate={{
                 scale: isHover ? 100 : 1,

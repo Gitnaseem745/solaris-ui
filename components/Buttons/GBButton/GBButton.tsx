@@ -20,13 +20,13 @@ export default GBButton;
 
 // @keyframes border-glow {
 //     0% {
-//       border-color: #F97316;
+//       border-color: #fff;
 //     }
 //     50% {
-//       border-color: #ffffff;
+//       border-color: #000;
 //     }
 //     100% {
-//       border-color: #F97316;
+//       border-color: #fff;
 //     }
 // }
 // .animate-border-glow {
