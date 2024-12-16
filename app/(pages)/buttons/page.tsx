@@ -1,5 +1,5 @@
 'use client';
-import { DarkButton, DefaultButton, DisabledButton, GBButton, GlassButton, HBorderButton, HFBButton, HFTButton, HGBGButton, HGlowButton, HGSButton, HShineButton, HUButton, LightButton, NeonButton, FIFButton, RoundedButton, FDButton, FSUButton, FEButton, FUPButton, FDLButton, FHButton, FACButton, FSendButton, FLoaderButton, FCLoadButton, FLSButton, NDelButton, BLButton, FShutButton } from "@/components/Buttons/buttons";
+import { DarkButton, DefaultButton, DisabledButton, GBButton, GlassButton, HBorderButton, HFBButton, HFTButton, HGBGButton, HGlowButton, HGSButton, HShineButton, HUButton, LightButton, NeonButton, FIFButton, RoundedButton, FDButton, FSUButton, FEButton, FUPButton, FDLButton, FHButton, FACButton, FSendButton, FLoaderButton, FCLoadButton, FLSButton, NDelButton, BLButton, FShutButton, FLogButton, FSPButton, NMAILButton, NMLButton, GoogleButton, GitButton, FGitButton, FGoogleButton, FFBButton, FacebookButton, XButton } from "@/components/Buttons/buttons";
 import Copy from "@/components/site/Copy/Copy";
 import { useState } from "react";
 const Page = () => {
@@ -56,19 +56,30 @@ const componentShowcase = [
     { component: FACButton, name: "FACButton", props: { label: "Add to cart", secondryLabel: "Added"} },
     { component: FSendButton, name: "FSendButton", props: { label: "Send", secondryLabel: "Sent" } },
     { component: FEButton, name: "FEButton", props: { label: "Email" } },
+    { component: NMAILButton, name: "NMAILButton", props: { label: "Send Mail" } },
+    { component: NMLButton, name: "NMLButton", props: { label: "Mail" } },
     { component: FShutButton, name: "FShutButton", props: { label: "SHUTTER" } },
     { component: FUPButton, name: "FUPButton", props: { label: "Upload" } },
     { component: BLButton, name: "BLButton", props: { label: "Blade" } },
     { component: FDLButton, name: "FDLButton", props: { label: "Download" } },
+    { component: FLogButton, name: "FLogButton", props: { label: "Login" } },
     { component: FLoaderButton, name: "FLoaderButton", props: { label: "Loading" } },
     { component: FCLoadButton, name: "FCLoadButton", props: { label: "Load" } },
     { component: FLSButton, name: "FLSButton", props: { label: "Load" } },
     { component: FHButton, name: "FHButton", props: { label: "Help" } },
+    { component: FSPButton, name: "FSPButton", props: { label: "HOVER" } },
+    { component: GitButton, name: "GitButton", props: { label: "Login" } },
+    { component: FGitButton, name: "FGitButton", props: { label: "Login" } },
+    { component: GoogleButton, name: "GoogleButton", props: { label: "Login" } },
+    { component: FGoogleButton, name: "FGoogleButton", props: { label: "Login" } },
+    { component: FacebookButton, name: "FacebookButton", props: { label: "Login" } },
+    { component: FFBButton, name: "FFBButton", props: { label: "Login" } },
+    { component: XButton, name: "XButton", props: { label: "Login" } },
     { component: GlassButton, name: "GlassButton", props: { label: "Glass" } },
     { component: HGSButton, name: "HGSButton", props: { label: "Glass Shiny" } },
     { component: HBorderButton, name: "HBorderButton", props: { label: "Border" } },
-    { component: GBButton, name: "GBButton", props: { label: "breathing" } },
-    { component: HGBGButton, name: "HGBGButton", props: { label: "Gradient Bg" } },
+    { component: GBButton, name: "GBButton", props: { label: "Breathing" } },
+    { component: HGBGButton, name: "HGBGButton", props: { label: "RGB BG" } },
 ];
 
 export default Page

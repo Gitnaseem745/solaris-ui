@@ -27,7 +27,10 @@ export default function RootLayout({
       suppressHydrationWarning
       >
         <Navbar />
+        <div className="max-sm:mt-20 mt-24">
+
         {children}
+        </div>
       </body>
     </html>
   );

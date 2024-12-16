@@ -28,6 +28,7 @@ export default function Home() {
       <div className="w-[700px] max-lg:w-[400px] max-sm:w-[200px]">
         <ul className="flex flex-col gap-2">
           <PageNavigator label="Explore Buttons" link="/buttons" />
+          <PageNavigator label="Cards" comingSoon={true} link="/cards"/>
         </ul>
       </div>
     </div>
