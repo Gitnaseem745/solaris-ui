@@ -31,7 +31,6 @@ export { default as BLButton } from './BLButton/BLButton';
 export { default as FShutButton } from './FShutButton/FShutButton';
 export { default as FLogButton } from './FLogButton/FLogButton';
 export { default as FSPButton } from './FSPButton/FSPButton';
-export { default as FPRButton } from './FPRButton/FPRButton';
 export { default as NMAILButton } from './NMAILButtton/NMAILButtton';
 export { default as NMLButton } from './NMLButton/NMLButton';
 export { default as GoogleButton } from './GoogleButton/GoogleButton';
