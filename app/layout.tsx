@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Philosopher } from 'next/font/google'
 import "./globals.css";
-import Navbar from "@/components/site/Navbar/Navbar";
+import Footer from "@/components/site/Footer/Footer";
+import NavbarHandler from "@/components/site/NavHandler";
+import { ThemeProvider } from "@/components/site/theme-provide/theme-provider";
 
 const philosopher = Philosopher({
     subsets: ["latin"],
@@ -11,7 +13,7 @@ const philosopher = Philosopher({
 })
 
 export const metadata: Metadata = {
-  title: "Solaris UI",
+  title: "Home - Solaris UI",
   description: "React Copy Paste UI Components.",
 };
 
@@ -26,11 +28,18 @@ export default function RootLayout({
       className={philosopher.className}
       suppressHydrationWarning
       >
-        <Navbar />
-        <div className="max-sm:mt-20 mt-24">
-
+         <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+        <NavbarHandler />
+        <div>
         {children}
         </div>
+        <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
