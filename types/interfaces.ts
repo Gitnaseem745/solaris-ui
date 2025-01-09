@@ -15,9 +15,9 @@ interface ComponentDataProps {
     id: string;
     name: string;
     description: string;
-    dependencies: string;
-    installation: string;
-    usage: string;
+    dependencies?: string;
+    installation?: string;
+    usage?: string;
     props: Props[];
     examples: Example[];
     Component: React.FC<any>;
