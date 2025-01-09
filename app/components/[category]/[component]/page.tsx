@@ -9,30 +9,6 @@ import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import ThemeToggle from '@/components/site/ThemeToggle/ThemeToggle';
 
-interface Props {
-    name: string;
-    type: string;
-    default: string;
-    description: string;
-}
-
-interface Example {
-    name: string;
-    code: string;
-}
-
-interface ComponentDataProps {
-    id: string;
-    name: string;
-    description: string;
-    dependencies: string;
-    installation: string;
-    usage: string;
-    props: Props[];
-    examples: Example[];
-    Component: React.FC;
-}
-
 export default async function Page({
     params
 }: {
@@ -41,7 +17,7 @@ export default async function Page({
     const { category, component } = await params;
 
     // Fetch category and component metadata dynamically
-    const categoryComponents: ComponentDataProps[] = components[category] || [];
+    const categoryComponents: ComponentDataProps[] = components[category as keyof typeof components] || [];
     const componentData = categoryComponents.find((c: ComponentDataProps) => c.id === component);
 
     if (!componentData) {
