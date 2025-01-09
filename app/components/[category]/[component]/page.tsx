@@ -24,7 +24,8 @@ export default async function Page({
         return notFound();
     }
 
-    const sections = [
+
+    const sections: Section[] = [
         {
             name: 'Dependencies',
             Component: CodePre,
