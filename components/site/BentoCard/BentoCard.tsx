@@ -2,13 +2,6 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-interface IconProps {
-    className: string;
-}
-
-const Icon: React.FC<IconProps> = ({ className }) => (
-  <svg className={className} />
-);
 
 type BentoGridProps = {
   children: ReactNode;
