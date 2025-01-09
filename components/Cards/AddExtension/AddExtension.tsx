@@ -31,7 +31,7 @@ interface AddExtensionProps {
             <div className="space-y-4">
               <div className="flex justify-start items-center gap-4">
             <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-              {/* <img src={icon} alt="" className="w-6 h-6" /> */}
+              <img src={icon || ''} alt="" className="w-6 h-6" />
               <BsTranslate className="w-6 h-6" />
             </div>
               <h3 className="font-medium">{title}</h3>
