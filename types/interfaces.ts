@@ -2,7 +2,7 @@
 interface Props {
     name: string;
     type: string;
-    default: string;
+    default?: string;
     description: string;
 }
 
