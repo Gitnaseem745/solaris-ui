@@ -1,5 +1,6 @@
 import DocsAlert from "@/components/site/DocsAlert/docs-alert";
 import Sidebar from "@/components/site/Sidebar/Sidebar";
+import { components } from "@/docs/components";
 import { toCapitalCase } from "@/utils/capital-case";
 export async function generateMetadata({ params }: {
     params: Promise<{ component: string }>
@@ -11,12 +12,14 @@ export async function generateMetadata({ params }: {
     }
   }
 
+type ComponentCategories = keyof typeof components;
+
 export default async function Layout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ category: string; component: string }>;
+  params: Promise<{ category: ComponentCategories; component: string }>;
 }) {
   const { category, component } = await params;
 
