@@ -108,7 +108,7 @@ interface PreviewSectionProps {
   componentName: string
 }
 
-function PreviewSection({ onCopy, copied, children, componentName}: PreviewSectionProps) {
+function PreviewSection({ onCopy, copied, children}: PreviewSectionProps) {
   return (
     <div className="relative rounded-lg border border-neutral-800 bg-neutral-900 p-4 flex flex-col justify-center min-h-[300px]">
       {/* Copy Button */}
