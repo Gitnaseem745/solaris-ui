@@ -6,11 +6,11 @@ interface SizePickerSwitchProps {
   name: string;
   checked: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  label: string;
+  label?: string;
   className?: string;
 }
 
-export const SizePickerSwitch: React.FC<SizePickerSwitchProps> = ({ id, name, checked, onChange, label, className }) => (
+export const SizePickerSwitch: React.FC<SizePickerSwitchProps> = ({ id, name, checked, onChange, className }) => (
   <div className={`${className}`}>
     <input
       type="checkbox"
@@ -30,4 +30,3 @@ export const SizePickerSwitch: React.FC<SizePickerSwitchProps> = ({ id, name, ch
     </label>
   </div>
 );
-
