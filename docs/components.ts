@@ -78,7 +78,7 @@ export const usageGuide = {
     ]
 };
 
-export const components = {
+export const components: Record<string, ComponentDataProps[]> = {
     buttons: [
         {
             id: 'default-button',
