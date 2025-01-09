@@ -16,8 +16,8 @@ export async function GET(request: Request) {
   const filePath = path.join(
     process.cwd(),
     "components",
+    "ui",
     directoryName,
-    componentName,
     `${componentName}.tsx`
   );
 

@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { GoCopy } from "react-icons/go";
 import { TbCopyCheckFilled, TbCopyXFilled } from "react-icons/tb";
@@ -38,7 +39,7 @@ const errorcopyStatus = () => {
     }, 5000);
 }
   return (
-    <p onClick={handleCopy} className={`mt-1 mr-1 cursor-pointer`}
+    <p onClick={handleCopy} className={`mt-1 mr-1 max-sm:-mt-2 max-sm:mr-2 cursor-pointer`}
         >
           { copyStatus === "initial" ? <GoCopy /> :
             copyStatus === "success" ? <TbCopyCheckFilled className="text-green-500" /> :
