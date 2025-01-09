@@ -20,7 +20,7 @@ export async function GET(request: Request) {
     directoryName,
     `${componentName}.tsx`
   );
-
+    console.log(filePath);
   try {
     const source = await fs.readFile(filePath, "utf8");
     return new Response(JSON.stringify({ source }), {
