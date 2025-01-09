@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { IconType } from "react-icons";
 import { BsArrowRight } from "react-icons/bs";
 
 type BentoGridProps = {
@@ -10,7 +11,7 @@ type BentoGridProps = {
 type BentoCardProps = {
   name: string;
   background?: ReactNode;
-  Icon?: any;
+  Icon?: IconType;
   classname?: string;
   description: string;
   href: string;
