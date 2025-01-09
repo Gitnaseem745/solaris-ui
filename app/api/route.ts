@@ -1,3 +1,4 @@
+import { toCapitalCase } from "@/utils/capital-case";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -17,11 +18,11 @@ export async function GET(request: Request) {
     process.cwd(),
     "components",
     "ui",
-    directoryName,
+    toCapitalCase(directoryName),
     `${componentName}.tsx`
   );
-    console.log(filePath);
   try {
+    console.log(filePath);
     const source = await fs.readFile(filePath, "utf8");
     return new Response(JSON.stringify({ source }), {
       status: 200,

@@ -2,6 +2,7 @@ import DocsAlert from "@/components/site/DocsAlert/docs-alert";
 import Sidebar from "@/components/site/Sidebar/Sidebar";
 import { components } from "@/docs/components";
 import { toCapitalCase } from "@/utils/capital-case";
+
 export async function generateMetadata({ params }: {
     params: Promise<{ component: string }>
 }) {

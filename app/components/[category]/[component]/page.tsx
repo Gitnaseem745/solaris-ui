@@ -1,4 +1,3 @@
-'use client'
 import { notFound } from 'next/navigation';
 import CodePre from '@/components/site/CodePre/CodePre';
 import PropsTable from '@/components/site/PropsTable/PropsTable';

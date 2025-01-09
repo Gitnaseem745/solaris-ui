@@ -1,6 +1,12 @@
 import Sidebar from "@/components/site/Sidebar/Sidebar";
+import { Metadata } from "next";
 
-export default async function Layout({
+export const metadata: Metadata = {
+    title: "Installation - Solaris UI",
+    description: "React Copy Paste UI Components.",
+};
+
+export default async function InstallationLayout({
   children,
   params,
 }: {

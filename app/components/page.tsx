@@ -2,12 +2,6 @@ import { BentoCard, BentoGrid } from "@/components/site/BentoCard/BentoCard";
 import { HiMiniBellAlert } from "react-icons/hi2";
 import { MdOutlineSmartButton } from "react-icons/md";
 import { TbCardsFilled, TbSelect } from "react-icons/tb";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Components - Solaris UI",
-    description: "React Copy Paste UI Components.",
-};
 
 export default function page() {
     return (
