@@ -77,12 +77,12 @@ export default function BentoLogin({
         </button>
 
         <div className="text-center text-sm">
-          <span className="text-gray-400">Don't have an account? </span>
+          <span className="text-gray-400">Don&apos;t have an account? </span>
           <button
             onClick={onSignUp}
             className="text-white hover:underline"
           >
-            Sign up, it's free!
+            Sign up, it&apos;s free!
           </button>
         </div>
       </div>
