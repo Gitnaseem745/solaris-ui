@@ -98,7 +98,7 @@ export default function FeatureCard({
                 className="w-24 h-24 rounded-xl object-cover"
               />
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-sm text-sm whitespace-nowrap">
-                You've won!
+                You&apos;ve won!
               </div>
 
               {/* Confetti */}
@@ -129,4 +129,3 @@ export default function FeatureCard({
     </div>
   )
 }
-
