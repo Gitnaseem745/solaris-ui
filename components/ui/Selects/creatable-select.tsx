@@ -84,7 +84,7 @@ const CreatableSelect: React.FC<CreatableSelectProps> = ({
                   onClick={handleCreateOption}
                 >
                   <FiPlus className="inline-block w-4 h-4 mr-2" />
-                  Create "{inputValue}"
+                  Create &quot;{inputValue}&quot;
                 </li>
               )}
             </ul>
