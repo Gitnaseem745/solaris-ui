@@ -23,7 +23,6 @@ export default async function Page({
         return notFound();
     }
 
-
     const sections: Section[] = [
         {
             name: 'Dependencies',

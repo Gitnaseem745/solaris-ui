@@ -14,13 +14,15 @@ export async function GET(request: Request) {
     );
   }
 
+  const resolvedDirectory = toCapitalCase(directoryName.toLowerCase());
   const filePath = path.join(
     process.cwd(),
     "components",
     "ui",
-    toCapitalCase(directoryName),
-    `${componentName}.tsx`
+    resolvedDirectory,
+    `${componentName.toLowerCase()}.tsx`
   );
+
   try {
     const source = await fs.readFile(filePath, "utf8");
     console.log(filePath);
