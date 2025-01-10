@@ -18,11 +18,10 @@ export async function GET(request: Request) {
     process.cwd(),
     "components",
     "ui",
-    toCapitalCase(directoryName),
+    directoryName,
     `${componentName}.tsx`
   );
   try {
-    console.log(filePath);
     const source = await fs.readFile(filePath, "utf8");
     return new Response(JSON.stringify({ source }), {
       status: 200,
