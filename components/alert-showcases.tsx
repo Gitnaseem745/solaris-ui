@@ -1,28 +1,28 @@
 'use client'
 
 import React, { useState } from 'react';
-import SuccessAlert from './ui/alerts/success-alert';
-import ErrorAlert from './ui/alerts/error-alert';
-import WarningAlert from './ui/alerts/warning-alert';
-import InfoAlert from './ui/alerts/info-alert';
-import ConfirmationAlert from './ui/alerts/confirmation-alert';
-import ToastAlert from './ui/alerts/toast-alert';
-import BannerAlert from './ui/alerts/banner-alert';
-import FloatingAlert from './ui/alerts/floating-alert';
-import SlideInAlert from './ui/alerts/slide-in-alert';
-import ProgressAlert from './ui/alerts/progress-alert';
-import CountdownAlert from './ui/alerts/countdown-alert';
-import ExpandingAlert from './ui/alerts/expanding-alert';
-import StickyAlert from './ui/alerts/sticky-alert';
-import PulsatingAlert from './ui/alerts/pulsating-alert';
-import BouncingAlert from './ui/alerts/bouncing-alert';
-import ShakingAlert from './ui/alerts/shaking-alert';
-import FadingAlert from './ui/alerts/fading-alert';
-import ColorChangingAlert from './ui/alerts/color-changing-alert';
-import TypingAlert from './ui/alerts/typing-alert';
-import RotatingAlert from './ui/alerts/rotating-alert';
-import FlipAlert from './ui/alerts/flip-alert';
-import SwipeAlert from './ui/alerts/swipe-alert';
+import SuccessAlert from '@/components/ui/alerts/success-alert';
+import ErrorAlert from '@/components/ui/alerts/error-alert';
+import WarningAlert from '@/components/ui/alerts/warning-alert';
+import InfoAlert from '@/components/ui/alerts/info-alert';
+import ConfirmationAlert from '@/components/ui/alerts/confirmation-alert';
+import ToastAlert from '@/components/ui/alerts/toast-alert';
+import BannerAlert from '@/components/ui/alerts/banner-alert';
+import FloatingAlert from '@/components/ui/alerts/floating-alert';
+import SlideInAlert from '@/components/ui/alerts/slide-in-alert';
+import ProgressAlert from '@/components/ui/alerts/progress-alert';
+import CountdownAlert from '@/components/ui/alerts/countdown-alert';
+import ExpandingAlert from '@/components/ui/alerts/expanding-alert';
+import StickyAlert from '@/components/ui/alerts/sticky-alert';
+import PulsatingAlert from '@/components/ui/alerts/pulsating-alert';
+import BouncingAlert from '@/components/ui/alerts/bouncing-alert';
+import ShakingAlert from '@/components/ui/alerts/shaking-alert';
+import FadingAlert from '@/components/ui/alerts/fading-alert';
+import ColorChangingAlert from '@/components/ui/alerts/color-changing-alert';
+import TypingAlert from '@/components/ui/alerts/typing-alert';
+import RotatingAlert from '@/components/ui/alerts/rotating-alert';
+import FlipAlert from '@/components/ui/alerts/flip-alert';
+import SwipeAlert from '@/components/ui/alerts/swipe-alert';
 
 // Success Alert Showcase
 export const SuccessAlertShowcase: React.FC = () => {
