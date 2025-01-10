@@ -1,13 +1,12 @@
 'use client'
-
 import React, { useState } from 'react';
 import SuccessAlert from './alerts/success-alert';
 import ErrorAlert from './alerts/error-alert';
 import WarningAlert from './alerts/warning-alert';
 import InfoAlert from './alerts/info-alert';
 import ConfirmationAlert from './alerts/confirmation-alert';
-import ToastAlert from './alerts/toast-alert';
 import BannerAlert from './alerts/banner-alert';
+import ToastAlert from './alerts/toast-alert';
 import FloatingAlert from './alerts/floating-alert';
 import SlideInAlert from './alerts/slide-in-alert';
 import ProgressAlert from './alerts/progress-alert';
