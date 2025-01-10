@@ -5,8 +5,8 @@ import { GoCopy } from "react-icons/go";
 
 
 export interface PreviewProps {
-  directoryName: string // Directory where the component resides
-  componentName: string // Name of the component
+  directoryName: string
+  componentName: string
   language?: string
   children?: React.ReactNode
 }
