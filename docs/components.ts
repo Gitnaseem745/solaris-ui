@@ -44,7 +44,7 @@ import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowc
 
 import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, ColoredSwitchShowcase, ColorPickerSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, ImageSwitchShowcase, OutlineSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SizePickerSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, TexturedSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/switches/switches-showcase";
 
-import { AnimatedCheckboxShowcase, ButtonGroupCheckboxShowcase, CardCheckboxShowcase, ColoredCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, ImageCheckboxShowcase, OutlineCheckboxShowcase, SimpleCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/checkboxes/checkbox-showcase";
+import { AnimatedCheckboxShowcase, ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/checkboxes/checkbox-showcase";
 
 export const usageGuide = {
     step: "Installation & Usage",
@@ -5988,66 +5988,6 @@ export const components: Record<string, ComponentDataProps[]> = {
 
       checkboxes: [
         {
-          id: 'simple-checkbox',
-          name: 'Simple Checkbox',
-          description: 'A basic checkbox component with a label.',
-          Component: SimpleCheckboxShowcase,
-          props: [
-            { name: 'id', type: 'string', description: 'Unique identifier for the checkbox' },
-            { name: 'name', type: 'string', description: 'Name attribute for the checkbox' },
-            { name: 'checked', type: 'boolean', description: 'Whether the checkbox is checked' },
-            { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', description: 'Function to call when the checkbox state changes' },
-            { name: 'label', type: 'string', description: 'Label text for the checkbox' },
-            { name: 'className', type: 'string', description: 'Additional CSS classes to apply' },
-          ],
-          examples: [
-            {
-              name: 'Basic usage',
-              code: '<SimpleCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Example Checkbox" />',
-            },
-          ],
-        },
-        {
-          id: 'colored-checkbox',
-          name: 'Colored Checkbox',
-          description: 'A checkbox with custom colors.',
-          Component: ColoredCheckboxShowcase,
-          props: [
-            { name: 'id', type: 'string', description: 'Unique identifier for the checkbox' },
-            { name: 'name', type: 'string', description: 'Name attribute for the checkbox' },
-            { name: 'checked', type: 'boolean', description: 'Whether the checkbox is checked' },
-            { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', description: 'Function to call when the checkbox state changes' },
-            { name: 'label', type: 'string', description: 'Label text for the checkbox' },
-            { name: 'className', type: 'string', description: 'Additional CSS classes to apply' },
-          ],
-          examples: [
-            {
-              name: 'Basic usage',
-              code: '<ColoredCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Colored Checkbox" />',
-            },
-          ],
-        },
-        {
-          id: 'animated-checkbox',
-          name: 'Animated Checkbox',
-          description: 'A checkbox with animation effects.',
-          Component: AnimatedCheckboxShowcase,
-          props: [
-            { name: 'id', type: 'string', description: 'Unique identifier for the checkbox' },
-            { name: 'name', type: 'string', description: 'Name attribute for the checkbox' },
-            { name: 'checked', type: 'boolean', description: 'Whether the checkbox is checked' },
-            { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', description: 'Function to call when the checkbox state changes' },
-            { name: 'label', type: 'string', description: 'Label text for the checkbox' },
-            { name: 'className', type: 'string', description: 'Additional CSS classes to apply' },
-          ],
-          examples: [
-            {
-              name: 'Basic usage',
-              code: '<AnimatedCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Animated Checkbox" />',
-            },
-          ],
-        },
-        {
           id: 'icon-checkbox',
           name: 'Icon Checkbox',
           description: 'A checkbox with an icon indicator.',
@@ -6064,26 +6004,6 @@ export const components: Record<string, ComponentDataProps[]> = {
             {
               name: 'Basic usage',
               code: '<IconCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Icon Checkbox" />',
-            },
-          ],
-        },
-        {
-          id: 'card-checkbox',
-          name: 'Card Checkbox',
-          description: 'A checkbox styled as a card.',
-          Component: CardCheckboxShowcase,
-          props: [
-            { name: 'id', type: 'string', description: 'Unique identifier for the checkbox' },
-            { name: 'name', type: 'string', description: 'Name attribute for the checkbox' },
-            { name: 'checked', type: 'boolean', description: 'Whether the checkbox is checked' },
-            { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', description: 'Function to call when the checkbox state changes' },
-            { name: 'label', type: 'string', description: 'Label text for the checkbox' },
-            { name: 'className', type: 'string', description: 'Additional CSS classes to apply' },
-          ],
-          examples: [
-            {
-              name: 'Basic usage',
-              code: '<CardCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Card Checkbox" />',
             },
           ],
         },
@@ -6124,27 +6044,6 @@ export const components: Record<string, ComponentDataProps[]> = {
             {
               name: 'Basic usage',
               code: '<OutlineCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Outline Checkbox" />',
-            },
-          ],
-        },
-        {
-          id: 'image-checkbox',
-          name: 'Image Checkbox',
-          description: 'A checkbox with an image.',
-          Component: ImageCheckboxShowcase,
-          props: [
-            { name: 'id', type: 'string', description: 'Unique identifier for the checkbox' },
-            { name: 'name', type: 'string', description: 'Name attribute for the checkbox' },
-            { name: 'checked', type: 'boolean', description: 'Whether the checkbox is checked' },
-            { name: 'onChange', type: '(event: React.ChangeEvent<HTMLInputElement>) => void', description: 'Function to call when the checkbox state changes' },
-            { name: 'label', type: 'string', description: 'Label text for the checkbox' },
-            { name: 'className', type: 'string', description: 'Additional CSS classes to apply' },
-            { name: 'imageSrc', type: 'string', description: 'Source URL for the image' },
-          ],
-          examples: [
-            {
-              name: 'Basic usage',
-              code: '<ImageCheckbox id="example" name="example" checked={false} onChange={() => {}} label="Image Checkbox" imageSrc="/path/to/image.jpg" />',
             },
           ],
         },
