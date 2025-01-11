@@ -22,6 +22,14 @@ export async function GET(request: Request) {
     `${componentName}.tsx`
   );
 
+  const directoryPath = path.join(process.cwd(), "components", "ui", "Buttons");
+  console.log('Attempting to read file from path:', filePath);
+  try {
+    const files = await fs.readdir(directoryPath);
+    console.log('Files in Buttons directory:', files);
+  } catch (err) {
+    console.error('Error reading directory:', err);
+  }
   try {
     const source = await fs.readFile(filePath, "utf8");
     return new Response(JSON.stringify({ source }), {
