@@ -2,7 +2,7 @@ import { BentoCard, BentoGrid } from "@/components/site/BentoCard/BentoCard";
 import { HiMiniBellAlert } from "react-icons/hi2";
 import { IoIosSwitch } from "react-icons/io";
 import { MdOutlineSmartButton } from "react-icons/md";
-import { TbCardsFilled, TbCheckbox, TbSelect } from "react-icons/tb";
+import { TbCheckbox, TbSelect } from "react-icons/tb";
 
 export default function page() {
     return (
