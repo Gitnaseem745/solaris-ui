@@ -1,5 +1,5 @@
 import { FaQuestionCircle } from 'react-icons/fa';
-import Alert from './Alert';
+import Alert from '../../Alert';
 
 interface ConfirmationAlertProps {
   message: string;

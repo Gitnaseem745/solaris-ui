@@ -1,5 +1,5 @@
 import { FaExclamationCircle } from 'react-icons/fa';
-import Alert from './Alert';
+import Alert from '../../Alert';
 
 interface WarningAlertProps {
   message: string;
