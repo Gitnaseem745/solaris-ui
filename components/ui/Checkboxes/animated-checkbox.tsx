@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FiCheck } from 'react-icons/fi';
 
 interface CheckboxProps {
   id: string;
@@ -26,8 +27,10 @@ export const AnimatedCheckbox: React.FC<CheckboxProps> = ({ id, name, checked, o
         animate={checked ? { scale: 1.1 } : { scale: 1 }}
         transition={{ duration: 0.2 }}
       ></motion.span>
+      <span className="w-5 h-5 mr-2 rounded border border-gray-300 flex-shrink-0 flex items-center justify-center">
+              {checked && <FiCheck className="text-green-500" />}
+      </span>
       {label}
     </label>
   </div>
 );
-

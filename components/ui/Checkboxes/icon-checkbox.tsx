@@ -28,4 +28,3 @@ export const IconCheckbox: React.FC<CheckboxProps> = ({ id, name, checked, onCha
     </label>
   </div>
 );
-
