@@ -7,17 +7,11 @@ import { AnimatedSwitch } from './animated-switch';
 import { IconSwitch } from './icon-switch';
 import { CardSwitch } from './card-switch';
 import { SquareSwitch } from './square-switch';
-import { OutlineSwitch } from './outline-switch';
-import { ImageSwitch } from './image-switch';
 import { ToggleSwitch } from './toggle-switch';
 import { DayNightSwitch } from './day-night-switch';
 import { VolumeSwitch } from './volume-switch';
 import { WifiSwitch } from './wifi-switch';
 import { SliderSwitch } from './slider-switch';
-import { ColorPickerSwitch } from './color-picker-switch';
-import { SizePickerSwitch } from './size-picker-switch';
-import { GradientSwitch } from './gradient-switch';
-import { TexturedSwitch } from './textured-switch';
 import { AnimatedIconSwitch } from './animated-icon-switch';
 import { PulsingSwitch } from './pulsing-switch';
 import { RippleSwitch } from './ripple-switch';
@@ -106,35 +100,6 @@ export const SquareSwitchShowcase: React.FC = () => {
   );
 };
 
-// Outline Switch Showcase
-export const OutlineSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <OutlineSwitch
-      id="outline-switch"
-      name="outline-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Outline Switch"
-    />
-  );
-};
-
-// Image Switch Showcase
-export const ImageSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <ImageSwitch
-      id="image-switch"
-      name="image-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Image Switch"
-      imageSrc="/placeholder.svg?height=100&width=100"
-    />
-  );
-};
-
 // Toggle Switch Showcase
 export const ToggleSwitchShowcase: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -201,64 +166,6 @@ export const SliderSwitchShowcase: React.FC = () => {
       checked={isChecked}
       onChange={() => setIsChecked(!isChecked)}
       label="Slider Switch"
-    />
-  );
-};
-
-// Color Picker Switch Showcase
-export const ColorPickerSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <ColorPickerSwitch
-      id="color-picker-switch"
-      name="color-picker-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Color Picker Switch"
-      onColor="#3B82F6"
-      offColor="#D1D5DB"
-    />
-  );
-};
-
-// Size Picker Switch Showcase
-export const SizePickerSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <SizePickerSwitch
-      id="size-picker-switch"
-      name="size-picker-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Size Picker Switch"
-    />
-  );
-};
-
-// Gradient Switch Showcase
-export const GradientSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <GradientSwitch
-      id="gradient-switch"
-      name="gradient-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Gradient Switch"
-    />
-  );
-};
-
-// Textured Switch Showcase
-export const TexturedSwitchShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <TexturedSwitch
-      id="textured-switch"
-      name="textured-switch"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Textured Switch"
     />
   );
 };
@@ -335,14 +242,6 @@ const SwitchShowcase: React.FC = () => {
           <SquareSwitchShowcase />
         </div>
         <div>
-          <h2 className="text-xl font-semibold mb-2">Outline Switch</h2>
-          <OutlineSwitchShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Image Switch</h2>
-          <ImageSwitchShowcase />
-        </div>
-        <div>
           <h2 className="text-xl font-semibold mb-2">Toggle Switch</h2>
           <ToggleSwitchShowcase />
         </div>
@@ -361,22 +260,6 @@ const SwitchShowcase: React.FC = () => {
         <div>
           <h2 className="text-xl font-semibold mb-2">Slider Switch</h2>
           <SliderSwitchShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Color Picker Switch</h2>
-          <ColorPickerSwitchShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Size Picker Switch</h2>
-          <SizePickerSwitchShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Gradient Switch</h2>
-          <GradientSwitchShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Textured Switch</h2>
-          <TexturedSwitchShowcase />
         </div>
         <div>
           <h2 className="text-xl font-semibold mb-2">Animated Icon Switch</h2>
