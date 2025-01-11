@@ -1,5 +1,5 @@
 import { FaExclamationTriangle } from 'react-icons/fa';
-import Alert from '../../Alert';
+import Alert from './Alert';
 
 interface ErrorAlertProps {
   message: string;

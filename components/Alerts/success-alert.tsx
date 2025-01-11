@@ -1,5 +1,5 @@
 import { FaCheckCircle } from 'react-icons/fa';
-import Alert from '../../Alert';
+import Alert from './Alert';
 
 interface SuccessAlertProps {
   message: string;

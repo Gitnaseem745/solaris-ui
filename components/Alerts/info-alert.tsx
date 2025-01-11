@@ -1,5 +1,5 @@
 import { FaInfoCircle } from 'react-icons/fa';
-import Alert from '../../Alert';
+import Alert from './Alert';
 
 interface InfoAlertProps {
   message: string;
