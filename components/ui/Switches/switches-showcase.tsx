@@ -15,6 +15,7 @@ import { SliderSwitch } from './slider-switch';
 import { AnimatedIconSwitch } from './animated-icon-switch';
 import { PulsingSwitch } from './pulsing-switch';
 import { RippleSwitch } from './ripple-switch';
+import { GradientSwitch } from './gradient-switch';
 
 // Simple Switch Showcase
 export const SimpleSwitchShowcase: React.FC = () => {
@@ -183,6 +184,20 @@ export const AnimatedIconSwitchShowcase: React.FC = () => {
     />
   );
 };
+
+// Gradient Switch Showcase
+export const GradientSwitchShowcase: React.FC = () => {
+    const [isChecked, setIsChecked] = useState(false);
+    return (
+      <GradientSwitch
+        id="gradient-switch"
+        name="gradient-switch"
+        checked={isChecked}
+        onChange={() => setIsChecked(!isChecked)}
+        label="Gradient Switch"
+      />
+    );
+  };
 
 // Pulsing Switch Showcase
 export const PulsingSwitchShowcase: React.FC = () => {
