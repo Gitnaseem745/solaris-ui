@@ -1,7 +1,8 @@
 import { BentoCard, BentoGrid } from "@/components/site/BentoCard/BentoCard";
 import { HiMiniBellAlert } from "react-icons/hi2";
+import { IoIosSwitch } from "react-icons/io";
 import { MdOutlineSmartButton } from "react-icons/md";
-import { TbCardsFilled, TbSelect } from "react-icons/tb";
+import { TbCardsFilled, TbCheckbox, TbSelect } from "react-icons/tb";
 
 export default function page() {
     return (
@@ -61,7 +62,7 @@ export default function page() {
                         background={
                             <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
                         }
-                        Icon={TbCardsFilled}
+                        Icon={IoIosSwitch}
                         description="Discover interactive and stylish switch designs to toggle settings effortlessly."
                         href="/components/switches/simple-switch"
                         cta="Explore Available Switches"
@@ -72,9 +73,9 @@ export default function page() {
                         background={
                             <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
                         }
-                        Icon={TbCardsFilled}
+                        Icon={TbCheckbox}
                         description="Discover interactive and stylish checkbox designs to check options effortlessly."
-                        href="/components/checkboxes/simple-checkbox"
+                        href="/components/checkboxes/icon-checkbox"
                         cta="Explore Available Checkboxes"
                     />
                 </BentoGrid>

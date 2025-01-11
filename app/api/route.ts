@@ -1,3 +1,4 @@
+import { toCapitalCase } from "@/utils/capital-case";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -12,12 +13,12 @@ export async function GET(request: Request) {
       { status: 400 }
     );
   }
-
+  const resolvedDirName = toCapitalCase(directoryName);
   const filePath = path.join(
     process.cwd(),
     "components",
     "ui",
-    directoryName,
+    resolvedDirName,
     `${componentName}.tsx`
   );
 
