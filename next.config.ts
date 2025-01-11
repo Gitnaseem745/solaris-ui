@@ -1,21 +1,9 @@
-const withMDX = require('@next/mdx')({
-    extension: /\.mdx?$/
-  });
+import type { NextConfig } from "next";
 
-  /** @type {import('next').NextConfig} */
-  const nextConfig = {
+const nextConfig: NextConfig = {
     typescript: {
-      ignoreBuildErrors: true,
-    },
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-    webpack(config) {
-      config.resolve.alias = {
-        ...(config.resolve.alias || {}),
-        '@': path.resolve(__dirname),
-      };
-      return config;
-    },
-  };
+        ignoreBuildErrors: true,
+      },
+};
 
-  const path = require('path');
-  module.exports = withMDX(nextConfig);
+export default nextConfig;
