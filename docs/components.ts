@@ -42,7 +42,7 @@ import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase,
 
 import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "@/components/ui/selects/selectShowcase";
 
-import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, ColoredSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/switches/switches-showcase";
+import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/switches/switches-showcase";
 
 import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/checkboxes/checkbox-showcase";
 
@@ -4634,77 +4634,6 @@ export const components: Record<string, ComponentDataProps[]> = {
             },
           ],
           Component: SimpleSwitchShowcase,
-        },
-        {
-          id: 'colored-switch',
-          name: 'Colored Switch',
-          description: 'A switch component with custom colors.',
-          dependencies: 'None',
-          installation: 'No additional installation required',
-          usage: `
-      import { ColoredSwitch } from '@/components/switches/colored-switch';
-
-      export default function MyComponent() {
-        const [checked, setChecked] = useState(false);
-        const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-          setChecked(event.target.checked);
-        };
-
-        return (
-          <ColoredSwitch
-            id="colored-switch"
-            name="colored-switch"
-            checked={checked}
-            onChange={handleChange}
-            label="Colored Switch"
-          />
-        );
-      }`,
-          props: [
-            {
-              name: 'id',
-              type: 'string',
-              default: '-',
-              description: 'Unique identifier for the switch input.',
-            },
-            {
-              name: 'name',
-              type: 'string',
-              default: '-',
-              description: 'Name attribute for the switch input.',
-            },
-            {
-              name: 'checked',
-              type: 'boolean',
-              default: 'false',
-              description: 'Indicates whether the switch is toggled on.',
-            },
-            {
-              name: 'onChange',
-              type: '(event: React.ChangeEvent<HTMLInputElement>) => void',
-              default: '-',
-              description: 'Callback function triggered when the switch state changes.',
-            },
-            {
-              name: 'label',
-              type: 'string',
-              default: "''",
-              description: 'Label text for the switch.',
-            },
-            {
-              name: 'className',
-              type: 'string',
-              default: "''",
-              description: 'Additional CSS classes to apply to the switch container.',
-            },
-          ],
-          examples: [
-            {
-              name: 'Default Colored Switch',
-              code: '<ColoredSwitch id="colored-switch" name="colored-switch" checked={false} onChange={() => {}} label="Colored Switch" />',
-            },
-          ],
-          Component: ColoredSwitchShowcase,
         },
         {
           id: 'animated-switch',
