@@ -45,6 +45,7 @@ import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowc
 import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/Switches/switches-showcase";
 
 import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/Checkboxes/checkbox-showcase";
+import DisabledButton from "@/components/ui/Buttons/disabled-button";
 
 export const usageGuide = {
     step: "Installation & Usage",
@@ -131,6 +132,32 @@ export const components: Record<string, ComponentDataProps[]> = {
                 { name: 'With Click Handler', code: `<DarkButton label="Proceed" onClick={() => alert('Dark Button Clicked!')} />` }
             ],
             Component: DarkButton
+        },
+        {
+            id: 'disabled-button',
+            name: 'Disabled Button',
+            description: 'This is a Disabled Button.',
+            dependencies: 'None',
+            installation: 'None',
+            usage: `import { DisabledButton } from '@components/disabled-button';
+
+        export default function MyComponent() {
+            const handleDisabledButtonClick = () => {
+                console.log('Disabled button clicked!');
+            };
+
+            return <DisabledButton label="Dark" onClick={handleDisabledButtonClick} />;
+        }`,
+            props: [
+                { name: 'label', type: 'string', default: 'Disabled', description: 'The label of the button' },
+                { name: 'onClick', type: '() => void', default: 'undefined', description: 'The callback to trigger when the button is clicked' }
+            ],
+            examples: [
+                { name: 'Default', code: `<DisabledButton label="Dark" />` },
+                { name: 'Custom Label', code: `<DisabledButton label="Light" />` },
+                { name: 'With Click Handler', code: `<DisabledButton label="Proceed" onClick={() => alert('Disabled Button Clicked!')} />` }
+            ],
+            Component: DisabledButton
         },
         {
             id: 'motion-default-button',
