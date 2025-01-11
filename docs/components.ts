@@ -1,50 +1,50 @@
-import DarkButton from "@/components/ui/buttons/dark-button";
-import DefaultButton from "@/components/ui/buttons/default-button";
-import DeleteButton from "@/components/ui/buttons/delete-button";
-import FloatingActionButton from "@/components/ui/buttons/floating-action-button";
-import MotionBlade from "@/components/ui/buttons/motion-blade-button";
-import MotionDefault from "@/components/ui/buttons/motion-default-button";
-import MotionDelete from "@/components/ui/buttons/motion-delete-button";
-import MotionDownload from "@/components/ui/buttons/motion-download-button";
-import MotionMail from "@/components/ui/buttons/motion-email-button";
-import MotionHelp from "@/components/ui/buttons/motion-help-button";
-import MotionSpinner from "@/components/ui/buttons/motion-spinner-button";
-import MotionLogin from "@/components/ui/buttons/motion-login-button";
-import MotionScale from "@/components/ui/buttons/motion-scale-button";
-import MotionSend from "@/components/ui/buttons/motion-send-button";
-import MotionShimmer from "@/components/ui/buttons/motion-shimmer-button";
-import MotionShutter from "@/components/ui/buttons/motion-shutter-button";
-import MotionUpload from "@/components/ui/buttons/motion-upload-button";
-import SocialButton from "@/components/ui/buttons/social-button";
-import MotionLoading from "@/components/ui/buttons/motion-loading-button";
-import MotionLoading2 from "@/components/ui/buttons/motion-loading-button-2";
-import BreathingBorder from "@/components/ui/buttons/breathing-border-button";
-import GlassButton from "@/components/ui/buttons/glass-button";
-import MailButton from "@/components/ui/buttons/mail-button";
-import MailButton2 from "@/components/ui/buttons/mail-button-2";
-import RoundedButton from "@/components/ui/buttons/rounded-button";
-import BorderButton from "@/components/ui/buttons/border-button";
-import LightEffectButton from "@/components/ui/buttons/light-effect-button";
-import GlowingButton from "@/components/ui/buttons/glowing-button";
-import UnderlineButton from "@/components/ui/buttons/underline-button";
-import ShinyGlass from "@/components/ui/buttons/shiny-glass-button";
-import RGBBGButton from "@/components/ui/buttons/rgb-bg-button";
-import SmoothFillButton from "@/components/ui/buttons/smooth-hover-fill-button";
-import SmoothZoomOut from "@/components/ui/buttons/smooth-zoom-out-button";
+import DarkButton from "@/components/ui/Buttons/dark-button";
+import DefaultButton from "@/components/ui/Buttons/default-button";
+import DeleteButton from "@/components/ui/Buttons/delete-button";
+import FloatingActionButton from "@/components/ui/Buttons/floating-action-button";
+import MotionBlade from "@/components/ui/Buttons/motion-blade-button";
+import MotionDefault from "@/components/ui/Buttons/motion-default-button";
+import MotionDelete from "@/components/ui/Buttons/motion-delete-button";
+import MotionDownload from "@/components/ui/Buttons/motion-download-button";
+import MotionMail from "@/components/ui/Buttons/motion-email-button";
+import MotionHelp from "@/components/ui/Buttons/motion-help-button";
+import MotionSpinner from "@/components/ui/Buttons/motion-spinner-button";
+import MotionLogin from "@/components/ui/Buttons/motion-login-button";
+import MotionScale from "@/components/ui/Buttons/motion-scale-button";
+import MotionSend from "@/components/ui/Buttons/motion-send-button";
+import MotionShimmer from "@/components/ui/Buttons/motion-shimmer-button";
+import MotionShutter from "@/components/ui/Buttons/motion-shutter-button";
+import MotionUpload from "@/components/ui/Buttons/motion-upload-button";
+import SocialButton from "@/components/ui/Buttons/social-button";
+import MotionLoading from "@/components/ui/Buttons/motion-loading-button";
+import MotionLoading2 from "@/components/ui/Buttons/motion-loading-button-2";
+import BreathingBorder from "@/components/ui/Buttons/breathing-border-button";
+import GlassButton from "@/components/ui/Buttons/glass-button";
+import MailButton from "@/components/ui/Buttons/mail-button";
+import MailButton2 from "@/components/ui/Buttons/mail-button-2";
+import RoundedButton from "@/components/ui/Buttons/rounded-button";
+import BorderButton from "@/components/ui/Buttons/border-button";
+import LightEffectButton from "@/components/ui/Buttons/light-effect-button";
+import GlowingButton from "@/components/ui/Buttons/glowing-button";
+import UnderlineButton from "@/components/ui/Buttons/underline-button";
+import ShinyGlass from "@/components/ui/Buttons/shiny-glass-button";
+import RGBBGButton from "@/components/ui/Buttons/rgb-bg-button";
+import SmoothFillButton from "@/components/ui/Buttons/smooth-hover-fill-button";
+import SmoothZoomOut from "@/components/ui/Buttons/smooth-zoom-out-button";
 
 import BentoLogin from "@/components/ui/Cards/bento-login";
 import MinJobCard from "@/components/ui/Cards/minimal-job-card";
 import ProfPricing from "@/components/ui/Cards/professional-pricing-card";
 
 
-import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "@/components/ui/alerts/alert-showcases";
+import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "@/components/ui/Alerts/alert-showcases";
 
 
-import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "@/components/ui/selects/selectShowcase";
+import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "@/components/ui/Selects/selectShowcase";
 
-import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/switches/switches-showcase";
+import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/Switches/switches-showcase";
 
-import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/checkboxes/checkbox-showcase";
+import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/Checkboxes/checkbox-showcase";
 
 export const usageGuide = {
     step: "Installation & Usage",
