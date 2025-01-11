@@ -1,14 +1,10 @@
 'use client'
 
 import { useState } from 'react';
-import { SimpleCheckbox } from './simple-checkbox';
-import { ColoredCheckbox } from './colored-checkbox';
 import { AnimatedCheckbox } from './animated-checkbox';
 import { IconCheckbox } from './icon-checkbox';
-import { CardCheckbox } from './card-checkbox';
 import { SquareCheckbox } from './square-checkbox';
 import { OutlineCheckbox } from './outline-checkbox';
-import { ImageCheckbox } from './image-checkbox';
 import { ToggleCheckbox } from './toggle-checkbox';
 import { StarCheckbox } from './star-checkbox';
 import { HeartCheckbox } from './heart-checkbox';
@@ -21,33 +17,6 @@ import { SizePickerCheckbox } from './size-picker-checkbox';
 import { GradientCheckbox } from './gradient-checkbox';
 import { TexturedCheckbox } from './textured-checkbox';
 
-// Simple Checkbox Showcase
-export const SimpleCheckboxShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <SimpleCheckbox
-      id="simple-checkbox"
-      name="simple-checkbox"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Simple Checkbox"
-    />
-  );
-};
-
-// Colored Checkbox Showcase
-export const ColoredCheckboxShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <ColoredCheckbox
-      id="colored-checkbox"
-      name="colored-checkbox"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Colored Checkbox"
-    />
-  );
-};
 
 // Animated Checkbox Showcase
 export const AnimatedCheckboxShowcase: React.FC = () => {
@@ -77,20 +46,6 @@ export const IconCheckboxShowcase: React.FC = () => {
   );
 };
 
-// Card Checkbox Showcase
-export const CardCheckboxShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <CardCheckbox
-      id="card-checkbox"
-      name="card-checkbox"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Card Checkbox"
-    />
-  );
-};
-
 // Square Checkbox Showcase
 export const SquareCheckboxShowcase: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -115,21 +70,6 @@ export const OutlineCheckboxShowcase: React.FC = () => {
       checked={isChecked}
       onChange={() => setIsChecked(!isChecked)}
       label="Outline Checkbox"
-    />
-  );
-};
-
-// Image Checkbox Showcase
-export const ImageCheckboxShowcase: React.FC = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  return (
-    <ImageCheckbox
-      id="image-checkbox"
-      name="image-checkbox"
-      checked={isChecked}
-      onChange={() => setIsChecked(!isChecked)}
-      label="Image Checkbox"
-      imageSrc="/placeholder.svg?height=100&width=100"
     />
   );
 };
@@ -295,14 +235,6 @@ const CheckboxShowcase: React.FC = () => {
       <h1 className="text-3xl font-bold mb-6">Checkbox Showcase</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div>
-          <h2 className="text-xl font-semibold mb-2">Simple Checkbox</h2>
-          <SimpleCheckboxShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Colored Checkbox</h2>
-          <ColoredCheckboxShowcase />
-        </div>
-        <div>
           <h2 className="text-xl font-semibold mb-2">Animated Checkbox</h2>
           <AnimatedCheckboxShowcase />
         </div>
@@ -311,20 +243,12 @@ const CheckboxShowcase: React.FC = () => {
           <IconCheckboxShowcase />
         </div>
         <div>
-          <h2 className="text-xl font-semibold mb-2">Card Checkbox</h2>
-          <CardCheckboxShowcase />
-        </div>
-        <div>
           <h2 className="text-xl font-semibold mb-2">Square Checkbox</h2>
           <SquareCheckboxShowcase />
         </div>
         <div>
           <h2 className="text-xl font-semibold mb-2">Outline Checkbox</h2>
           <OutlineCheckboxShowcase />
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Image Checkbox</h2>
-          <ImageCheckboxShowcase />
         </div>
         <div>
           <h2 className="text-xl font-semibold mb-2">Toggle Checkbox</h2>
