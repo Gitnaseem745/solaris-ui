@@ -1,16 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-    typescript: {
-        ignoreBuildErrors: true,
-      },
-};
 const withMDX = require('@next/mdx')({
     extension: /\.mdx?$/
-});
+  });
 
-module.exports = withMDX({
+  /** @type {import('next').NextConfig} */
+  const nextConfig = {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-});
+  };
 
-export default nextConfig;
+  module.exports = withMDX(nextConfig);
