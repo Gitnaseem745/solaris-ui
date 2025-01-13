@@ -109,7 +109,7 @@ interface PreviewSectionProps {
 
 function PreviewSection({ onCopy, copied, children}: PreviewSectionProps) {
   return (
-    <div className="relative rounded-lg overflow-hidden border border-neutral-800 bg-neutral-900 p-4 flex flex-col justify-center min-h-[300px]">
+    <div className="relative rounded-lg border border-neutral-800 bg-neutral-900 p-4 flex flex-col justify-center min-h-[300px]">
       {/* Copy Button */}
       <div className="self-end">
         <CopyButton onCopy={onCopy} copied={copied} className='absolute top-2 right-2' />

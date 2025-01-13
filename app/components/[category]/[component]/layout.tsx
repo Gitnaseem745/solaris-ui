@@ -27,7 +27,7 @@ export default async function Layout({
   return (
     <>
     {/* <DocsAlert /> */}
-    <div className="flex flex-col w-full max-w-screen-xl mx-auto mt-10 lg:flex-row max-lg:mt-8">
+    <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
       {/* Sidebar */}
       <aside className="w-full lg:w-1/4">
         <Sidebar

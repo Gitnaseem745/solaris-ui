@@ -40,7 +40,7 @@ export default async function Page({
     ];
 
     return (
-        <div className="w-full flex justify-center items-center mt-2 font-sans">
+        <div className="w-full flex justify-center items-center font-sans">
             <div className="text-foreground w-full mx-auto">
                 <main className="flex-1 p-6 lg:px-8">
                 <div className="gap-3 hidden max-lg:flex absolute top-5 right-4">

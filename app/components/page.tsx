@@ -2,7 +2,7 @@ import { BentoCard, BentoGrid } from "@/components/site/BentoCard/BentoCard";
 import { HiMiniBellAlert } from "react-icons/hi2";
 import { IoIosSwitch } from "react-icons/io";
 import { MdOutlineSmartButton } from "react-icons/md";
-import { TbCheckbox, TbSelect } from "react-icons/tb";
+import { TbCardsFilled, TbCheckbox, TbSelect } from "react-icons/tb";
 
 export default function page() {
     return (
@@ -45,17 +45,6 @@ export default function page() {
                         href="/components/alerts/success-alert"
                         cta="Check It Out"
                     />
-                    {/* <BentoCard
-                        name="Card Components"
-                        classname="col-span-2 max-md:col-span-4"
-                        background={
-                            <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
-                        }
-                        Icon={TbCardsFilled}
-                        description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
-                        href="/components/cards/bento-login"
-                        cta="Explore Cards"
-                    /> */}
                     <BentoCard
                         name="Switch Components"
                         classname="col-span-2 max-md:col-span-4"
@@ -66,7 +55,7 @@ export default function page() {
                         description="Discover interactive and stylish switch designs to toggle settings effortlessly."
                         href="/components/switches/simple-switch"
                         cta="Explore Available Switches"
-                    />
+                        />
                     <BentoCard
                         name="Checkbox Components"
                         classname="col-span-2 max-md:col-span-4"
@@ -77,7 +66,18 @@ export default function page() {
                         description="Discover interactive and stylish checkbox designs to check options effortlessly."
                         href="/components/checkboxes/icon-checkbox"
                         cta="Explore Available Checkboxes"
-                    />
+                        />
+                        <BentoCard
+                            name="Card Components"
+                            classname="col-span-2 max-md:col-span-4 pointer-events-none cursor-not-allowed"
+                            background={
+                                <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
+                            }
+                            Icon={TbCardsFilled}
+                            description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
+                            href="/components"
+                            cta="Coming Soon"
+                        />
                 </BentoGrid>
             </div>
         </div>
