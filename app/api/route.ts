@@ -13,12 +13,12 @@ export async function GET(request: Request) {
       { status: 400 }
     );
   }
-  const resolvedDirName = toCapitalCase(directoryName === "buttons" ? 'btns' : directoryName);
+  const resolvedDirName = toCapitalCase(directoryName);
   const filePath = path.join(
     process.cwd(),
     "components",
     "ui",
-    resolvedDirName,
+    directoryName,
     `${componentName}.tsx`
   );
 
