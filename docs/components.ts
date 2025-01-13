@@ -32,7 +32,7 @@ import RGBBGButton from "../components/ui/buttons/rgb-bg-button";
 import SmoothFillButton from "../components/ui/buttons/smooth-hover-fill-button";
 import SmoothZoomOut from "../components/ui/buttons/smooth-zoom-out-button";
 
-import BentoLogin from "../components/ui/Cards/bento-login";
+import BentoLogin from "../components/ui/bento-login";
 import MinJobCard from "../components/ui/Cards/minimal-job-card";
 import ProfPricing from "../components/ui/Cards/professional-pricing-card";
 
