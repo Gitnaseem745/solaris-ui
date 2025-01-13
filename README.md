@@ -1,9 +1,9 @@
 # Solaris UI Library
 
-Welcome to Solaris UI, a collection of customizable and beautifully designed UI components for your React projects. I have launched only the Button components, but more will be launched soon.
+Welcome to Solaris UI, a collection of customizable and beautifully designed UI components for your React projects.
 
 ## Features
-- **Button Components**: A set of stylish and functional button components to enhance your application’s UI.
+- **UI Components**: A set of stylish and functional UI components to enhance your application’s UI.
 - **Built with TypeScript & Tailwind CSS**: The library is developed using TypeScript and Tailwind CSS, ensuring easy integration and customization.
 - **Customizable**: Fully customizable to match your project’s design requirements.
 - **Growing Library**: Expect more components like form elements, modals, cards, etc., in future releases.
@@ -25,30 +25,7 @@ For streamlined usage:
 ## Usage
 
 ### Step 1: Choose and Copy Your Component
-Currently, Solaris provide various button components such as:
-1. `DarkButton`
-1. `LightButton`
-1. `DisabledButton`
-1. `DefaultButton`
-1. `GradientButton`
-1. `LightupButton`
-1. `GlowingButton`
-1. `BottomFillButton`
-1. `TopFillButton`
-1. `UnderlineButton`
-1. `RoundedButton`
-1. `MotionButton`
-1. `DeleteButton`
-1. `ScaleButton`
-1. `EmailButton`
-1. `UploadButton`
-1. `DownloadButton`
-1. `HelpButton`
-1. `GlassButton`
-1. `ShinyGlassButton`
-1. `BorderButton`
-1. `ShinyBorderButton`
-1. `GradientBgButton`
+Copy the source code of the component you want to use from the library.
 
 ### Step 2: Create a New `.tsx` File
 Inside your project, create a new `.tsx` file, e.g., `MyCustomButton.tsx`.
