@@ -12,7 +12,7 @@ import { DayNightSwitch } from './day-night-switch';
 import { VolumeSwitch } from './volume-switch';
 import { WifiSwitch } from './wifi-switch';
 import { SliderSwitch } from './slider-switch';
-import { AnimatedIconSwitch } from './animated-icon-switch';
+import { AnimatedIconSwitch } from '../animated-icon-switch';
 import { PulsingSwitch } from './pulsing-switch';
 import { RippleSwitch } from './ripple-switch';
 import { GradientSwitch } from './gradient-switch';
