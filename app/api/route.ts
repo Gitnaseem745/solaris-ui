@@ -31,7 +31,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error(`Error reading ${componentName} file ${filePath}:`, error);
     return new Response(
-      JSON.stringify({ error: `Failed to read ${componentName} file at ${filePath}.` }),
+      JSON.stringify({ error: `Failed to read ${componentName} file at ${filePath}` }),
       { status: 500 }
     );
   }

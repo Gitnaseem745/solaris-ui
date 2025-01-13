@@ -1,51 +1,51 @@
-import DarkButton from "@/components/ui/buttons/dark-button";
-import DefaultButton from "@/components/ui/buttons/default-button";
-import DeleteButton from "@/components/ui/buttons/delete-button";
-import FloatingActionButton from "@/components/ui/buttons/floating-action-button";
-import MotionBlade from "@/components/ui/buttons/motion-blade-button";
-import MotionDefault from "@/components/ui/buttons/motion-default-button";
-import MotionDelete from "@/components/ui/buttons/motion-delete-button";
-import MotionDownload from "@/components/ui/buttons/motion-download-button";
-import MotionMail from "@/components/ui/buttons/motion-email-button";
-import MotionHelp from "@/components/ui/buttons/motion-help-button";
-import MotionSpinner from "@/components/ui/buttons/motion-spinner-button";
-import MotionLogin from "@/components/ui/buttons/motion-login-button";
-import MotionScale from "@/components/ui/buttons/motion-scale-button";
-import MotionSend from "@/components/ui/buttons/motion-send-button";
-import MotionShimmer from "@/components/ui/buttons/motion-shimmer-button";
-import MotionShutter from "@/components/ui/buttons/motion-shutter-button";
-import MotionUpload from "@/components/ui/buttons/motion-upload-button";
-import SocialButton from "@/components/ui/buttons/social-button";
-import MotionLoading from "@/components/ui/buttons/motion-loading-button";
-import MotionLoading2 from "@/components/ui/buttons/motion-loading-button-2";
-import BreathingBorder from "@/components/ui/buttons/breathing-border-button";
-import GlassButton from "@/components/ui/buttons/glass-button";
-import MailButton from "@/components/ui/buttons/mail-button";
-import MailButton2 from "@/components/ui/buttons/mail-button-2";
-import RoundedButton from "@/components/ui/buttons/rounded-button";
-import BorderButton from "@/components/ui/buttons/border-button";
-import LightEffectButton from "@/components/ui/buttons/light-effect-button";
-import GlowingButton from "@/components/ui/buttons/glowing-button";
-import UnderlineButton from "@/components/ui/buttons/underline-button";
-import ShinyGlass from "@/components/ui/buttons/shiny-glass-button";
-import RGBBGButton from "@/components/ui/buttons/rgb-bg-button";
-import SmoothFillButton from "@/components/ui/buttons/smooth-hover-fill-button";
-import SmoothZoomOut from "@/components/ui/buttons/smooth-zoom-out-button";
+import DarkButton from "../components/ui/buttons/dark-button";
+import DefaultButton from "../components/ui/buttons/default-button";
+import DeleteButton from "../components/ui/buttons/delete-button";
+import FloatingActionButton from "../components/ui/buttons/floating-action-button";
+import MotionBlade from "../components/ui/buttons/motion-blade-button";
+import MotionDefault from "../components/ui/buttons/motion-default-button";
+import MotionDelete from "../components/ui/buttons/motion-delete-button";
+import MotionDownload from "../components/ui/buttons/motion-download-button";
+import MotionMail from "../components/ui/buttons/motion-email-button";
+import MotionHelp from "../components/ui/buttons/motion-help-button";
+import MotionSpinner from "../components/ui/buttons/motion-spinner-button";
+import MotionLogin from "../components/ui/buttons/motion-login-button";
+import MotionScale from "../components/ui/buttons/motion-scale-button";
+import MotionSend from "../components/ui/buttons/motion-send-button";
+import MotionShimmer from "../components/ui/buttons/motion-shimmer-button";
+import MotionShutter from "../components/ui/buttons/motion-shutter-button";
+import MotionUpload from "../components/ui/buttons/motion-upload-button";
+import SocialButton from "../components/ui/buttons/social-button";
+import MotionLoading from "../components/ui/buttons/motion-loading-button";
+import MotionLoading2 from "../components/ui/buttons/motion-loading-button-2";
+import BreathingBorder from "../components/ui/buttons/breathing-border-button";
+import GlassButton from "../components/ui/buttons/glass-button";
+import MailButton from "../components/ui/buttons/mail-button";
+import MailButton2 from "../components/ui/buttons/mail-button-2";
+import RoundedButton from "../components/ui/buttons/rounded-button";
+import BorderButton from "../components/ui/buttons/border-button";
+import LightEffectButton from "../components/ui/buttons/light-effect-button";
+import GlowingButton from "../components/ui/buttons/glowing-button";
+import UnderlineButton from "../components/ui/buttons/underline-button";
+import ShinyGlass from "../components/ui/buttons/shiny-glass-button";
+import RGBBGButton from "../components/ui/buttons/rgb-bg-button";
+import SmoothFillButton from "../components/ui/buttons/smooth-hover-fill-button";
+import SmoothZoomOut from "../components/ui/buttons/smooth-zoom-out-button";
 
-import BentoLogin from "@/components/ui/Cards/bento-login";
-import MinJobCard from "@/components/ui/Cards/minimal-job-card";
-import ProfPricing from "@/components/ui/Cards/professional-pricing-card";
-
-
-import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "@/components/ui/alerts/alert-showcases";
+import BentoLogin from "../components/ui/Cards/bento-login";
+import MinJobCard from "../components/ui/Cards/minimal-job-card";
+import ProfPricing from "../components/ui/Cards/professional-pricing-card";
 
 
-import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "@/components/ui/selects/selectShowcase";
+import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "../components/ui/alerts/alert-showcases";
 
-import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "@/components/ui/switches/switches-showcase";
 
-import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "@/components/ui/checkboxes/checkbox-showcase";
-import DisabledButton from "@/components/ui/buttons/disabled-button";
+import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "../components/ui/selects/selectShowcase";
+
+import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "../components/ui/switches/switches-showcase";
+
+import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "../components/ui/checkboxes/checkbox-showcase";
+import DisabledButton from "../components/ui/buttons/disabled-button";
 
 export const usageGuide = {
     step: "Installation & Usage",
@@ -87,7 +87,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'This is a Default button.',
             dependencies: 'None',
             installation: 'None',
-            usage: `import { DefaultButton } from '@components/default-button';
+            usage: `import { DefaultButton } from '..components/default-button';
 
         export default function MyComponent() {
             const handleButtonClick = () => {
@@ -113,7 +113,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'This is a Dark button.',
             dependencies: 'None',
             installation: 'None',
-            usage: `import { DarkButton } from '@components/dark-button';
+            usage: `import { DarkButton } from '..components/dark-button';
 
         export default function MyComponent() {
             const handleDarkButtonClick = () => {
@@ -139,7 +139,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'This is a Disabled Button.',
             dependencies: 'None',
             installation: 'None',
-            usage: `import { DisabledButton } from '@components/disabled-button';
+            usage: `import { DisabledButton } from '..components/disabled-button';
 
         export default function MyComponent() {
             const handleDisabledButtonClick = () => {
@@ -165,7 +165,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'This is a Motion button with hover animations.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { MotionDefault } from '@components/motion-default';
+            usage: `import { MotionDefault } from '..components/motion-default';
 
         export default function MyComponent() {
             const handleMotionClick = () => {
@@ -191,7 +191,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A Floating Action Button with smooth animations and dual labels.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { FloatingActionButton } from '@components/floating-action-button';
+            usage: `import { FloatingActionButton } from '..components/floating-action-button';
 
         export default function MyComponent() {
             const handleFabClick = () => {
@@ -218,7 +218,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A motion-enabled delete button with hover animations.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { MotionDelete } from '@components/motion-delete';
+            usage: `import { MotionDelete } from '..components/motion-delete';
 
         export default function MyComponent() {
             const handleDeleteClick = () => {
@@ -245,7 +245,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A motion-enabled download button with hover animations.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { MotionDownload } from '@components/motion-download';
+            usage: `import { MotionDownload } from '..components/motion-download';
 
         export default function MyComponent() {
             const handleDownloadClick = () => {
@@ -271,7 +271,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A motion-enabled email button with hover animations.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { MotionMail } from '@components/motion-mail';
+            usage: `import { MotionMail } from '..components/motion-mail';
 
         export default function MyComponent() {
             const handleMailClick = () => {
@@ -297,7 +297,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A motion-enabled help button with hover animations.',
             dependencies: 'framer-motion, react-icons',
             installation: 'npm install framer-motion react-icons',
-            usage: `import { MotionHelp } from '@components/motion-help';
+            usage: `import { MotionHelp } from '..components/motion-help';
 
         export default function MyComponent() {
             const handleHelpClick = () => {
@@ -323,7 +323,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             description: 'A motion-enabled shutter button with dynamic hover effects.',
             dependencies: 'framer-motion',
             installation: 'npm install framer-motion',
-            usage: `import { MotionShutter } from '@components/motion-shutter';
+            usage: `import { MotionShutter } from '..components/motion-shutter';
 
         export default function MyComponent() {
             const handleShutterClick = () => {
@@ -755,7 +755,7 @@ export const components: Record<string, ComponentDataProps[]> = {
             dependencies: 'framer-motion',
             installation: 'npm install framer-motion',
             usage: `
-          import { MotionSpinner } from '@components/motion-loading-button-2';
+          import { MotionSpinner } from '..components/motion-loading-button-2';
 
           export default function MyComponent() {
             const handleButtonClick = async () => {
@@ -1555,9 +1555,9 @@ export const components: Record<string, ComponentDataProps[]> = {
             name: 'Bento Login',
             description: 'A Bento Login Card.',
             dependencies: 'None',
-            installation: 'npm install @yourlib/Bento-Login',
+            installation: 'npm install ..yourlib/Bento-Login',
             usage: `
-          import { GlassButton } from '@components/Bento-Login';
+          import { GlassButton } from '..components/Bento-Login';
 
           export default function MyComponent() {
             const handleClick = () => {
@@ -1593,9 +1593,9 @@ export const components: Record<string, ComponentDataProps[]> = {
             name: 'Job Card',
             description: 'A Minimalistic Job Card.',
             dependencies: 'None',
-            installation: 'npm install @yourlib/Bento-Login',
+            installation: 'npm install ..yourlib/Bento-Login',
             usage: `
-          import { GlassButton } from '@components/Bento-Login';
+          import { GlassButton } from '..components/Bento-Login';
 
           export default function MyComponent() {
             const handleClick = () => {
@@ -1631,9 +1631,9 @@ export const components: Record<string, ComponentDataProps[]> = {
             name: 'Pricing Card',
             description: 'A Minimalistic Job Card.',
             dependencies: 'None',
-            installation: 'npm install @yourlib/Bento-Login',
+            installation: 'npm install ..yourlib/Bento-Login',
             usage: `
-          import { GlassButton } from '@components/Bento-Login';
+          import { GlassButton } from '..components/Bento-Login';
 
           export default function MyComponent() {
             const handleClick = () => {
@@ -4598,7 +4598,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { SimpleSwitch } from '@/components/switches/simple-switch';
+      import { SimpleSwitch } from '../components/switches/simple-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -4669,7 +4669,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'framer-motion',
           installation: 'npm install framer-motion',
           usage: `
-      import { AnimatedSwitch } from '@/components/switches/animated-switch';
+      import { AnimatedSwitch } from '../components/switches/animated-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -4740,7 +4740,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { IconSwitch } from '@/components/switches/icon-switch';
+      import { IconSwitch } from '../components/switches/icon-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -4811,7 +4811,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { CardSwitch } from '@/components/switches/card-switch';
+      import { CardSwitch } from '../components/switches/card-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -4882,7 +4882,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { SquareSwitch } from '@/components/switches/square-switch';
+      import { SquareSwitch } from '../components/switches/square-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -4953,7 +4953,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { ToggleSwitch } from '@/components/switches/toggle-switch';
+      import { ToggleSwitch } from '../components/switches/toggle-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5024,7 +5024,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { DayNightSwitch } from '@/components/switches/day-night-switch';
+      import { DayNightSwitch } from '../components/switches/day-night-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5095,7 +5095,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { VolumeSwitch } from '@/components/switches/volume-switch';
+      import { VolumeSwitch } from '../components/switches/volume-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5166,7 +5166,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { WifiSwitch } from '@/components/switches/wifi-switch';
+      import { WifiSwitch } from '../components/switches/wifi-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5237,7 +5237,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { SliderSwitch } from '@/components/switches/slider-switch';
+      import { SliderSwitch } from '../components/switches/slider-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5308,7 +5308,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'None',
           installation: 'No additional installation required',
           usage: `
-      import { GradientSwitch } from '@/components/switches/gradient-switch';
+      import { GradientSwitch } from '../components/switches/gradient-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5379,7 +5379,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'framer-motion',
           installation: 'npm install framer-motion',
           usage: `
-      import { AnimatedIconSwitch } from '@/components/switches/animated-icon-switch';
+      import { AnimatedIconSwitch } from '../components/switches/animated-icon-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5450,7 +5450,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'framer-motion',
           installation: 'npm install framer-motion',
           usage: `
-      import { PulsingSwitch } from '@/components/switches/pulsing-switch';
+      import { PulsingSwitch } from '../components/switches/pulsing-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
@@ -5521,7 +5521,7 @@ export const components: Record<string, ComponentDataProps[]> = {
           dependencies: 'framer-motion',
           installation: 'npm install framer-motion',
           usage: `
-      import { RippleSwitch } from '@/components/switches/ripple-switch';
+      import { RippleSwitch } from '../components/switches/ripple-switch';
 
       export default function MyComponent() {
         const [checked, setChecked] = useState(false);
