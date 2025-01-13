@@ -25,7 +25,7 @@ import MaterialSelect from './material-select';
 import IconLabelSelect from './icon-label-select';
 import TagSelect from './tag-select';
 import ChipSelect from './chip-select';
-import AccordionSelect from './accordion-select';
+import AccordionSelect from '../accordion-select';
 import ButtonGroupSelect from './button-group-select';
 import SegmentedControlSelect from './segmented-control-select';
 import TreeSelect from './tree-select';
