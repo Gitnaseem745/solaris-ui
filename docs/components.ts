@@ -33,8 +33,8 @@ import SmoothFillButton from "../components/ui/buttons/smooth-hover-fill-button"
 import SmoothZoomOut from "../components/ui/buttons/smooth-zoom-out-button";
 
 import BentoLogin from "../components/ui/cards/bento-login";
-import MinJobCard from "../components/ui/Cards/minimal-job-card";
-import ProfPricing from "../components/ui/Cards/professional-pricing-card";
+import MinJobCard from "../components/ui/cards/minimal-job-card";
+import ProfPricing from "../components/ui/cards/professional-pricing-card";
 
 
 import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "../components/ui/alerts/alert-showcases";
@@ -42,7 +42,7 @@ import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase,
 
 import { AccordionSelectShowcase, AnimatedBorderSelectShowcase, AsyncSelectShowcase, BorderlessSelectShowcase, ButtonGroupSelectShowcase, ChipSelectShowcase, ColorSelectShowcase, ComboboxSelectShowcase, CreatableSelectShowcase, FadingSelectShowcase, FloatingLabelSelectShowcase, GlassmorphismSelectShowcase, GradientSelectShowcase, GroupedSelectShowcase, IconLabelSelectShowcase, IconSelectShowcase, MaterialSelectShowcase, MinimalSelectShowcase, MultiSelectShowcase, NeumorphicSelectShowcase, OutlinedSelectShowcase, PillSelectShowcase, RotateSelectShowcase, RoundedSelectShowcase, ScaleSelectShowcase, SearchableSelectShowcase, SegmentedControlSelectShowcase, SimpleSelectShowcase, SlideSelectShowcase, TagSelectShowcase, TreeSelectShowcase, UnderlinedSelectShowcase, VirtualizedSelectShowcase } from "../components/ui/selects/selectShowcase";
 
-import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "../components/ui/Switches/switches-showcase";
+import { AnimatedIconSwitchShowcase, AnimatedSwitchShowcase, CardSwitchShowcase, DayNightSwitchShowcase, GradientSwitchShowcase, IconSwitchShowcase, PulsingSwitchShowcase, RippleSwitchShowcase, SimpleSwitchShowcase, SliderSwitchShowcase, SquareSwitchShowcase, ToggleSwitchShowcase, VolumeSwitchShowcase, WifiSwitchShowcase } from "../components/ui/switches/switches-showcase";
 
 import { ButtonGroupCheckboxShowcase, ColorPickerCheckboxShowcase, EmojiCheckboxShowcase, GradientCheckboxShowcase, HeartCheckboxShowcase, IconCheckboxShowcase, OutlineCheckboxShowcase, SizePickerCheckboxShowcase, SliderCheckboxShowcase, SquareCheckboxShowcase, StarCheckboxShowcase, TexturedCheckboxShowcase, ThumbsUpCheckboxShowcase, ToggleCheckboxShowcase } from "../components/ui/checkboxes/checkbox-showcase";
 import DisabledButton from "../components/ui/buttons/disabled-button";
