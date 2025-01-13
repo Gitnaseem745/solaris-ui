@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { AnimatedCheckbox } from './animated-checkbox';
+import { AnimatedCheckbox } from '../animated-checkbox';
 import { IconCheckbox } from './icon-checkbox';
 import { SquareCheckbox } from './square-checkbox';
 import { OutlineCheckbox } from './outline-checkbox';
