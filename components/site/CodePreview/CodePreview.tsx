@@ -34,7 +34,7 @@ export default function CodePreview({
         setCode(source || '')
       } catch (err) {
         console.error(err)
-        setError(`Failed to load ${componentName} source, Error Log from CodePreview`)
+        setError(`Failed to load ${componentName} source code.`)
       }
     }
 
