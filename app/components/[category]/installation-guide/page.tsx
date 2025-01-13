@@ -40,7 +40,7 @@ export default async function Page() {
         </div>
     );
 }
-export const usageGuide = {
+const usageGuide = {
     step: "Installation & Usage",
     steps: [
         {
