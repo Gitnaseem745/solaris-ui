@@ -28,13 +28,13 @@ export default function CodePreview({
       try {
         const response = await fetch(apiUrl)
         if (!response.ok) {
-          throw new Error(`Failed to fetch source code for ${componentName}`)
+          throw new Error(`Failed to fetch source code for ${componentName} due to wrong response from api, Error Log from CodePreview`)
         }
         const { source } = await response.json()
         setCode(source || '')
       } catch (err) {
         console.error(err)
-        setError('Failed to load component source.')
+        setError(`Failed to load ${componentName} source, Error Log from CodePreview`)
       }
     }
 

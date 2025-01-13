@@ -13,21 +13,22 @@ export async function GET(request: Request) {
         );
     }
     const filePath = path.join(
+        process.cwd(),
         "components",
         "ui",
         directoryName.toLowerCase(),
         `${componentName.toLowerCase()}.tsx`
     );
-    console.log(componentName)
-    console.log(filePath)
     try {
         const source = await fs.readFile(filePath, "utf8");
+        console.log(`Reading Successfull of ${componentName} at file ${filePath} from API`,);
         return new Response(JSON.stringify({ source }), {
             status: 200,
             headers: { "Content-Type": "application/json" },
         });
     } catch (error) {
-        console.error(`Error reading ${componentName} file ${filePath}:`, error);
+        console.log(`Error reading ${componentName} file ${filePath}`);
+        console.error(`Error:`, error)
         return new Response(
             JSON.stringify({ error: `Failed to read ${componentName} file at ${filePath}` }),
             { status: 500 }
