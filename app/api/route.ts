@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
@@ -7,30 +8,58 @@ export async function GET(request: Request) {
     const directoryName = searchParams.get("directoryName");
 
     if (!componentName || !directoryName) {
-        return new Response(
-            JSON.stringify({ error: `${componentName} path is incorrect.` }),
+        return NextResponse.json(
+            { error: `Component name or directory name is missing.` },
             { status: 400 }
         );
     }
+
     const filePath = path.join(
         process.cwd(),
         "components",
         "ui",
-        directoryName.toLowerCase(),
-        `${componentName.toLowerCase()}.tsx`
+        directoryName,
+        `${componentName}.tsx`
     );
+
     try {
         const source = await fs.readFile(filePath, "utf8");
-        console.log(`Reading Successfull of ${componentName} at file ${filePath} from API`,);
-        return new Response(JSON.stringify({ source }), {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-        });
-    } catch (error) {
-        console.log(`Error reading ${componentName} file ${filePath}`);
-        console.error(`Error:`, error)
-        return new Response(
-            JSON.stringify({ error: `Failed to read ${componentName} file at ${filePath}` }),
+        console.log(`Successfully read ${componentName} at file ${filePath}`);
+        return NextResponse.json({ source }, { status: 200 });
+    } catch (error: unknown) {
+        console.error(`Error reading ${componentName} file ${filePath}:`, error);
+
+        let errorMessage = 'An unknown error occurred';
+        if (error instanceof Error) {
+            errorMessage = error.message;
+        } else if (typeof error === 'string') {
+            errorMessage = error;
+        }
+
+        // Check if the file exists
+        try {
+            await fs.access(filePath);
+            console.log(`File ${filePath} exists but could not be read`);
+        } catch {
+            console.log(`File ${filePath} does not exist`);
+        }
+
+        // List directory contents
+        try {
+            const dir = path.dirname(filePath);
+            const files = await fs.readdir(dir);
+            console.log(`Contents of ${dir}:`, files);
+        } catch (e) {
+            console.log(`Could not read directory ${path.dirname(filePath)}:`, e);
+        }
+
+        return NextResponse.json(
+            {
+                error: `Failed to read ${componentName} file`,
+                details: errorMessage,
+                path: filePath,
+                cwd: process.cwd()
+            },
             { status: 500 }
         );
     }
