@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import CodePre from '@/components/site/CodePre/CodePre';
 import PropsTable from '@/components/site/PropsTable/PropsTable';
-import Examples from '@/components/site/Examples/Examples';
+// import Examples from '@/components/site/Examples/Examples';
 import CodePreview from '@/components/site/CodePreview/CodePreview';
 import { components } from '@/docs/components';
 import Link from 'next/link';
@@ -34,21 +34,21 @@ export default async function Page({
             Component: CodePre,
             props: { code: componentData.installation, language: 'bash' },
         },
-        {
-            name: 'Usage',
-            Component: CodePre,
-            props: { code: componentData.usage, language: 'tsx' },
-        },
+        // {
+        //     name: 'Usage',
+        //     Component: CodePre,
+        //     props: { code: componentData.usage, language: 'tsx' },
+        // },
         {
             name: 'Props',
             Component: PropsTable,
             props: { props: componentData.props },
         },
-        {
-            name: 'Variants',
-            Component: Examples,
-            props: { examples: componentData.examples },
-        },
+        // {
+        //     name: 'Variants',
+        //     Component: Examples,
+        //     props: { examples: componentData.examples },
+        // },
     ];
 
     return (

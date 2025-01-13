@@ -19,7 +19,7 @@ export default function CodePreview({
 }: PreviewProps) {
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview')
   const [copied, setCopied] = useState(false)
-  const [code, setCode] = useState<string>('') // Holds the source code
+  const [code, setCode] = useState<string>('')
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
