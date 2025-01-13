@@ -1,4 +1,4 @@
-import DocsAlert from "@/components/site/DocsAlert/docs-alert";
+// import DocsAlert from "@/components/site/DocsAlert/docs-alert";
 import Sidebar from "@/components/site/Sidebar/Sidebar";
 import { components } from "@/docs/components";
 import { toCapitalCase } from "@/utils/capital-case";
@@ -26,7 +26,7 @@ export default async function Layout({
 
   return (
     <>
-    <DocsAlert />
+    {/* <DocsAlert /> */}
     <div className="flex flex-col w-full max-w-screen-xl mx-auto mt-10 lg:flex-row max-lg:mt-8">
       {/* Sidebar */}
       <aside className="w-full lg:w-1/4">

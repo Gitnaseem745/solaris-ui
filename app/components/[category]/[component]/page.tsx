@@ -25,12 +25,12 @@ export default async function Page({
         {
             name: 'Dependencies',
             Component: CodePre,
-            props: { code: componentData.dependencies, language: 'bash' },
+            props: { code: componentData.dependencies === undefined ? "None" : componentData.dependencies, language: 'bash' },
         },
         {
             name: 'Installation',
             Component: CodePre,
-            props: { code: componentData.installation, language: 'bash' },
+            props: { code: componentData.installation === undefined ? "None" : componentData.installation, language: 'bash' },
         },
         {
             name: 'Props',

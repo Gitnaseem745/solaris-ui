@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { FiCheck } from 'react-icons/fi';
 import { GoCopy } from "react-icons/go";
 
-
 export interface PreviewProps {
   directoryName: string
   componentName: string
@@ -60,7 +59,7 @@ export default function CodePreview({
       <div className="py-4">
         {activeTab === 'preview' ? (
           <PreviewSection componentName={componentName} onCopy={copyToClipboard} copied={copied}>
-            {children}
+            {children || <div>Loading preview...</div>}
           </PreviewSection>
         ) : (
           <CodeSection
@@ -110,7 +109,7 @@ interface PreviewSectionProps {
 
 function PreviewSection({ onCopy, copied, children}: PreviewSectionProps) {
   return (
-    <div className="relative rounded-lg border border-neutral-800 bg-neutral-900 p-4 flex flex-col justify-center min-h-[300px]">
+    <div className="relative rounded-lg overflow-hidden border border-neutral-800 bg-neutral-900 p-4 flex flex-col justify-center min-h-[300px]">
       {/* Copy Button */}
       <div className="self-end">
         <CopyButton onCopy={onCopy} copied={copied} className='absolute top-2 right-2' />

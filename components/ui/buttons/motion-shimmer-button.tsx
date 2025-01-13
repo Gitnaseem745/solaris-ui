@@ -48,7 +48,7 @@ const MotionShimmer: React.FC<MotionShimmerProps> = ({ label = "SHIMMER", onClic
         </div>
       </motion.div>
 
-      <motion.div {...borderAnimationConfig(20, isHover ? 5 : 8, isHover ? -5 : -8)} />
+      <motion.div {...borderAnimationConfig(20, isHover ? 5 : 8, isHover ? -5 : -8) } />
 
       <motion.div {...borderAnimationConfig(30, isHover ? 5 : 16, isHover ? -5 : -16)} />
     </div>

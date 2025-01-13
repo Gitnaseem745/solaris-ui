@@ -19,7 +19,7 @@ interface ComponentDataProps {
     installation?: string;
     usage?: string;
     props: Props[];
-    examples: Example[];
+    examples?: Example[];
     Component: React.FC<any>;
   }
 
