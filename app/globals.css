@@ -70,7 +70,7 @@
         --input: hsl(220 10% 30%);
         --ring: hsl(220 50% 50%);
       }
-      
+
 }
 
 /* Selection styles */
@@ -150,3 +150,11 @@ body {
     background-position: 0 0;
   }
 }
+
+.text-security-disc {
+    -webkit-text-security: disc;
+  }
+
+  .text-security-none {
+    -webkit-text-security: none;
+  }

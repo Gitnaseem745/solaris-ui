@@ -1,4 +1,3 @@
-'use client'
 import { useState } from 'react';
 
 interface PasswordResetCardProps {
@@ -50,7 +49,7 @@ export default function PasswordResetCard({
     }
   };
 
-    // Handles pasting a full code into the input fields.
+  // Handles pasting a full code into the input fields.
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     const pastedData = e.clipboardData.getData('Text').slice(0, 6);
     if (/^\d+$/.test(pastedData)) {
@@ -60,7 +59,7 @@ export default function PasswordResetCard({
     }
   };
 
-// Handles form submission.
+  // Handles form submission.
   const handleSubmit = async () => {
     setError('');
     const fullCode = code.join('');
@@ -112,8 +111,8 @@ export default function PasswordResetCard({
               className={`w-12 h-12 bg-[#2C2C2E] border-2 rounded-lg text-center text-xl font-medium
                 ${index === focusedIndex ? 'border-[#00BFA5]' : 'border-transparent'}
                 ${digit ? 'text-white' : 'text-transparent'}
-                focus:outline-none focus:border-[#00BFA5] transition-colors`}
-              style={{ textSecurity: digit ? 'disc' : 'none', WebkitTextSecurity: digit ? 'disc' : 'none' }}
+                focus:outline-none focus:border-[#00BFA5] transition-colors
+                ${digit ? 'text-security-disc' : 'text-security-none'}`}
             />
           ))}
         </div>
@@ -160,3 +159,14 @@ export default function PasswordResetCard({
     </div>
   );
 }
+
+
+// add this to globals.css or index.css
+
+// .text-security-disc {
+//     -webkit-text-security: disc;
+//   }
+
+//   .text-security-none {
+//     -webkit-text-security: none;
+//   }
