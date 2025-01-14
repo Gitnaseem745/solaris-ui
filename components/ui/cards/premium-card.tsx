@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PremiumCardProps {
     imgOne: string;
@@ -22,30 +24,49 @@ export default function PremiumCard({
 }: PremiumCardProps) {
     const [hover, setHover] = useState(false);
 
-    const currentImage = hover ? imgTwo : imgOne;
-    const containerClasses = "relative max-w-[300px] max-h-[450px] w-full h-full rounded-3xl overflow-hidden m-4";
-    const imageClasses = "w-full h-full absolute object-cover transition-all ease-in-out duration-300";
-    const overlayClasses = `w-full h-full flex-col justify-between z-50 p-4 ${hover ? 'flex' : 'hidden'} absolute`;
+    const containerClasses = "relative w-[300px] h-[450px] rounded-3xl overflow-hidden m-4";
+    const imageClasses = "w-full h-full absolute object-contain";
+    const overlayClasses = "w-full h-full flex flex-col justify-between z-10 p-4 absolute";
+
+    if (!imgOne || !imgTwo) {
+        return <div className={containerClasses + " bg-gray-200 flex items-center justify-center"}>Images not provided</div>;
+    }
 
     return (
-        <div
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+        <motion.div
             className={containerClasses}
+            onHoverStart={() => setHover(true)}
+            onHoverEnd={() => setHover(false)}
         >
-            <img
-                src={currentImage}
-                alt={'/'}
-                className={`${imageClasses} ${hover ? 'bg-blue-400' : 'bg-red-400'}`}
+            {/* Image animation */}
+            <Image
+                src={hover ? imgTwo : imgOne}
+                alt="Card Image"
+                layout="fill"
+                objectFit="cover"
+                className={imageClasses}
             />
-            <div className={overlayClasses}>
-                <h2 className="bg-black rounded-full text-sm max-w-fit h-7 text-white text-center content-center px-3">
+
+            {/* Overlay with animated category and button */}
+            <motion.div
+                className={overlayClasses}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: hover ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+            >
+                <h2
+                    className="bg-black hover:bg-neutral-700 hover:text-white/50 rounded-full text-sm max-w-fit h-7 text-white text-center px-3 py-1"
+                >
                     <Link href={categoryLink}>{categoryTitle}</Link>
                 </h2>
-                <button className="w-full bg-black rounded-full h-10">
-                    <Link href={buttonLink}>{buttonText}</Link>
+                <button
+                    className="w-full bg-black hover:bg-neutral-700 hover:text-white/50 text-white rounded-full h-10"
+                >
+                    <Link href={buttonLink} className="w-full h-full flex items-center justify-center">
+                        {buttonText}
+                    </Link>
                 </button>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }

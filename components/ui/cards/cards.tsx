@@ -17,8 +17,8 @@ import { FaDiscord, FaFigma } from "react-icons/fa";
 // Dummy Data
 const dummyProduct = {
   images: [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150/FF0000",
+    "/shoe_img_1.webp",
+    "/shoe_img_2.webp",
   ],
   title: "Stylish Sneakers",
   rating: 4.5,
@@ -49,7 +49,6 @@ const ShowcaseProfPricing = () => (
         label="Starter"
         price={19.99}
         features={dummyFeatures}
-        onStart={() => alert("Start now clicked!")}
     />
 );
 
@@ -60,18 +59,16 @@ const ShowcaseProfPricingPopular = () => (
         label="Advanced"
         price={39.99}
         features={dummyFeatures}
-        onStart={() => alert("Start now clicked!")}
     />
 );
 
 const ShowcasePremiumCard = () => (
   <PremiumCard
-    imgOne="/"
-    imgTwo="/"
+    imgOne="/shoe_img_3.webp"
+    imgTwo="/shoe_img_4.webp"
     categoryTitle="Category"
-    categoryLink="/"
     buttonText="Product Details"
-    buttonLink="/"
+    buttonLink="/components/cards/premium-card"
   />
 );
 
@@ -82,7 +79,6 @@ const ShowcaseAddExtension = () => (
     description="Translate your text into multiple languages easily."
     viewCount={12345}
     author={{ name: "John Doe", avatar: "/path/to/avatar.jpg" }}
-    onAdd={() => alert("Extension added!")}
     className="shadow-lg"
   />
 );
@@ -91,9 +87,6 @@ const ShowcaseMinShareCard = () => <MinShareCard />;
 
 const ShowcaseConnectCard = () => (
   <ConnectCard
-    onClose={() => alert('Close button clicked')}
-    onCancel={() => alert('Cancel button clicked')}
-    onIntegrate={() => alert('Integrate button clicked')}
     title="Connect Figma to Discord"
     description="Integrate Figma with Discord for better collaboration."
     sourceApp={{
@@ -115,7 +108,7 @@ const ShowcaseOrderStatusCard = () => (
     packageId="#1L2K5"
     deliveryAddress="Rustam Nagar Sahaspur - 244411"
     warehouseLocation="Gurgaon Sector 36 - 221244"
-    courierImage="/"
+    courierImage="/product_img.jpg"
   />
 );
 
@@ -123,7 +116,7 @@ const ShowcaseCategoryCard1 = () => (
   <CategoryCard
     title="Iphone 15 Pro Max"
     description="An Apple Iphone's 15 series mobile device"
-    image="/"
+    image="/product_img.jpg"
     productCount={50}
   />
 );
@@ -134,11 +127,9 @@ const ShowcaseSuccessCard = () => (
     message="Your operation was completed successfully. Thank you for your patience."
     primaryAction={{
       label: "Continue",
-      onClick: () => alert("Primary action executed!"),
     }}
     secondaryAction={{
       label: "Go Back",
-      onClick: () => alert("Secondary action executed!"),
     }}
   />
 );
@@ -157,7 +148,7 @@ const ShowcaseCategoryCard2 = () => (
   <CategoryCard
     title="Nike Air 1 Jordan"
     productCount={44}
-    image="/"
+    image="/shoe_img_1.webp"
     description="Air Jordan Series Air 1 Shoes By Nike"
   />
 );
