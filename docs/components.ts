@@ -3,8 +3,7 @@ import { DarkButton, DefaultButton, DeleteButton, FloatingActionButton, MotionBl
 
 
 // Cards
-import { BentoLogin, MinJobCard, ProfPricing } from '../components/ui/cards/cards';
-
+import { ShowcaseAddExtension, ShowcaseBentoLogin, ShowcaseCategoryCard2, ShowcaseConnectCard, ShowcaseMinJobCard, ShowcaseMinShareCard, ShowcaseOrderStatusCard, ShowcasePasswordResetCard, ShowcasePremiumCard, ShowcaseProductCard, ShowcaseProfPricing, ShowcaseSuccessCard } from '@/components/ui/cards/cards';
 
 // Alerts
 import { BannerAlertShowcase, BouncingAlertShowcase, ColorChangingAlertShowcase, ConfirmationAlertShowcase, CountdownAlertShowcase, ErrorAlertShowcase, ExpandingAlertShowcase, FadingAlertShowcase, FlipAlertShowcase, FloatingAlertShowcase, InfoAlertShowcase, ProgressAlertShowcase, PulsatingAlertShowcase, RotatingAlertShowcase, ShakingAlertShowcase, SlideInAlertShowcase, StickyAlertShowcase, SuccessAlertShowcase, SwipeAlertShowcase, ToastAlertShowcase, TypingAlertShowcase, WarningAlertShowcase } from "../components/ui/alerts/alert-showcases";
@@ -579,64 +578,483 @@ export const components: Record<string, ComponentDataProps[]> = {
     // cards docs
     cards: [
         {
+            id: 'add-extension',
+            name: 'Add Extension',
+            description: 'This component allows users to add an extension with detailed information and an icon.',
+            props: [
+                { name: 'Icon', type: 'ElementType', default: 'undefined', description: 'The icon to display for the extension.' },
+                { name: 'title', type: 'string', default: 'undefined', description: 'The title of the extension.' },
+                { name: 'description', type: 'string', default: 'undefined', description: 'A brief description of the extension.' },
+                { name: 'viewCount', type: 'number', default: 'undefined', description: 'The number of views for the extension.' },
+                {
+                    name: 'author',
+                    type: '{ name: string; avatar: string; }',
+                    default: 'undefined',
+                    description: 'An object containing the author\'s name and avatar.'
+                },
+                { name: 'onAdd', type: '() => void', default: 'undefined', description: 'Callback triggered when the "Add" button is clicked.' },
+                { name: 'className', type: 'string', default: '""', description: 'Optional class names for additional styling.' }
+            ],
+            Component: ShowcaseAddExtension
+        },
+        {
             id: 'bento-login',
             name: 'Bento Login',
-            description: 'A Bento Login Card.',
+            description: 'A login form component with email, password, Google sign-in, and sign-up options.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
             props: [
                 {
-                    name: 'label',
-                    type: 'string',
-                    default: '"Glass"',
-                    description: 'Text displayed on the button.',
+                    name: 'onSubmit',
+                    type: '(email: string, password: string) => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the form is submitted with email and password.'
                 },
                 {
-                    name: 'onClick',
-                    type: 'function',
-                    default: '-',
-                    description: 'Click event handler.',
+                    name: 'onGoogleSignIn',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the "Sign in with Google" button is clicked.'
                 },
+                {
+                    name: 'onSignUp',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the "Sign up" button is clicked.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: '"Bento Login"',
+                    description: 'The title of the login form displayed at the top.'
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    default: '""',
+                    description: 'Optional class names for additional styling.'
+                }
             ],
-            Component: BentoLogin,
+            Component: ShowcaseBentoLogin
+        },
+        {
+            id: 'ecom-order-status',
+            name: 'Order Status Card',
+            description: 'A card component displaying order status information, including courier details and package tracking.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'courierName',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The name of the courier service.'
+                },
+                {
+                    name: 'courierImage',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'URL of the courier’s image or logo.'
+                },
+                {
+                    name: 'packageId',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The unique identifier for the package.'
+                },
+                {
+                    name: 'warehouseLocation',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The current warehouse location of the package.'
+                },
+                {
+                    name: 'deliveryAddress',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The delivery address for the package.'
+                },
+                {
+                    name: 'onCall',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the call button is clicked.'
+                },
+                {
+                    name: 'onMessage',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the message button is clicked.'
+                }
+            ],
+            Component: ShowcaseOrderStatusCard
+        },
+        {
+            id: 'ecom-product-card',
+            name: 'Product Card',
+            description: 'A card component to showcase product details, including images, title, rating, reviews, and price.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'images',
+                    type: 'string[]',
+                    default: '[]',
+                    description: 'An array of image URLs for the product.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The title or name of the product.'
+                },
+                {
+                    name: 'rating',
+                    type: 'number',
+                    default: '0',
+                    description: 'The product’s rating on a scale of 0 to 5.'
+                },
+                {
+                    name: 'reviews',
+                    type: 'number',
+                    default: '0',
+                    description: 'The number of reviews the product has received.'
+                },
+                {
+                    name: 'price',
+                    type: 'number',
+                    default: '0',
+                    description: 'The price of the product in USD.'
+                }
+            ],
+            Component: ShowcaseProductCard
+        },
+        {
+            id: 'ecom-product-category',
+            name: 'Category Card',
+            description: 'A card component displaying a product category with an image, title, description, and product count.',
+            props: [
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The title of the product category.'
+                },
+                {
+                    name: 'description',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'A brief description of the product category.'
+                },
+                {
+                    name: 'productCount',
+                    type: 'number',
+                    default: 'undefined',
+                    description: 'The number of products in the category.'
+                },
+                {
+                    name: 'image',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'URL of the image representing the product category.'
+                }
+            ],
+            Component: ShowcaseCategoryCard2
+        },
+        {
+            id: 'ecom-success-card',
+            name: 'Success Card',
+            description: 'A card component to display success messages with primary and secondary actions.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The title of the success card.'
+                },
+                {
+                    name: 'message',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'The message or description displayed in the card.'
+                },
+                {
+                    name: 'primaryAction',
+                    type: '{ label: string; onClick?: () => void; }',
+                    default: 'undefined',
+                    description: 'Primary action details, including label and optional onClick handler.'
+                },
+                {
+                    name: 'secondaryAction',
+                    type: '{ label: string; onClick?: () => void; }',
+                    default: 'undefined',
+                    description: 'Secondary action details, including label and optional onClick handler.'
+                }
+            ],
+            Component: ShowcaseSuccessCard
+        },
+        {
+            id: 'figma-connect',
+            name: 'Connect Card',
+            description: 'A card component to facilitate app integrations, with source and target app icons, description, and action buttons.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'onClose',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the close button is clicked.'
+                },
+                {
+                    name: 'onCancel',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the cancel button is clicked.'
+                },
+                {
+                    name: 'onIntegrate',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the integrate button is clicked.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'Title displayed in the card.'
+                },
+                {
+                    name: 'description',
+                    type: 'string',
+                    default: 'undefined',
+                    description: 'Description displayed below the title.'
+                },
+                {
+                    name: 'sourceApp',
+                    type: '{ name: string; Icon: ElementType; }',
+                    default: 'undefined',
+                    description: 'Details of the source app, including name and icon.'
+                },
+                {
+                    name: 'targetApp',
+                    type: '{ name: string; Icon: ElementType; }',
+                    default: 'undefined',
+                    description: 'Details of the target app, including name and icon.'
+                }
+            ],
+            Component: ShowcaseConnectCard
+        },
+        {
+            id: 'min-share-card',
+            name: 'Min Share Card',
+            description: 'A minimal share card component to share links on social media or copy a direct link.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'onClose',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the close button is clicked.'
+                },
+                {
+                    name: 'onCopy',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the copy link button is clicked.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'Share On Social Media',
+                    description: 'Title displayed at the top of the card.'
+                },
+                {
+                    name: 'subtitle',
+                    type: 'string',
+                    default: 'Share link via',
+                    description: 'Subtitle displayed below the title.'
+                }
+            ],
+            Component: ShowcaseMinShareCard
         },
         {
             id: 'minimal-job-card',
-            name: 'Job Card',
-            description: 'A Minimalistic Job Card.',
+            name: 'Min Job Card',
+            description: 'A minimal job card component for displaying job details and providing an apply action.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
             props: [
                 {
-                    name: 'label',
-                    type: 'string',
-                    default: '"Glass"',
-                    description: 'Text displayed on the button.',
+                    name: 'company',
+                    type: '{ name?: string; logo?: string; }',
+                    default: `{ name: 'Meta', logo: '/placeholder.svg?height=32&width=32' }`,
+                    description: 'Details about the company, including its name and logo.'
                 },
                 {
-                    name: 'onClick',
-                    type: 'function',
-                    default: '-',
-                    description: 'Click event handler.',
+                    name: 'title',
+                    type: 'string',
+                    default: 'Software Engineer',
+                    description: 'Job title displayed on the card.'
                 },
+                {
+                    name: 'description',
+                    type: 'string',
+                    default: 'Develop innovative software solutions that drive impactful, high-performance experiences. Work with cutting-edge technologies to create seamless user interfaces and robust backend systems.',
+                    description: 'A brief description of the job.'
+                },
+                {
+                    name: 'tags',
+                    type: 'string[]',
+                    default: "['Full-Time', 'Remote', 'Mid-Senior Level']",
+                    description: 'Array of tags that categorize the job.'
+                },
+                {
+                    name: 'onApply',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the apply button is clicked.'
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    default: '""',
+                    description: 'Additional CSS classes for customizing the card appearance.'
+                }
             ],
-            Component: MinJobCard,
+            Component: ShowcaseMinJobCard
+        },
+        {
+            id: 'premium-card',
+            name: 'Premium Card',
+            description: 'A premium card component that displays images with hover effects, category information, and a button linking to a specified location.',
+            props: [
+                {
+                    name: 'imgOne',
+                    type: 'string',
+                    description: 'URL of the first image to display before hover.'
+                },
+                {
+                    name: 'imgTwo',
+                    type: 'string',
+                    description: 'URL of the second image that appears on hover.'
+                },
+                {
+                    name: 'categoryTitle',
+                    type: 'string',
+                    description: 'Title of the category that links to the specified category link.'
+                },
+                {
+                    name: 'categoryLink',
+                    type: 'string',
+                    default: '/',
+                    description: 'Link to navigate when the category title is clicked (default is the home page).'
+                },
+                {
+                    name: 'buttonText',
+                    type: 'string',
+                    description: 'Text displayed on the button.'
+                },
+                {
+                    name: 'buttonLink',
+                    type: 'string',
+                    description: 'Link to navigate when the button is clicked.'
+                }
+            ],
+            Component: ShowcasePremiumCard
         },
         {
             id: 'professional-pricing-card',
-            name: 'Pricing Card',
-            description: 'A Minimalistic Job Card.',
+            name: 'Professional Pricing Plan',
+            description: 'A pricing plan component that displays the features, pricing, and a call-to-action button for different subscription types, such as basic or popular plans.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
             props: [
+                {
+                    name: 'type',
+                    type: '\'basic\' | \'popular\'',
+                    default: 'basic',
+                    description: 'The type of the pricing plan. "basic" for a standard plan or "popular" for a highlighted plan.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'Basic Plan',
+                    description: 'The title of the pricing plan (e.g., "Basic Plan").'
+                },
                 {
                     name: 'label',
                     type: 'string',
-                    default: '"Glass"',
-                    description: 'Text displayed on the button.',
+                    default: 'Starter',
+                    description: 'The label of the pricing plan, such as "Starter" or "Premium".'
                 },
                 {
-                    name: 'onClick',
-                    type: 'function',
-                    default: '-',
-                    description: 'Click event handler.',
+                    name: 'price',
+                    type: 'number',
+                    default: "19.99",
+                    description: 'The price of the plan, displayed as a number with currency formatting.'
                 },
+                {
+                    name: 'features',
+                    type: 'ProfPricingFeature[]',
+                    description: 'An array of feature objects that describe the plan\'s features, each containing a "text" field.'
+                },
+                {
+                    name: 'onStart',
+                    type: '() => void',
+                    description: 'A callback function that is triggered when the "Start now" button is clicked.'
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    default: '',
+                    description: 'Additional custom CSS classes to apply to the component.'
+                }
             ],
-            Component: ProfPricing,
+            Component: ShowcaseProfPricing
+        },
+        {
+            id: 'reset-pass',
+            name: 'Password Reset Card',
+            description: 'A form card for entering a 6-digit code to reset a password, with error handling, loading state, and additional actions such as resend code, help, and feedback.',
+            props: [
+                {
+                    name: 'onSubmit',
+                    type: '(code: string) => void',
+                    description: 'A callback function that handles the form submission when the 6-digit code is entered and submitted.'
+                },
+                {
+                    name: 'onResendCode',
+                    type: '() => void',
+                    description: 'A callback function that handles resending the code when the user clicks on the "Resend code" link.'
+                },
+                {
+                    name: 'onHelp',
+                    type: '() => void',
+                    description: 'A callback function that triggers when the user clicks on the "Need help?" button.'
+                },
+                {
+                    name: 'onFeedback',
+                    type: '() => void',
+                    description: 'A callback function that triggers when the user clicks on the "Send feedback" button.'
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    default: '',
+                    description: 'Additional custom CSS classes to apply to the card component.'
+                },
+                {
+                    name: 'style',
+                    type: 'React.CSSProperties',
+                    default: '{}',
+                    description: 'Custom inline styles to apply to the card component.'
+                }
+            ],
+            Component: ShowcasePasswordResetCard
         },
     ],
 

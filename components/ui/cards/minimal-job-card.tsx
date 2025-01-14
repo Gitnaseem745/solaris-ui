@@ -27,7 +27,7 @@ export default function MinJobCard({
     className = "",
 }: MinJobCardProps) {
     return (
-        <div className={`bg-[#1a1a1a] rounded-3xl p-8 shadow-sm ${className}`}>
+        <div className={`bg-[#1a1a1a] rounded-3xl p-8 shadow-sm max-w-md w-full ${className}`}>
             <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-[#2a2a2a] flex items-center justify-center overflow-hidden">
                     <Icon className="size-5 text-white" />

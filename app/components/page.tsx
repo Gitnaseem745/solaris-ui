@@ -23,6 +23,18 @@ export default function page() {
                         cta="View Buttons"
                         classname="col-span-2 max-md:col-span-4"
                     />
+                        <BentoCard
+                            name="Card Components"
+                            classname="col-span-2 max-md:col-span-4"
+                            background={
+                                <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
+                            }
+                            Icon={TbCardsFilled}
+                            description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
+                            href="/components/cards/add-extension"
+                            cta="Explore Cards"
+                        />
+                    </BentoGrid>
                     <BentoCard
                         name="Select Components"
                         classname="col-span-2 max-sm:col-span-4"
@@ -55,7 +67,7 @@ export default function page() {
                         description="Discover interactive and stylish switch designs to toggle settings effortlessly."
                         href="/components/switches/simple-switch"
                         cta="Explore Available Switches"
-                        />
+                    />
                     <BentoCard
                         name="Checkbox Components"
                         classname="col-span-2 max-md:col-span-4"
@@ -66,19 +78,7 @@ export default function page() {
                         description="Discover interactive and stylish checkbox designs to check options effortlessly."
                         href="/components/checkboxes/icon-checkbox"
                         cta="Explore Available Checkboxes"
-                        />
-                        <BentoCard
-                            name="Card Components"
-                            classname="col-span-2 max-md:col-span-4 pointer-events-none cursor-not-allowed"
-                            background={
-                                <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
-                            }
-                            Icon={TbCardsFilled}
-                            description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
-                            href="/components"
-                            cta="Coming Soon"
-                        />
-                </BentoGrid>
+                    />
             </div>
         </div>
     );
