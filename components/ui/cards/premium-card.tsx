@@ -23,8 +23,7 @@ export default function PremiumCard({
     buttonLink,
 }: PremiumCardProps) {
     const [hover, setHover] = useState(false);
-
-    const containerClasses = "relative w-[300px] h-[450px] rounded-3xl overflow-hidden m-4";
+    const containerClasses = "relative w-full min-w-[250px] sm:min-w-[300px] h-[450px] rounded-3xl overflow-hidden sm:m-4";
     const imageClasses = "w-full h-full absolute object-contain";
     const overlayClasses = "w-full h-full flex flex-col justify-between z-10 p-4 absolute";
 

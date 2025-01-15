@@ -34,13 +34,13 @@ export default function ConnectCard({
           onClick={onClose}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors"
         >
-          <FaX size={20} />
+          <FaX size={12} />
         </button>
       </div>
 
       <div className="flex flex-col items-center text-center space-y-6">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 relative">
+          <div className="w-12 h-12 relative bg-[#2C2C2E] p-4 rounded-full flex justify-center items-center">
             <sourceApp.Icon
               className="size-10"
             />
@@ -57,7 +57,7 @@ export default function ConnectCard({
             </svg>
           </div>
 
-          <div className="w-12 h-12 relative">
+          <div className="w-12 h-12 relative bg-[#2C2C2E] p-4 rounded-full flex justify-center items-center">
           <targetApp.Icon
               className="size-10"
             />

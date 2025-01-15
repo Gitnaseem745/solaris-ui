@@ -27,7 +27,7 @@ export default function MinJobCard({
     className = "",
 }: MinJobCardProps) {
     return (
-        <div className={`bg-[#1a1a1a] rounded-3xl p-8 shadow-sm max-w-md w-full ${className}`}>
+        <div className={`bg-[#1a1a1a] rounded-3xl p-8 shadow-sm max-w-md w-full max-sm:p-4 ${className}`}>
             <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-[#2a2a2a] flex items-center justify-center overflow-hidden">
                     <Icon className="size-5 text-white" />
@@ -53,7 +53,7 @@ export default function MinJobCard({
 
             <button
                 onClick={onApply}
-                className="w-full bg-[#2a2a2a] text-white rounded-full py-4 px-6 flex items-center justify-between hover:bg-[#3a3a3a] transition-colors ease-in-out duration-300"
+                className="w-full bg-[#2a2a2a] text-white rounded-full py-4 px-6 flex items-center justify-between hover:bg-[#3a3a3a] transition-colors ease-in-out duration-300 max-sm:py-2 max-sm:px-4"
             >
                 <span className="font-medium">Apply</span>
                 <HiOutlineArrowRight className="size-5" />

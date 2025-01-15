@@ -578,64 +578,168 @@ export const components: Record<string, ComponentDataProps[]> = {
     // cards docs
     cards: [
         {
-            id: 'add-extension',
-            name: 'Add Extension',
-            description: 'This component allows users to add an extension with detailed information and an icon.',
-            props: [
-                { name: 'Icon', type: 'ElementType', default: 'undefined', description: 'The icon to display for the extension.' },
-                { name: 'title', type: 'string', default: 'undefined', description: 'The title of the extension.' },
-                { name: 'description', type: 'string', default: 'undefined', description: 'A brief description of the extension.' },
-                { name: 'viewCount', type: 'number', default: 'undefined', description: 'The number of views for the extension.' },
-                {
-                    name: 'author',
-                    type: '{ name: string; avatar: string; }',
-                    default: 'undefined',
-                    description: 'An object containing the author\'s name and avatar.'
-                },
-                { name: 'onAdd', type: '() => void', default: 'undefined', description: 'Callback triggered when the "Add" button is clicked.' },
-                { name: 'className', type: 'string', default: '""', description: 'Optional class names for additional styling.' }
-            ],
-            Component: ShowcaseAddExtension
-        },
-        {
-            id: 'bento-login',
-            name: 'Bento Login',
-            description: 'A login form component with email, password, Google sign-in, and sign-up options.',
+            id: 'ecom-product-card',
+            name: 'Product Card',
+            description: 'A card component to showcase product details, including images, title, rating, reviews, and price.',
             dependencies: 'react-icons',
             installation: 'npm install react-icons',
             props: [
                 {
-                    name: 'onSubmit',
-                    type: '(email: string, password: string) => void',
-                    default: 'undefined',
-                    description: 'Callback triggered when the form is submitted with email and password.'
-                },
-                {
-                    name: 'onGoogleSignIn',
-                    type: '() => void',
-                    default: 'undefined',
-                    description: 'Callback triggered when the "Sign in with Google" button is clicked.'
-                },
-                {
-                    name: 'onSignUp',
-                    type: '() => void',
-                    default: 'undefined',
-                    description: 'Callback triggered when the "Sign up" button is clicked.'
+                    name: 'images',
+                    type: 'string[]',
+                    default: '[]',
+                    description: 'An array of image URLs for the product.'
                 },
                 {
                     name: 'title',
                     type: 'string',
-                    default: '"Bento Login"',
-                    description: 'The title of the login form displayed at the top.'
+                    default: 'undefined',
+                    description: 'The title or name of the product.'
+                },
+                {
+                    name: 'rating',
+                    type: 'number',
+                    default: '0',
+                    description: 'The product’s rating on a scale of 0 to 5.'
+                },
+                {
+                    name: 'reviews',
+                    type: 'number',
+                    default: '0',
+                    description: 'The number of reviews the product has received.'
+                },
+                {
+                    name: 'price',
+                    type: 'number',
+                    default: '0',
+                    description: 'The price of the product in USD.'
+                }
+            ],
+            Component: ShowcaseProductCard
+        },
+        {
+            id: 'min-share-card',
+            name: 'Min Share Card',
+            description: 'A minimal share card component to share links on social media or copy a direct link.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'onClose',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the close button is clicked.'
+                },
+                {
+                    name: 'onCopy',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback function triggered when the copy link button is clicked.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'Share On Social Media',
+                    description: 'Title displayed at the top of the card.'
+                },
+                {
+                    name: 'subtitle',
+                    type: 'string',
+                    default: 'Share link via',
+                    description: 'Subtitle displayed below the title.'
+                }
+            ],
+            Component: ShowcaseMinShareCard
+        },
+        {
+            id: 'professional-pricing-card',
+            name: 'Professional Pricing Plan',
+            description: 'A pricing plan component that displays the features, pricing, and a call-to-action button for different subscription types, such as basic or popular plans.',
+            dependencies: 'react-icons',
+            installation: 'npm install react-icons',
+            props: [
+                {
+                    name: 'type',
+                    type: '\'basic\' | \'popular\'',
+                    default: 'basic',
+                    description: 'The type of the pricing plan. "basic" for a standard plan or "popular" for a highlighted plan.'
+                },
+                {
+                    name: 'title',
+                    type: 'string',
+                    default: 'Basic Plan',
+                    description: 'The title of the pricing plan (e.g., "Basic Plan").'
+                },
+                {
+                    name: 'label',
+                    type: 'string',
+                    default: 'Starter',
+                    description: 'The label of the pricing plan, such as "Starter" or "Premium".'
+                },
+                {
+                    name: 'price',
+                    type: 'number',
+                    default: "19.99",
+                    description: 'The price of the plan, displayed as a number with currency formatting.'
+                },
+                {
+                    name: 'features',
+                    type: 'ProfPricingFeature[]',
+                    description: 'An array of feature objects that describe the plan\'s features, each containing a "text" field.'
+                },
+                {
+                    name: 'onStart',
+                    type: '() => void',
+                    description: 'A callback function that is triggered when the "Start now" button is clicked.'
                 },
                 {
                     name: 'className',
                     type: 'string',
-                    default: '""',
-                    description: 'Optional class names for additional styling.'
+                    default: '',
+                    description: 'Additional custom CSS classes to apply to the component.'
                 }
             ],
-            Component: ShowcaseBentoLogin
+            Component: ShowcaseProfPricing
+        },
+        {
+            id: 'reset-pass',
+            name: 'Password Reset Card',
+            description: 'A form card for entering a 6-digit code to reset a password, with error handling, loading state, and additional actions such as resend code, help, and feedback.',
+            props: [
+                {
+                    name: 'onSubmit',
+                    type: '(code: string) => void',
+                    description: 'A callback function that handles the form submission when the 6-digit code is entered and submitted.'
+                },
+                {
+                    name: 'onResendCode',
+                    type: '() => void',
+                    description: 'A callback function that handles resending the code when the user clicks on the "Resend code" link.'
+                },
+                {
+                    name: 'onHelp',
+                    type: '() => void',
+                    description: 'A callback function that triggers when the user clicks on the "Need help?" button.'
+                },
+                {
+                    name: 'onFeedback',
+                    type: '() => void',
+                    description: 'A callback function that triggers when the user clicks on the "Send feedback" button.'
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    default: '',
+                    description: 'Additional custom CSS classes to apply to the card component.'
+                },
+                {
+                    name: 'style',
+                    type: 'React.CSSProperties',
+                    default: '{}',
+                    description: 'Custom inline styles to apply to the card component.'
+                }
+            ],
+            Component: ShowcasePasswordResetCard
         },
         {
             id: 'ecom-order-status',
@@ -675,12 +779,6 @@ export const components: Record<string, ComponentDataProps[]> = {
                     description: 'The delivery address for the package.'
                 },
                 {
-                    name: 'onCall',
-                    type: '() => void',
-                    default: 'undefined',
-                    description: 'Callback triggered when the call button is clicked.'
-                },
-                {
                     name: 'onMessage',
                     type: '() => void',
                     default: 'undefined',
@@ -688,46 +786,6 @@ export const components: Record<string, ComponentDataProps[]> = {
                 }
             ],
             Component: ShowcaseOrderStatusCard
-        },
-        {
-            id: 'ecom-product-card',
-            name: 'Product Card',
-            description: 'A card component to showcase product details, including images, title, rating, reviews, and price.',
-            dependencies: 'react-icons',
-            installation: 'npm install react-icons',
-            props: [
-                {
-                    name: 'images',
-                    type: 'string[]',
-                    default: '[]',
-                    description: 'An array of image URLs for the product.'
-                },
-                {
-                    name: 'title',
-                    type: 'string',
-                    default: 'undefined',
-                    description: 'The title or name of the product.'
-                },
-                {
-                    name: 'rating',
-                    type: 'number',
-                    default: '0',
-                    description: 'The product’s rating on a scale of 0 to 5.'
-                },
-                {
-                    name: 'reviews',
-                    type: 'number',
-                    default: '0',
-                    description: 'The number of reviews the product has received.'
-                },
-                {
-                    name: 'price',
-                    type: 'number',
-                    default: '0',
-                    description: 'The price of the product in USD.'
-                }
-            ],
-            Component: ShowcaseProductCard
         },
         {
             id: 'ecom-product-category',
@@ -848,40 +906,6 @@ export const components: Record<string, ComponentDataProps[]> = {
             Component: ShowcaseConnectCard
         },
         {
-            id: 'min-share-card',
-            name: 'Min Share Card',
-            description: 'A minimal share card component to share links on social media or copy a direct link.',
-            dependencies: 'react-icons',
-            installation: 'npm install react-icons',
-            props: [
-                {
-                    name: 'onClose',
-                    type: '() => void',
-                    default: 'undefined',
-                    description: 'Callback function triggered when the close button is clicked.'
-                },
-                {
-                    name: 'onCopy',
-                    type: '() => void',
-                    default: 'undefined',
-                    description: 'Callback function triggered when the copy link button is clicked.'
-                },
-                {
-                    name: 'title',
-                    type: 'string',
-                    default: 'Share On Social Media',
-                    description: 'Title displayed at the top of the card.'
-                },
-                {
-                    name: 'subtitle',
-                    type: 'string',
-                    default: 'Share link via',
-                    description: 'Subtitle displayed below the title.'
-                }
-            ],
-            Component: ShowcaseMinShareCard
-        },
-        {
             id: 'minimal-job-card',
             name: 'Min Job Card',
             description: 'A minimal job card component for displaying job details and providing an apply action.',
@@ -967,94 +991,64 @@ export const components: Record<string, ComponentDataProps[]> = {
             Component: ShowcasePremiumCard
         },
         {
-            id: 'professional-pricing-card',
-            name: 'Professional Pricing Plan',
-            description: 'A pricing plan component that displays the features, pricing, and a call-to-action button for different subscription types, such as basic or popular plans.',
+            id: 'add-extension',
+            name: 'Add Extension',
+            description: 'This component allows users to add an extension with detailed information and an icon.',
+            props: [
+                { name: 'Icon', type: 'ElementType', default: 'undefined', description: 'The icon to display for the extension.' },
+                { name: 'title', type: 'string', default: 'undefined', description: 'The title of the extension.' },
+                { name: 'description', type: 'string', default: 'undefined', description: 'A brief description of the extension.' },
+                { name: 'viewCount', type: 'number', default: 'undefined', description: 'The number of views for the extension.' },
+                {
+                    name: 'author',
+                    type: '{ name: string; avatar: string; }',
+                    default: 'undefined',
+                    description: 'An object containing the author\'s name and avatar.'
+                },
+                { name: 'onAdd', type: '() => void', default: 'undefined', description: 'Callback triggered when the "Add" button is clicked.' },
+                { name: 'className', type: 'string', default: '""', description: 'Optional class names for additional styling.' }
+            ],
+            Component: ShowcaseAddExtension
+        },
+        {
+            id: 'bento-login',
+            name: 'Bento Login',
+            description: 'A login form component with email, password, Google sign-in, and sign-up options.',
             dependencies: 'react-icons',
             installation: 'npm install react-icons',
             props: [
                 {
-                    name: 'type',
-                    type: '\'basic\' | \'popular\'',
-                    default: 'basic',
-                    description: 'The type of the pricing plan. "basic" for a standard plan or "popular" for a highlighted plan.'
+                    name: 'onSubmit',
+                    type: '(email: string, password: string) => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the form is submitted with email and password.'
+                },
+                {
+                    name: 'onGoogleSignIn',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the "Sign in with Google" button is clicked.'
+                },
+                {
+                    name: 'onSignUp',
+                    type: '() => void',
+                    default: 'undefined',
+                    description: 'Callback triggered when the "Sign up" button is clicked.'
                 },
                 {
                     name: 'title',
                     type: 'string',
-                    default: 'Basic Plan',
-                    description: 'The title of the pricing plan (e.g., "Basic Plan").'
-                },
-                {
-                    name: 'label',
-                    type: 'string',
-                    default: 'Starter',
-                    description: 'The label of the pricing plan, such as "Starter" or "Premium".'
-                },
-                {
-                    name: 'price',
-                    type: 'number',
-                    default: "19.99",
-                    description: 'The price of the plan, displayed as a number with currency formatting.'
-                },
-                {
-                    name: 'features',
-                    type: 'ProfPricingFeature[]',
-                    description: 'An array of feature objects that describe the plan\'s features, each containing a "text" field.'
-                },
-                {
-                    name: 'onStart',
-                    type: '() => void',
-                    description: 'A callback function that is triggered when the "Start now" button is clicked.'
+                    default: '"Bento Login"',
+                    description: 'The title of the login form displayed at the top.'
                 },
                 {
                     name: 'className',
                     type: 'string',
-                    default: '',
-                    description: 'Additional custom CSS classes to apply to the component.'
+                    default: '""',
+                    description: 'Optional class names for additional styling.'
                 }
             ],
-            Component: ShowcaseProfPricing
-        },
-        {
-            id: 'reset-pass',
-            name: 'Password Reset Card',
-            description: 'A form card for entering a 6-digit code to reset a password, with error handling, loading state, and additional actions such as resend code, help, and feedback.',
-            props: [
-                {
-                    name: 'onSubmit',
-                    type: '(code: string) => void',
-                    description: 'A callback function that handles the form submission when the 6-digit code is entered and submitted.'
-                },
-                {
-                    name: 'onResendCode',
-                    type: '() => void',
-                    description: 'A callback function that handles resending the code when the user clicks on the "Resend code" link.'
-                },
-                {
-                    name: 'onHelp',
-                    type: '() => void',
-                    description: 'A callback function that triggers when the user clicks on the "Need help?" button.'
-                },
-                {
-                    name: 'onFeedback',
-                    type: '() => void',
-                    description: 'A callback function that triggers when the user clicks on the "Send feedback" button.'
-                },
-                {
-                    name: 'className',
-                    type: 'string',
-                    default: '',
-                    description: 'Additional custom CSS classes to apply to the card component.'
-                },
-                {
-                    name: 'style',
-                    type: 'React.CSSProperties',
-                    default: '{}',
-                    description: 'Custom inline styles to apply to the card component.'
-                }
-            ],
-            Component: ShowcasePasswordResetCard
+            Component: ShowcaseBentoLogin
         },
     ],
 

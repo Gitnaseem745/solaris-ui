@@ -104,18 +104,18 @@ const ShowcasePasswordResetCard = () => <PasswordResetCard />;
 
 const ShowcaseOrderStatusCard = () => (
   <OrderStatusCard
-    courierName="Iphone 15 Pro"
+    courierName="Iphone 15"
     packageId="#1L2K5"
-    deliveryAddress="Rustam Nagar Sahaspur - 244411"
-    warehouseLocation="Gurgaon Sector 36 - 221244"
+    deliveryAddress="123 ABC Street - USA"
+    warehouseLocation="123 ABC Street - USA"
     courierImage="/product_img.jpg"
   />
 );
 
 const ShowcaseCategoryCard1 = () => (
   <CategoryCard
-    title="Iphone 15 Pro Max"
-    description="An Apple Iphone's 15 series mobile device"
+    title="Iphones"
+    description="Apple Iphone's 15 series mobile devices"
     image="/product_img.jpg"
     productCount={50}
   />
@@ -146,7 +146,7 @@ const ShowcaseProductCard = () => (
 
 const ShowcaseCategoryCard2 = () => (
   <CategoryCard
-    title="Nike Air 1 Jordan"
+    title="Nike Air Jordans"
     productCount={44}
     image="/shoe_img_1.webp"
     description="Air Jordan Series Air 1 Shoes By Nike"

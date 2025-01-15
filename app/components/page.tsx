@@ -23,18 +23,17 @@ export default function page() {
                         cta="View Buttons"
                         classname="col-span-2 max-md:col-span-4"
                     />
-                        <BentoCard
-                            name="Card Components"
-                            classname="col-span-2 max-md:col-span-4"
-                            background={
-                                <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
-                            }
-                            Icon={TbCardsFilled}
-                            description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
-                            href="/components/cards/add-extension"
-                            cta="Explore Cards"
-                        />
-                    </BentoGrid>
+                    <BentoCard
+                        name="Card Components"
+                        classname="col-span-2 max-md:col-span-4"
+                        background={
+                            <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
+                        }
+                        Icon={TbCardsFilled}
+                        description="Explore dynamic and customizable card designs for your projects. Tailored for adaptability and style."
+                        href="/components/cards/ecom-product-card"
+                        cta="Explore Cards"
+                    />
                     <BentoCard
                         name="Select Components"
                         classname="col-span-2 max-sm:col-span-4"
@@ -79,6 +78,7 @@ export default function page() {
                         href="/components/checkboxes/icon-checkbox"
                         cta="Explore Available Checkboxes"
                     />
+                </BentoGrid>
             </div>
         </div>
     );

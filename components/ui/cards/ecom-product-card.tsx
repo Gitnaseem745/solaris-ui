@@ -16,7 +16,7 @@ export default function ProductCard({
   price,
 }: ProductCardProps) {
   return (
-    <div className="bg-black rounded-2xl p-4 shadow-lg max-w-sm">
+    <div className="bg-foreground text-background rounded-2xl p-4 shadow-lg max-w-sm">
       <div className="grid grid-cols-2 gap-2">
         {images.map((image, index) => (
           <div key={index} className="relative group">
@@ -25,8 +25,8 @@ export default function ProductCard({
               alt={`${title} ${index + 1}`}
               className="w-full h-40 object-cover rounded-lg"
             />
-            <button className="absolute top-2 right-2 p-1.5 rounded-full bg-white/80 opacity-0 group-hover:opacity-100 transition-opacity">
-              <BiHeart className="w-4 h-4 text-gray-600" />
+            <button className="absolute top-2 right-2 p-1.5 rounded-full bg-background opacity-0 group-hover:opacity-100 transition-opacity">
+              <BiHeart className="w-4 h-4 text-foreground" />
             </button>
           </div>
         ))}
@@ -39,8 +39,8 @@ export default function ProductCard({
             {"★".repeat(Math.floor(rating))}
             {"☆".repeat(5 - Math.floor(rating))}
           </div>
-          <span className="text-sm text-gray-600">{rating}</span>
-          <span className="text-sm text-gray-400">({reviews} Reviews)</span>
+          <span className="text-sm text-neutral-400">{rating}</span>
+          <span className="text-sm text-neutral-400">({reviews} Reviews)</span>
         </div>
         <p className="font-semibold mt-2">${price.toFixed(2)}</p>
       </div>

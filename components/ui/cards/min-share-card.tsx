@@ -28,9 +28,9 @@ export default function MinShareCard({
   ];
 
   return (
-    <div className="w-full max-w-sm bg-[#1C1C1E] rounded-xl p-6 shadow-lg">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-white text-xl font-semibold">{title}</h2>
+    <div className="w-full max-w-sm bg-[#1C1C1E] rounded-xl p-6 max-sm:p-3 shadow-lg">
+      <div className="flex justify-between items-center mb-6 max-sm:mb-3">
+        <h2 className="text-white text-xl font-semibold max-sm:text-[16px]">{title}</h2>
         <button
           onClick={onClose}
           className="text-gray-400 hover:text-white transition-colors"
@@ -39,10 +39,10 @@ export default function MinShareCard({
         </button>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-6 max-sm:space-y-3">
         <div>
-          <p className="text-gray-400 text-sm mb-4">{subtitle}</p>
-          <div className="flex gap-4 flex-wrap">
+          <p className="text-gray-400 text-sm mb-4 max-sm:mb-3">{subtitle}</p>
+          <div className="flex gap-4 flex-wrap max-sm:gap-2">
             {socialLinks.map((link, i) => (
               <Link
                 href={link.link}
@@ -64,7 +64,7 @@ export default function MinShareCard({
           <div onClick={onCopy}>
           <button
           onClick={() => setClicked(true)}
-          className="w-full bg-[#2C2C2E] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#3C3C3E] transition-all">
+          className="w-full bg-[#2C2C2E] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#3C3C3E] transition-all max-sm:py-2 max-sm:px-2 max-sm:text-sm max-sm:rounded-sm">
             {!clicked && <div className='flex justify-center items-center gap-2'>
                 <FaLink className='size-4' />
                 Copy link

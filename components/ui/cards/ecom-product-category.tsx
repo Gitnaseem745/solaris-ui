@@ -14,7 +14,7 @@ export default function CategoryCard({
   image,
 }: CategoryCardProps) {
   return (
-    <div className="bg-black rounded-2xl overflow-hidden shadow-lg max-w-sm">
+    <div className="bg-foreground text-background rounded-2xl overflow-hidden shadow-lg max-w-sm">
       <div className="relative h-48">
         <img
           src={image}

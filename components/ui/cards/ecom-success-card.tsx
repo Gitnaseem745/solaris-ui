@@ -20,7 +20,7 @@ export default function SuccessCard({
   secondaryAction,
 }: SuccessCardProps) {
   return (
-    <div className="bg-black rounded-2xl p-6 shadow-lg max-w-sm text-center">
+    <div className="bg-foreground text-background rounded-2xl p-6 shadow-lg max-w-sm text-center">
       <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
         <BiCheck className="w-8 h-8 text-white" />
       </div>
@@ -29,13 +29,13 @@ export default function SuccessCard({
       <div className="flex gap-3">
         <button
           onClick={secondaryAction.onClick}
-          className="flex-1 py-2 px-4 border hover:text-black border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+          className="flex-1 py-2 px-4 border hover:text-foreground border-background rounded-lg hover:bg-background transition-colors"
         >
           {secondaryAction.label}
         </button>
         <button
           onClick={primaryAction.onClick}
-          className="flex-1 py-2 px-4 hover:text-white/50 bg-white text-black rounded-lg hover:bg-gray-900 transition-colors"
+          className="flex-1 py-2 px-4 hover:text-white/50 bg-background text-foreground rounded-lg hover:bg-neutral-900 transition-colors"
         >
           {primaryAction.label}
         </button>

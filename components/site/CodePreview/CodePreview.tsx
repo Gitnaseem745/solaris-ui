@@ -115,7 +115,9 @@ function PreviewSection({ onCopy, copied, children}: PreviewSectionProps) {
         <CopyButton onCopy={onCopy} copied={copied} className='absolute top-2 right-2' />
       </div>
       {/* Preview Content */}
-      <div className="mt-4 self-center">{children}</div>
+      <div className="my-8 max-sm:my-4 self-center">
+        {children}
+      </div>
     </div>
   )
 }

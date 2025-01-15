@@ -81,7 +81,7 @@ export default function PasswordResetCard({
 
   return (
     <div
-      className={`w-full max-w-sm bg-[#1C1C1E] rounded-xl p-6 shadow-lg ${className}`}
+      className={`w-full max-w-[270px] sm:max-w-sm bg-[#1C1C1E] rounded-xl p-6 shadow-lg ${className}`}
       style={style}
     >
       <div className="space-y-4">
@@ -108,7 +108,7 @@ export default function PasswordResetCard({
               onFocus={() => setFocusedIndex(index)}
               aria-label={`Digit ${index + 1}`}
               aria-required="true"
-              className={`w-12 h-12 bg-[#2C2C2E] border-2 rounded-lg text-center text-xl font-medium
+              className={` size-8 sm:size-12 bg-[#2C2C2E] border-2 rounded-lg text-center text-xl font-medium
                 ${index === focusedIndex ? 'border-[#00BFA5]' : 'border-transparent'}
                 ${digit ? 'text-white' : 'text-transparent'}
                 focus:outline-none focus:border-[#00BFA5] transition-colors
