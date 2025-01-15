@@ -1,7 +1,11 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-    outputFileTracingIncludes: {
-        'components/ui': ['components/ui/**/*.tsx'],
+    output: 'standalone',
+    experimental: {
+      outputFileTracingIncludes: {
+        '/api/**': ['components/**/*.tsx'],
+      },
     },
-};
+  }
 
-export default nextConfig;
+  module.exports = nextConfig
