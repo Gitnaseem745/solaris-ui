@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: {
     const { component } = await params
     return {
       title: `${toCapitalCase(component.replaceAll('-', ' '))} - Solaris UI`,
-      description: "React UI Component Library",
+      description: "React and Nextjs  UI Component Library",
     }
   }
 
