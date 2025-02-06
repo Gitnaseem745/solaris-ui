@@ -6,14 +6,10 @@ import { IoLogoWebComponent } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SlArrowRight } from "react-icons/sl";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import Head from 'next/head';
 
 export default function Home() {
     return (
         <>
-        <Head>
-        <meta name="google-site-verification" content="AjNNh2XIyX4CHP2CbV2pz0zjNgzmvvx0wBAMHyfTdKM" />
-        </Head>
         <div className="w-full flex justify-center items-center max-sm:items-start max-sm:justify-start px-8 min-h-[calc(100vh-96px)] py-10 mt-20">
             <div className="flex flex-col gap-10 justify-center items-center w-10/12 max-sm:w-full relative max-sm:items-start max-sm:justify-start">
 

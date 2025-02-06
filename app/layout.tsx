@@ -15,6 +15,9 @@ const philosopher = Philosopher({
 export const metadata: Metadata = {
   title: "Home - Solaris UI",
   description: "React and Nextjs Copy Paste UI Components.",
+  verification: {
+    google: "AjNNh2XIyX4CHP2CbV2pz0zjNgzmvvx0wBAMHyfTdKM"
+  }
 };
 
 export default function RootLayout({
