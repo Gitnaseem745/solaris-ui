@@ -18,7 +18,7 @@ interface ComponentDataProps {
     dependencies?: string;
     installation?: string;
     usage?: string;
-    props: Props[];
+    props?: Props[];
     examples?: Example[];
     Component: React.FC<any>;
   }
