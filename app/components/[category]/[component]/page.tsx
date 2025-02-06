@@ -35,7 +35,7 @@ export default async function Page({
         {
             name: 'Props',
             Component: PropsTable,
-            props: { props: componentData.props },
+            props: { props: componentData?.props },
         },
     ];
 

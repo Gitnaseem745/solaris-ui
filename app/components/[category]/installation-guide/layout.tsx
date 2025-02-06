@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Installation - Solaris UI",
-    description: "React Copy Paste UI Components.",
+    description: "React and Nextjs Copy Paste UI Components.",
 };
 
 export default async function InstallationLayout({
