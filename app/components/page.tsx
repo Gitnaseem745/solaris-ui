@@ -1,5 +1,6 @@
 import { BentoCard, BentoGrid } from "@/components/site/BentoCard/BentoCard";
-import { HiMiniBellAlert } from "react-icons/hi2";
+import { AiOutlineDingding } from "react-icons/ai";
+import { HiOutlineBellAlert } from "react-icons/hi2";
 import { IoIosSwitch } from "react-icons/io";
 import { MdOutlineSmartButton } from "react-icons/md";
 import { TbCardsFilled, TbCheckbox, TbSelect } from "react-icons/tb";
@@ -13,15 +14,15 @@ export default function page() {
             <div className="w-[950px] max-lg:w-11/12 max-sm:w-full">
                 <BentoGrid>
                     <BentoCard
-                        name="Button Components"
+                        name="Interactive Blocks"
+                        classname="col-span-2 max-md:col-span-4"
                         background={
                             <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
                         }
-                        Icon={MdOutlineSmartButton}
-                        description="Discover versatile button styles to enhance user interaction across your applications."
-                        href="/components/buttons/default-button"
-                        cta="View Buttons"
-                        classname="col-span-2 max-md:col-span-4"
+                        Icon={AiOutlineDingding}
+                        description="Explore customizable and interactive Blocks for your projects. Tailored for adaptability and style."
+                        href="/components/interactive-blocks/social-tag"
+                        cta="Explore Interactive Blocks"
                     />
                     <BentoCard
                         name="Card Components"
@@ -35,15 +36,15 @@ export default function page() {
                         cta="Explore Cards"
                     />
                     <BentoCard
-                        name="Select Components"
-                        classname="col-span-2 max-sm:col-span-4"
+                        name="Button Components"
                         background={
                             <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
                         }
-                        Icon={TbSelect}
-                        description="Explore interactive and customizable select menus to provide seamless selection experiences."
-                        href="/components/selects/simple-select"
-                        cta="View All Selects"
+                        Icon={MdOutlineSmartButton}
+                        description="Discover versatile button styles to enhance user interaction across your applications."
+                        href="/components/buttons/default-button"
+                        cta="View Buttons"
+                        classname="col-span-2 max-md:col-span-4"
                     />
                     <BentoCard
                         name="Alert Components"
@@ -51,7 +52,7 @@ export default function page() {
                         background={
                             <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
                         }
-                        Icon={HiMiniBellAlert}
+                        Icon={HiOutlineBellAlert}
                         description="Choose from a variety of alert styles to efficiently notify users with important messages."
                         href="/components/alerts/success-alert"
                         cta="Check It Out"
@@ -66,6 +67,17 @@ export default function page() {
                         description="Discover interactive and stylish switch designs to toggle settings effortlessly."
                         href="/components/switches/simple-switch"
                         cta="Explore Available Switches"
+                    />
+                    <BentoCard
+                        name="Select Components"
+                        classname="col-span-2 max-sm:col-span-4"
+                        background={
+                            <div className="absolute inset-0 bg-neutral-700/5 data-light:backdrop-blur-sm opacity-20"></div>
+                        }
+                        Icon={TbSelect}
+                        description="Explore interactive and customizable select menus to provide seamless selection experiences."
+                        href="/components/selects/simple-select"
+                        cta="View All Selects"
                     />
                     <BentoCard
                         name="Checkbox Components"
