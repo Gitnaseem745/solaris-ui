@@ -1,15 +1,15 @@
 'use client'
 
 import { usePathname } from "next/navigation";
-import Navbar from "@/components/site/Navbar/Navbar";
+import Navbar from "@/components/site/Navbar";
 
 export default function NavbarHandler() {
     const pathname = usePathname();
-    const hideNavbarRegex = /^\/components\/[^/]+\/[^/]+$/;
+    const hideNavbarRegex = /^\/components(\/.*)?$/; // Matches all paths under /components
     const shouldHideNavbar = hideNavbarRegex.test(pathname);
 
     if (shouldHideNavbar) {
-        return <p></p>
+        return null; // Return null to hide the navbar
     }
 
     return <Navbar />;

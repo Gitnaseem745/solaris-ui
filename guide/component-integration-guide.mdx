@@ -1,0 +1,133 @@
+# Component Integration Guide
+
+This guide explains how to add new components to the library and how they are displayed on the component page. Follow these steps to ensure proper integration.
+
+---
+
+## **Adding a New Component to the Library**
+
+1. **Create the Component**  
+   - Write the component code and store it inside the `@/components/ui/` directory.  
+   - Ensure the component is modular, reusable, and adheres to best practices.
+
+2. **Create a Demo for the Component**  
+   - Write a demo showcasing the usage of the component.  
+   - Store the demo file inside the `@/demo/` directory.  
+   - The demo should demonstrate all key features and props of the component.
+
+3. **Document the Component**  
+   - Add the component's metadata and props to the `@/docs/components.ts` file.  
+   - Include details such as the component name, description, props, and default values.
+
+---
+
+## **How Components Are Displayed on the Component Page**
+
+### **1. Component Demo in `CodePreview`**
+
+- The component demo is passed to the `CodePreview` component along with the `component.id`.
+- The `CodePreview` component renders the demo and provides syntax-highlighted source code.
+
+### **2. Fetching Demo Source Code**
+
+- The `component.id` is used to fetch the source code of the demo through an API.
+- The API uses the `fs` module to read the source file from the `@/demo/` directory.
+
+**Example API Call for Demo Source:**
+
+```bash
+GET /api/fetch-demo?componentName=button
+```
+
+> **Note:**  
+> The `component.id` must match the demo file name in the `@/demo/` directory.
+
+### **3. Fetching Component Source Code**
+
+- The same `component.id` is passed to the `CodePre` component to fetch the source code of the actual component.
+- The API uses the `fs` module to read the source file from the `@/components/ui/` directory.
+
+**Example API Call for Component Source:**
+
+```bash
+GET /api/fetch-source?componentName=button
+```
+
+> **Note:**  
+> The `component.id` must match the component file name in the `@/components/ui/` directory.
+
+---
+
+## **Important Notes**
+
+### **File Naming Convention**
+
+- The `component.id` must match the file name of both the component and its demo.
+- This ensures the API can correctly fetch the source code.
+
+### **Directory Structure**
+
+- **Components:** `@/components/ui/`  
+- **Demos:** `@/demo/`  
+- **Documentation:** `@/docs/components.ts`
+
+### **CodePreview and CodePre**
+
+- `CodePreview`: Displays the demo and its source code.  
+- `CodePre`: Displays the actual component's source code.
+
+---
+
+## **Example Workflow: Adding a New Component - Button**
+
+### **Create the Component**
+
+**File:** `@/components/ui/button.tsx`
+
+```tsx
+export default function Button({ children }: { children: React.ReactNode }) {
+  return <button className="px-4 py-2 bg-blue-500 text-white rounded">{children}</button>;
+}
+```
+
+### **Create the Demo**
+
+**File:** `@/demo/button.tsx`
+
+```tsx
+import Button from "@/components/ui/button";
+
+export default function ButtonDemo() {
+  return <Button>Click Me</Button>;
+}
+```
+
+### **Document the Component**
+
+Add the following entry to `@/docs/components.ts`:
+
+```ts
+{
+  id: 'button',
+  name: 'Button',
+  description: 'A simple button component.',
+  props: [
+    name: 'Button',
+    props: [
+        {
+            name: 'children',
+            type: 'React.ReactNode',
+            required: true,
+            default: 'undefined',
+            description: 'The content to display inside the button.',
+        },
+    ]
+  ],
+  dependencies: 'clsx tailwind-merge',
+  Component: ButtonDemo,
+}
+```
+
+### **Verify on the Component Page**
+
+The `Button` component will now appear on the component page with its demo and source code.

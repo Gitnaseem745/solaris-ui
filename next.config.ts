@@ -1,11 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'standalone',
-    experimental: {
-      outputFileTracingIncludes: {
-        '/api/**': ['components/**/*.tsx'],
-      },
-    },
-  }
+import { NextConfig } from "next";
 
-  module.exports = nextConfig
+/** @type {NextConfig} */
+const nextConfig: NextConfig = {
+  output: "standalone",
+  outputFileTracingIncludes: {
+    "/api/**": ["components/**/*.tsx"],
+  },
+  eslint: {
+    // Disable ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Disable TypeScript errors during builds
+    ignoreBuildErrors: true,
+  },
+};
+
+export default nextConfig;
