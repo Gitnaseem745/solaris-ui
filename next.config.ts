@@ -4,7 +4,7 @@ import { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   outputFileTracingIncludes: {
-    "/api/**": ["components/**/*.tsx"],
+    "/api/**": ["components/**/*.tsx", "demos/**/*.tsx"],
   },
   eslint: {
     // Disable ESLint during builds
