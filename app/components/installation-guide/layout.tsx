@@ -1,5 +1,8 @@
 import Sidebar from "@/components/site/Sidebar";
+import UniversalSidebar from "@/components/site/UniversalSidebar";
 import { siteConfig } from "@/config/site";
+import { components } from "@/docs/components";
+import { toCapitalCase } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -31,22 +34,29 @@ export const metadata: Metadata = {
 };
 
 export default async function InstallationLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
 
-  return (
-    <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
-      {/* Sidebar */}
-      <aside className="w-full lg:w-1/4">
-        <Sidebar />
-      </aside>
+    return (
+        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
+            {/* Sidebar */}
+            <aside className="w-full lg:w-1/4">
+                <UniversalSidebar
+                    items={components.map((item) => ({
+                        name: toCapitalCase(item.id.replaceAll("-", " ")),
+                        id: `/components/${item.id}`,
+                        href: `/components/${item.id}`,
+                    }))}
+                    heading="Components"
+                />
+            </aside>
 
-      {/* Main Content */}
-      <main className="w-full lg:w-3/4 p-4 sm:p-6 overflow-auto">
-        {children}
-      </main>
-    </div>
-  );
+            {/* Main Content */}
+            <main className="max-w-4xl max-sm:mt-4 overflow-auto">
+                {children}
+            </main>
+        </div>
+    );
 }

@@ -1,0 +1,97 @@
+# 🪝 How This Hook Documentation Works
+
+This folder contains everything needed to automatically register a **new custom hook** to the documentation site.
+
+---
+
+## 📁 Folder Structure
+
+Every hook should live inside its own directory inside `/hooks/user/` using this structure:
+
+hooks/user/useMyHook/useMyHook.ts ← Hook source code and README.md ← Hook documentation
+
+
+> ✅ Make sure the folder name **and** the `.ts` file match the hook name exactly (`useMyHook`).
+
+---
+
+## ⚙️ Automatic Documentation Workflow
+
+Once you create the folder and add both the `README.md` and `useMyHook.ts` file:
+
+### 1. **Your hook will appear in the sidebar**
+- The system scans all folders inside `/hooks/user/`
+- Each folder is assumed to be a hook (if it has a `README.md`)
+- All valid hooks are passed to the sidebar `<HookSidebar />`
+
+### 2. **Your hook gets its own documentation page**
+- When you visit `/hooks/useMyHook`
+- The system:
+  - Loads the `README.md` file and renders it as MDX
+  - Loads the `.ts` file and displays it below as full source code
+
+### 3. **Headings inside the `README.md` generate a floating Table of Contents**
+- Auto-generated using the `<HookTOC />` component
+- Requires `rehype-slug` to attach `id`s to headings
+
+---
+
+## 🧪 Example Usage
+
+### Source Code
+
+```ts
+// /hooks/user/useScroll.ts
+
+import { useEffect, useState } from 'react'
+
+export function useScroll() {
+  const [y, setY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => setY(window.scrollY)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return y
+}
+```
+
+### Documentation (README.md)
+
+```mdx
+// /hooks/user/README.md
+
+# useScroll
+
+Tracks the vertical scroll position of the window.
+
+## Usage
+
+```tsx
+const y = useScroll()
+console.log(y)
+
+When to use
+
+Use when you want to react to scroll (e.g., show/hide elements, animations).
+```
+
+---
+
+## 🧠 Summary
+
+| Task                            | What you need to do                            |
+| ------------------------------ | ---------------------------------------------- |
+| Add a new hook                 | Create a folder inside `/hooks/user/`          |
+| Add hook code                  | Inside a `useYourHook.ts` file                 |
+| Add documentation              | Create a `README.md` inside the same folder    |
+| Sidebar + page auto-detection  | ✅ Done automatically using `fs` module         |
+| Show code + docs               | ✅ Rendered automatically inside `[hook].tsx`   |
+| Floating TOC                   | ✅ Works via `rehype-slug` + `HookTOC` component|
+
+---
+
+**No manual steps needed to register hooks!** 🚀  
+Just follow this structure and your hooks will show up fully documented.

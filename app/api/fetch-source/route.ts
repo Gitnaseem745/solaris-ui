@@ -22,7 +22,6 @@ export async function GET(request: Request) {
 
     try {
         const source = await fs.readFile(filePath, "utf8");
-        // console.log(`Successfully read ${componentName} at file ${filePath}`);
         return NextResponse.json({ source }, { status: 200 });
     } catch (error: unknown) {
         console.error(`Error reading ${componentName} file ${filePath}:`, error);
@@ -32,23 +31,6 @@ export async function GET(request: Request) {
             errorMessage = error.message;
         } else if (typeof error === 'string') {
             errorMessage = error;
-        }
-
-        // Check if the file exists
-        try {
-            await fs.access(filePath);
-            console.log(`File ${filePath} exists but could not be read`);
-        } catch {
-            console.log(`File ${filePath} does not exist`);
-        }
-
-        // List directory contents
-        try {
-            const dir = path.dirname(filePath);
-            const files = await fs.readdir(dir);
-            console.log(`Contents of ${dir}:`, files);
-        } catch (e) {
-            console.log(`Could not read directory ${path.dirname(filePath)}:`, e);
         }
 
         return NextResponse.json(

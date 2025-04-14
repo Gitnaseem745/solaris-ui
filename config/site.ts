@@ -1,3 +1,9 @@
+import { Component } from "lucide-react";
+import { FaInstalod } from "react-icons/fa";
+import { FiHome } from "react-icons/fi";
+import { MdAnimation } from "react-icons/md";
+import { TbFishHook } from "react-icons/tb";
+
 export const siteConfig = {
     name: "SolarisUI",  // Site Name
     title: "SolarisUI - Modern UI Components Library",  // Site Name with Tagline
@@ -47,6 +53,35 @@ export const siteConfig = {
             github: "https://github.com/gitNaseem745",
         },
     ],  // List of Contributors
+
+    // Sidebar Navigation
+    sidebarNav: [
+        {
+            name: 'Home',
+            href: '/',
+            icon: FiHome,
+        },
+        {
+            name: 'Hooks',
+            href: `/hooks/`,
+            icon: TbFishHook,
+        },
+        {
+            name: 'Animations',
+            href: `/animations`,
+            icon: MdAnimation,
+        },
+        {
+            name: 'Components',
+            href: `/components/advance-toast`,
+            icon: Component,
+        },
+        {
+            name: 'Installation',
+            href: `/components/installation-guide`,
+            icon: FaInstalod,
+        },
+    ],
 
     // Documentation Sections
     usageGuide: {

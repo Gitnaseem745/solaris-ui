@@ -124,7 +124,7 @@ function PreviewSection({ onCopy, copied, children, theme }: PreviewSectionProps
     <div className={`relative rounded-lg ${theme === 'dark' ? 'bg-[#282C34]' : 'bg-[#f5f5f5]'} p-4 flex flex-col justify-center min-h-[300px]`}>
       {/* Copy Button */}
       <div className="self-end">
-        <CopyButton onCopy={onCopy} copied={copied} className="absolute top-2 right-2" />
+        <CopyButton onCopy={onCopy} copied={copied} className="absolute top-4 right-4" />
       </div>
       {/* Preview Content */}
       <div className="my-8 max-sm:my-4 w-full flex justify-center items-center">
@@ -161,7 +161,7 @@ export function CodeSection({ code, language, theme, onCopy, copied }: CodeSecti
       >
         {code}
       </SyntaxHighlighter>
-      <CopyButton onCopy={onCopy} copied={copied} className="absolute top-2 right-2" />
+      <CopyButton onCopy={onCopy} copied={copied} className="absolute top-4 right-4" />
     </div>
   );
 }
@@ -177,7 +177,7 @@ function CopyButton({ onCopy, copied, className }: CopyButtonProps) {
   return (
     <button
       className={`
-        bg-transparent border-gray-800 hover:bg-neutral-700 text-white transition p-2 rounded-md
+        bg-background text-foreground border-border hover:bg-neutral-700 hover:text-white transition p-2 rounded-md
         ${className}
       `}
       onClick={onCopy}

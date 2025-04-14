@@ -51,25 +51,9 @@ export function cn(...inputs: Parameters<typeof clsx>) {
         <div className="w-full flex justify-center items-center font-sans">
             <div className="text-foreground w-full mx-auto">
                 <main className="flex-1 p-6 lg:px-8">
-                    <div className="gap-3 hidden max-lg:flex absolute top-5 right-4">
-                        <Link href={'https://github.com/Gitnaseem745/solaris-ui'} target="_blank" className="font-semibold font-sans">
-                            <div className="p-2 rounded-md text-foreground hover:bg-white/5 hover:backdrop-blur-sm">
-                                <FaGithub size={18} />
-                            </div>
-                        </Link>
-                        <ThemeToggle />
-                    </div>
                     <div className="max-w-3xl mx-auto">
                         <div className="flex justify-between items-center mb-6">
                             <h1 className="text-3xl font-bold text-foreground max-sm:text-2xl">{componentData.name}</h1>
-                            <div className="flex gap-3 max-lg:hidden">
-                                <Link href={'https://github.com/Gitnaseem745/solaris-ui'} target="_blank" className="font-semibold font-sans">
-                                    <div className="p-2 rounded-md text-foreground hover:bg-white/5 hover:backdrop-blur-sm">
-                                        <FaGithub size={18} />
-                                    </div>
-                                </Link>
-                                <ThemeToggle />
-                            </div>
                         </div>
 
                         <p className="text-lg text-foreground mb-8">{componentData.description}</p>

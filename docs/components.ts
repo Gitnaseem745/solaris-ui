@@ -26,6 +26,8 @@ import {
     VideoCardDemo,
     CodePreviewDemo,
 } from '@/demos';
+import AvatarGroupDemo from '@/demos/avatar-group';
+import InputDemo from '@/demos/input';
 
 
 export const components: ComponentType[] = [
@@ -1133,5 +1135,75 @@ export const components: ComponentType[] = [
           ],
         dependencies: 'react-syntax-highlighter clsx tailwind-merge',
         Component: CodePreviewDemo,
+    },
+    {
+        id: 'input',
+        name: 'Input',
+        description: 'This is a simple input component.',
+        props: [
+            {
+                name: 'Input',
+            props: [
+                {
+                    name: 'placeholder',
+                    type: 'string',
+                    required: false,
+                    default: '"Enter text here..."',
+                    description: 'Placeholder text for the input field.',
+                },
+                {
+                        name: 'error',
+                        type: 'boolean',
+                        required: false,
+                        default: 'false',
+                        description: 'Indicates if the input is in an error state.',
+                    },
+                    {
+                        name: 'variant',
+                        type: '"sm" | "md" | "lg"',
+                        required: false,
+                        default: '"md"',
+                        description: 'Variant of the input field.',
+                    },
+                      {
+                        name: 'type',
+                        type: '"text" | "password" | "email" | "number"',
+                        required: false,
+                        default: '"text"',
+                        description: 'Type of the input field.',
+                      },
+                    {
+                        name: 'className',
+                        type: 'string',
+                        required: false,
+                        default: 'undefined',
+                        description: 'Additional classnames for custom styling of the container.',
+                      },
+            ]}
+        ],
+        dependencies: 'clsx tailwind-merge',
+        Component: InputDemo,
+    },
+    {
+        id: 'avatar-group',
+        name: 'Avatar Group',
+        description: 'A component that displays a group of avatars with optional overlapping, tooltips, and ring effects.',
+        props: [
+            {
+                name: 'AvatarGroup',
+                props: [
+                    { name: 'imgs', type: 'string[]', required: true, default: 'undefined', description: 'Array of image URLs for the avatars.' },
+                    { name: 'size', type: 'number', required: false, default: '32', description: 'Size of the avatars in pixels.' },
+                    { name: 'spacing', type: 'number', required: false, default: '14', description: 'Spacing between the avatars in pixels.' },
+                    { name: 'max', type: 'number', required: false, default: 'undefined', description: 'Maximum number of avatars to display.' },
+                    { name: 'ring', type: 'boolean', required: false, default: 'false', description: 'Whether to show a ring around the avatars.' },
+                    { name: 'overlap', type: 'boolean', required: false, default: 'false', description: 'Whether to overlap the avatars.' },
+                    { name: 'tooltips', type: 'boolean', required: false, default: 'false', description:'Whether to show tooltips on hover.' },
+                ],
+            },
+            
+        ],
+        dependencies: 'clsx tailwind-merge',
+        Component: AvatarGroupDemo,
     }
 ];

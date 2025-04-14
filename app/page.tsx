@@ -8,7 +8,6 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 
 // Tech stack icons
 const Icons = [FaReact, BiLogoTypescript, RiTailwindCssFill, TbBrandFramerMotion, RiNextjsFill];
-
 export default function Home() {
     return (
         <>

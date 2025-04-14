@@ -1,0 +1,123 @@
+# 🌀 Animations Integration Guide
+
+This guide explains how to add new animations to the system and how they are displayed on the **Animations** page. The layout includes animation name, description, an interactive demo with a replay button, and the source code for both the preset and the demo.
+
+---
+
+## 🚀 Adding a New Animation
+
+1. **Create the Animation Preset**
+   - Define your animation variants inside the `@/animations/presets/` directory.
+   - Each file must export a `variants` object compatible with Framer Motion.
+
+   **Example:**  
+   `@/animations/presets/fadeIn.ts`
+   ```ts
+   export const fadeIn = {
+     hidden: { opacity: 0 },
+     visible: {
+       opacity: 1,
+       transition: { duration: 0.5 }
+     }
+   };
+   ```
+
+2. **Create a Shape-Based Demo**
+   - Create a file with the same name inside `@/animations/demos/`.
+   - Use `motion.div` to animate shapes like circles or squares.
+   - Include a **Replay** button that resets the animation using a key state.
+
+   **Example:**  
+   `@/animations/demos/fadeIn.tsx`
+   ```tsx
+   "use client";
+
+   import { motion } from "framer-motion";
+   import { fadeIn } from "@/animations/presets/fadeIn";
+   import { useState } from "react";
+
+   export default function FadeInDemo() {
+     const [key, setKey] = useState(0);
+
+     return (
+       <div className="flex flex-col items-center gap-4">
+         <motion.div
+           key={key}
+           variants={fadeIn}
+           initial="hidden"
+           animate="visible"
+           className="w-24 h-24 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 shadow-lg"
+         />
+         <button
+           onClick={() => setKey(prev => prev + 1)}
+           className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 border"
+         >
+           🔁 Replay
+         </button>
+       </div>
+     );
+   }
+   ```
+
+3. **Register the Animation**
+   - Add an entry to `@/animations/animations.ts`.
+
+   **Example:**
+   ```ts
+   import FadeInDemo from "@/animations/demos/fadeIn";
+
+   export const animations = [
+     {
+       id: 'fadeIn',
+       name: 'Fade In',
+       description: 'A smooth fade-in effect using opacity transition.',
+       Demo: FadeInDemo,
+       preset: fadeInVariants
+     },
+     // more animations...
+   ];
+   ```
+
+---
+
+## 🧩 How Animations Appear on the Page
+
+Each animation section will include:
+
+- **Name & Description**  
+- **Preview Tab** → Live demo with a Replay button  
+- **Code Tab** → Syntax-highlighted demo code (`/animations/demos/[id].tsx`)  
+- **Source Code Block** → Full preset source code (`/animations/presets/[id].ts`)
+
+---
+
+## 🗂️ Directory Structure
+
+```bash
+📦 /animations
+ ┣ 📂 demos         → Demo .tsx files with shape-based previews
+ ┣ 📂 presets       → Framer Motion preset objects
+ ┗ 📜 animations.ts → Animation metadata list
+```
+
+---
+
+## 🏷️ Naming Convention
+
+- Each animation’s `id` must match:
+  - `presets/[id].ts`
+  - `demos/[id].tsx`
+- This ensures correct dynamic loading of both demo and preset source code using `fs`.
+
+---
+
+## ✅ Final Checklist
+
+| Step | Task |
+|------|------|
+| ✅   | Create animation preset in `presets/` |
+| ✅   | Create animated shape demo in `demos/` |
+| ✅   | Add to `animations.ts` with id, name, description, Demo |
+| ✅   | Verify on `/animations` page |
+
+---

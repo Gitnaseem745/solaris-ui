@@ -3,7 +3,8 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
-import { FiCopy, FiCheck } from 'react-icons/fi';
+import { FiCheck } from 'react-icons/fi';
+import { GoCopy } from 'react-icons/go';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -12,6 +13,7 @@ interface CodePreProps {
   language?: string;
     lineNumbers?: boolean;
   componentName?: string;
+  expandable?: boolean;
   theme?: 'dark' | 'light';
 }
 
@@ -20,6 +22,7 @@ export default function CodePre({
   language = 'tsx',
   componentName,
   lineNumbers = true,
+  expandable=false,
   theme = 'dark',
 }: CodePreProps) {
   const [copied, setCopied] = useState<boolean>(false);
@@ -72,12 +75,12 @@ export default function CodePre({
         <div className="p-4 rounded-md bg-red-500 text-white">
           <p>{error}</p>
         </div>
-      ) : loading && componentName ? (
+      ) : loading && (componentName || expandable) ? (
         <div className="p-4 rounded-md bg-[#282c34] text-white">Loading...</div>
       ) : (
         <div
           className={cn(
-            'relative rounded-lg overflow-hidden',
+            'relative w-full rounded-lg overflow-hidden',
             expand ? 'line-clamp-none overflow-x-auto' : `${componentName && "h-60"} overflow-hidden`,
           )}
         >
@@ -117,9 +120,9 @@ export default function CodePre({
       {/* Copy Button */}
       <button
         onClick={copyToClipboard}
-        className="absolute top-2 right-2 p-2 rounded-md bg-background text-foreground hover:opacity-85"
+        className="absolute top-4 right-4 p-2 rounded-md bg-background text-foreground hover:bg-neutral-700 hover:text-white"
       >
-        {copied ? <FiCheck className="w-4 h-4 text-green-500" /> : <FiCopy className="w-4 h-4" />}
+        {copied ? <FiCheck className="w-4 h-4 text-green-500" /> : <GoCopy className="w-4 h-4" />}
       </button>
     </div>
   );
