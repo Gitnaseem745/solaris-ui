@@ -6,12 +6,13 @@ import { ThemeProvider } from "@/components/site/theme-provider";
 import { siteMetadata, structuredData } from "@/config/site";
 import Script from "next/script";
 import { Poppins } from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700'], // you can customize as needed
+    weight: ['400', '500', '600', '700'], 
     display: 'swap',
-    variable: '--font-poppins', // optional for using with Tailwind
+    variable: '--font-poppins',
 })
 
 export const metadata: Metadata = siteMetadata;
@@ -36,6 +37,7 @@ export default function RootLayout({
                     <NavbarHandler />
                     <div>
                         {children}
+                        <SpeedInsights />
                     </div>
                     <Footer />
                 </ThemeProvider>
