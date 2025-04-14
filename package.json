@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/verify-hooks.js && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "verify-hooks": "node scripts/verify-hooks.js"
   },
   "dependencies": {
     "@next/mdx": "^15.3.0",

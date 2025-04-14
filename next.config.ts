@@ -22,9 +22,20 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   pageExtensions: ["ts", "tsx", "md", "mdx"], // Add support for MD and MDX files
+  // Add experimental features to improve static generation
+  experimental: {
+    // Enable static generation for dynamic routes
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
 };
 
 // Wrap the Next.js config with MDX support
 export default withMDX({
   extension: /\.mdx?$/, // Match .mdx and .md files
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
 })(nextConfig);

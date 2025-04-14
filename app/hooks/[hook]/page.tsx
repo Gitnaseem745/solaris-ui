@@ -15,8 +15,15 @@ const hookDirs = fs.readdirSync(hooksDir).filter((file) =>
 )
 export const allHooks = hookDirs.map((dir) => ({ id: dir, name: dir, href: `/hooks/${dir}` }))
 
+// Generate static paths for all hooks
+export async function generateStaticParams() {
+    return allHooks.map((hook) => ({
+        hook: hook.id,
+    }))
+}
+
 export default async function HookDocPage({ params }: { params: { hook: string } }) {
-    const { hook } = await params
+    const { hook } = params
     const docPath = path.join(process.cwd(), 'hooks', 'user', hook, 'README.md')
     const codePath = path.join(process.cwd(), 'hooks', 'user', hook, `${hook}.ts`)
 
