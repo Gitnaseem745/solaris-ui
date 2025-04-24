@@ -6,6 +6,23 @@ import { siteConfig } from '@/config/site'
 export const metadata: Metadata = {
     title: 'Hooks - Solaris UI',
     description: 'Production Grade Ready to Use Hooks by Solaris UI',
+    keywords: [
+        'React hooks', 
+        'custom hooks', 
+        'Solaris UI hooks', 
+        'JavaScript hooks', 
+        'TypeScript hooks', 
+        'React utilities', 
+        'frontend development', 
+        'React state management', 
+        'UI development hooks', 
+        'React performance hooks', 
+        'production-ready hooks', 
+        'JavaScript utilities', 
+        'React components', 
+        'web development tools', 
+        'React developer resources'
+    ],
     openGraph: {
         title: "Hooks - Solaris UI",
         description: "Production Grade Ready to Use Hooks by Solaris UI",

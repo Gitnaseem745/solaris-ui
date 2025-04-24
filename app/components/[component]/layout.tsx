@@ -16,9 +16,31 @@ export async function generateMetadata({ params }: { params: { component: string
     const title = `${toCapitalCase(component.replaceAll("-", " "))} - Solaris UI`;
     const description = comp.description;
 
+    const keywords = [
+        `${toCapitalCase(component.replaceAll("-", " "))}`,
+        `${component} component`, 
+        `React ${component}`,
+        `Tailwind ${component}`,
+        `Solaris UI ${component}`,
+        `${component} React component`,
+        `${component} UI component`,
+        `${component} design pattern`,
+        'React components',
+        'Tailwind CSS components',
+        'UI component library',
+        'React UI kit',
+        'accessible components',
+        'responsive UI components',
+        'modern React components',
+        'TypeScript components',
+        'frontend development',
+        'web design components'
+    ];
+
     return {
         title,
         description,
+        keywords,
         openGraph: {
             title,
             description,

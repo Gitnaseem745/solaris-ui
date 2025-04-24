@@ -3,10 +3,11 @@ import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
 import ThemeToggle from "./ThemeToggle"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 
 const Navbar: React.FC = () => {
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className={cn("flex justify-center items-center w-full" )}>
     <nav className="max-sm:h-12 max-xl:w-8/12 w-6/12 h-16 max-sm:px-1 max-sm:w-11/12 max-sm:rounded-xl px-4 flex justify-between items-center backdrop-blur-sm
     bg-neutral-800/10 border-none shadow-md rounded-3xl fixed top-5 z-[1000]">
     <Link href="/" className="flex items-center cursor-pointer">

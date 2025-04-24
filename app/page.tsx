@@ -16,7 +16,7 @@ export default function Home() {
                 <div className="flex flex-col gap-10 justify-center items-center w-10/12 max-sm:w-full relative max-sm:items-start max-sm:justify-start">
 
                     {/* Beacon Section */}
-                    <Beacon url="/components/hooks/" icon={<IoLogoWebComponent />} text="Introducing SolarisUI Hooks!" />
+                    <Beacon url="/themes/create" icon={<IoLogoWebComponent />} text="Introducing SolarisUI Themes!" />
 
                     {/* Hero Section */}
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-sm:text-4xl max-sm:text-left text-foreground text-center font-sans">

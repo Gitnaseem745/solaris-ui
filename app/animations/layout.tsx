@@ -1,15 +1,36 @@
 import { animations } from "@/animations/animations"
-import ThemeNav from "@/components/site/ThemeNav"
 import UniversalSidebar from "@/components/site/UniversalSidebar"
 import { siteConfig } from "@/config/site"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: 'Animations - Solaris UI',
-    description: 'Animations page of solaris ui pre made ready to use framer-motion based animations',
+    description: 'Ready-to-use Framer Motion animations for React applications. Add smooth, interactive animations to your UI components with minimal effort.',
+    keywords: [
+        'React animations', 
+        'Framer Motion', 
+        'UI animations', 
+        'JavaScript animations', 
+        'React transitions', 
+        'motion effects', 
+        'animation library', 
+        'Solaris UI animations', 
+        'interactive animations', 
+        'web animations', 
+        'CSS animations', 
+        'animation components', 
+        'transition effects', 
+        'UI motion', 
+        'React motion library',
+        'smooth animations',
+        'animation presets',
+        'front-end animations',
+        'component animations',
+        'animation hooks'
+    ],
     openGraph: {
         title: "Animations - Solaris UI",
-        description: "Animations page of solaris ui pre made ready to use framer-motion based animations",
+        description: "Ready-to-use Framer Motion animations for React applications. Add smooth, interactive animations to your UI components with minimal effort.",
         url: "https://solarisui.com/animations/",
         siteName: siteConfig.title,
         images: [
@@ -26,7 +47,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Animations - Solaris UI",
-        description: "Animations page of solaris ui pre made ready to use framer-motion based animations",
+        description: "Ready-to-use Framer Motion animations for React applications. Add smooth, interactive animations to your UI components with minimal effort.",
         images: [siteConfig.ogImage],
         creator: siteConfig.twitterHandle,
     },

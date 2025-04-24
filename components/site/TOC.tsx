@@ -1,3 +1,6 @@
+// Not in use
+// This component was created to be used as the TOC of the doc page. The component is a table of contents that is generated from the headings in the documentation pages.
+
 'use client'
 
 import { useTableOfContents } from '@/hooks/user/useTableOfContents/useTableOfContents'

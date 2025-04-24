@@ -6,10 +6,30 @@ export async function generateMetadata({ params }: { params: { hook: string } })
     const { hook } = await params;
     const title = `${hook} - Solaris UI`;
     const description = `Ready to use Production grade ${hook} hook by Solaris UI`;
-  
+    
+    const keywords = [
+        `${hook} hook`, 
+        `React ${hook}`, 
+        `${hook} React hook`, 
+        `Solaris UI ${hook}`, 
+        `TypeScript ${hook}`, 
+        `React ${hook} implementation`,
+        'React hooks', 
+        'custom hooks', 
+        'production-ready hooks',
+        'React state management',
+        'UI development hooks',
+        'frontend utilities',
+        'JavaScript hooks',
+        'TypeScript hooks',
+        'React development',
+        'web development tools'
+    ];
+
     return {
       title,
       description,
+      keywords,
       openGraph: {
         title,
         description,

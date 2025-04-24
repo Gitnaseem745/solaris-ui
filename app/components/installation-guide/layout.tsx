@@ -1,4 +1,3 @@
-import Sidebar from "@/components/site/Sidebar";
 import UniversalSidebar from "@/components/site/UniversalSidebar";
 import { siteConfig } from "@/config/site";
 import { components } from "@/docs/components";

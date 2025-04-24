@@ -1,4 +1,4 @@
-import { Component } from "lucide-react";
+import { Component, Palette } from "lucide-react";
 import { FaInstalod } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { MdAnimation } from "react-icons/md";
@@ -60,6 +60,11 @@ export const siteConfig = {
             name: 'Home',
             href: '/',
             icon: FiHome,
+        },
+        {
+            name: 'Themes',
+            href: `/themes/create`,
+            icon: Palette,
         },
         {
             name: 'Hooks',

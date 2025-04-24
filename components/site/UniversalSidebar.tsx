@@ -63,7 +63,7 @@ export default function UniversalSidebar({
                 : 'text-foreground hover:bg-foreground hover:text-background'
             )}
           >
-            {item.icon && <item.icon className="mr-2" />}
+            {item.icon && <item.icon className="mr-2" size={18} />}
             {item.name}
             {item.new && (
               <span className="ml-2 text-[10px] px-2 py-0.5 border border-foreground/70 rounded-full backdrop-blur-sm shadow-sm bg-background">

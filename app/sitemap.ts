@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/themes/create`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   // Component routes
