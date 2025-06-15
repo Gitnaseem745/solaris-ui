@@ -52,7 +52,7 @@ export default function HooksPage() {
   const hooks = getHooksMeta()
 
   return (
-    <div className="max-w-4xl mx-auto pt-32 pb-16 px-4">
+    <div className="max-w-4xl mx-auto py-10 px-4">
       <h1 className="sm:text-4xl text-2xl font-bold mb-8">Solaris UI Hooks🔧</h1>
       <p className="mb-6 max-sm:text-sm">Production-ready custom React hooks to speed up your development.</p>
 

@@ -1,10 +1,14 @@
+import Link from "next/link";
+import { FaGreaterThan } from "react-icons/fa";
+
 const DocsAlert: React.FC = () => {
   return (
         <div
-          className="fixed top-0 left-0 right-0 bg-indigo-600 text-white p-4 z-50 max-sm:hidden"
+          className="bg-indigo-600 text-white p-4 z-50"
         >
-          <div className="container px-32 mx-auto flex justify-start items-center font-sans">
-            <span> <b> Important Notice: </b> Solaris is currently in development. Some components may not function as expected. I appreciate your patience as i actively work to improve and enhance the library. Stay tuned for updates and thank you for your support!</span>
+          <div className="container mx-auto flex justify-start items-center font-sans">
+            <Link href={'https://nextlaunch.solarisui.com/'} target="_blank" className="text-sm text-center font-semibold w-full max-sm:text-xs"> ✨ Introducing NextLaunch — Premium templates designed to help you build stunning landing pages in minutes.
+            </Link>
           </div>
         </div>
       )

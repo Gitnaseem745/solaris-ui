@@ -5,6 +5,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./demos/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./animations/**/*.{js,ts,jsx,tsx,mdx}",
     "./docs/**/*.{js,ts,jsx,tsx,mdx}",
     "./guide/**/*.{js,ts,jsx,tsx,mdx}",

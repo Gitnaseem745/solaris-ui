@@ -25,6 +25,7 @@ import {
     TypographyDemo,
     VideoCardDemo,
     CodePreviewDemo,
+    TabsDemo,
 } from '@/demos';
 import AvatarGroupDemo from '@/demos/avatar-group';
 import InputDemo from '@/demos/input';
@@ -1205,5 +1206,133 @@ export const components: ComponentType[] = [
         ],
         dependencies: 'clsx tailwind-merge',
         Component: AvatarGroupDemo,
-    }
+    },
+    {
+        id: "tabs",
+        name: "Tabs",
+        new: true,
+        description: "A fully accessible and customizable tabbed interface component with support for controlled and uncontrolled modes.",
+        props: [
+          {
+            name: "Tabs",
+            props: [
+              {
+                name: "defaultValue",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "The default value for the uncontrolled tabs. Represents the initially selected tab."
+              },
+              {
+                name: "value",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "The controlled value for the tabs. When provided, the component operates in controlled mode."
+              },
+              {
+                name: "onValueChange",
+                type: "(value: string) => void",
+                required: false,
+                default: "undefined",
+                description: "Callback function that fires when the selected tab changes. Required for controlled usage."
+              },
+              {
+                name: "children",
+                type: "React.ReactNode",
+                required: true,
+                default: "undefined",
+                description: "The content of the tabs component, typically includes TabsList and TabsContent components."
+              },
+              {
+                name: "className",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "Additional class names for custom styling of the tabs container."
+              }
+            ]
+          },
+          {
+            name: "TabsList",
+            props: [
+              {
+                name: "children",
+                type: "React.ReactNode",
+                required: true,
+                default: "undefined",
+                description: "The content of the tabs list, typically includes TabsTrigger components."
+              },
+              {
+                name: "className",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "Additional class names for custom styling of the tabs list container."
+              }
+            ]
+          },
+          {
+            name: "TabsTrigger",
+            props: [
+              {
+                name: "value",
+                type: "string",
+                required: true,
+                default: "undefined",
+                description: "The unique identifier for the tab that matches with the corresponding TabsContent value."
+              },
+              {
+                name: "children",
+                type: "React.ReactNode",
+                required: false,
+                default: "undefined",
+                description: "The content of the tab trigger button, such as text or icons."
+              },
+              {
+                name: "className",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "Additional class names for custom styling of the tab trigger button."
+              },
+              {
+                name: "disabled",
+                type: "boolean",
+                required: false,
+                default: "false",
+                description: "Whether the tab trigger is disabled."
+              }
+            ]
+          },
+          {
+            name: "TabsContent",
+            props: [
+              {
+                name: "value",
+                type: "string",
+                required: true,
+                default: "undefined",
+                description: "The unique identifier for the content that matches with the corresponding TabsTrigger value."
+              },
+              {
+                name: "children",
+                type: "React.ReactNode",
+                required: false,
+                default: "undefined",
+                description: "The content to display when the tab is active."
+              },
+              {
+                name: "className",
+                type: "string",
+                required: false,
+                default: "undefined",
+                description: "Additional class names for custom styling of the tab content."
+              }
+            ]
+          }
+        ],
+        dependencies: "clsx tailwind-merge",
+        Component: TabsDemo
+      }
 ];

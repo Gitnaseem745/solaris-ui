@@ -2,9 +2,6 @@ import { notFound } from 'next/navigation';
 import CodePre from '@/components/site/CodePre';
 import PropsTable from '@/components/site/PropsTable';
 import CodePreview from '@/components/site/CodePreview';
-import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
-import ThemeToggle from '@/components/site/ThemeToggle';
 import { components } from '@/docs/components';
 
 export default async function Page({ params }: {

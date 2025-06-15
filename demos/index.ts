@@ -24,6 +24,7 @@ import TopButtonDemo from "./top-button";
 import TypographyDemo from "./typography";
 import VideoCardDemo from "./video-card";
 import CodePreviewDemo from '@/demos/code-preview';
+import TabsDemo from "./tabs";
 
 
 export {
@@ -53,4 +54,5 @@ export {
     TypographyDemo,
     VideoCardDemo,
     CodePreviewDemo,
+    TabsDemo,
 }

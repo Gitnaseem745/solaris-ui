@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             {/* Main container for the home page */}
-            <div className="w-full flex justify-center items-center max-sm:items-start max-sm:justify-start px-8 min-h-[calc(100vh-96px)] py-10 mt-20">
+            <div className="w-full flex justify-center items-center max-sm:items-start max-sm:justify-start px-8 min-h-[calc(100vh-96px)] py-10">
                 <div className="flex flex-col gap-10 justify-center items-center w-10/12 max-sm:w-full relative max-sm:items-start max-sm:justify-start">
 
                     {/* Beacon Section */}

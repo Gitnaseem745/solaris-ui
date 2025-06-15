@@ -39,7 +39,7 @@ export default async function InstallationLayout({
 }) {
 
     return (
-        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
+        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row">
             {/* Sidebar */}
             <aside className="w-full lg:w-1/4">
                 <UniversalSidebar
@@ -53,7 +53,7 @@ export default async function InstallationLayout({
             </aside>
 
             {/* Main Content */}
-            <main className="max-w-4xl max-sm:mt-4 overflow-auto">
+            <main className="max-w-4xl overflow-auto">
                 {children}
             </main>
         </div>

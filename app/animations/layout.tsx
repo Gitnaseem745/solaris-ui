@@ -59,7 +59,7 @@ export default function AnimationsLayout({
     children: React.ReactNode
 }) {
     return (
-        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
+        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row">
             {/* Sidebar */}
             <aside className="w-full lg:w-1/4">
                 <UniversalSidebar
@@ -73,7 +73,7 @@ export default function AnimationsLayout({
             </aside>
 
             {/* Main Content */}
-            <main className="max-w-4xl max-sm:mt-4 overflow-auto relative">
+            <main className="max-w-4xl overflow-auto relative">
                 {children}
             </main>
         </div>

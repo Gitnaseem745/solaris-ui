@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: { hook: string } })
 
 export default function Layout({ children }: { children: string }){
     return (
-        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
+        <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row">
                     {/* Sidebar */}
                     <aside className="w-full lg:w-1/4">
                         <UniversalSidebar
@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: string }){
                     </aside>
         
                     {/* Main Content */}
-                    <main className="max-w-4xl max-sm:mt-4 overflow-auto">
+                    <main className="max-w-4xl overflow-auto">
                         {children}
                     </main>
                 </div>

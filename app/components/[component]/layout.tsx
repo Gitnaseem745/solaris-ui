@@ -60,17 +60,14 @@ export async function generateMetadata({ params }: { params: { component: string
 
 export default async function Layout({
     children,
-    params,
 }: {
     children: React.ReactNode;
     params: Promise<{ component: string }>;
 }) {
-    const { component } = await params;
-
     return (
         <>
             {/* <DocsAlert /> */}
-            <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row max-lg:mt-8">
+            <div className="flex flex-col w-full max-w-screen-xl mx-auto lg:flex-row">
                 {/* Sidebar */}
                 <aside className="w-full lg:w-1/4">
                     <UniversalSidebar
@@ -84,7 +81,7 @@ export default async function Layout({
                 </aside>
 
                 {/* Main Content */}
-                <main className="max-w-4xl max-sm:mt-4 overflow-auto">
+                <main className="max-w-4xl overflow-auto">
                     {children}
                 </main>
             </div>

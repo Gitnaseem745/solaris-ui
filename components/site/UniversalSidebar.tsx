@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollSpy } from '@/components/site/ScrollSpy';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/config/site';
+import ThemeNav from './ThemeNav';
 
 interface SidebarItem {
   id?: string;
@@ -119,7 +120,10 @@ export default function UniversalSidebar({
           >
             {navigation.length > 0 && (
               <>
-                <h2 className="text-lg font-semibold mb-4 capitalize font-sans">Navigation</h2>
+                <div className='flex items-center justify-between mb-4'>
+                <h2 className="text-lg font-semibold capitalize font-sans">Navigation</h2>
+                <ThemeNav />
+                </div>
                 <ul>{navigation.map(renderNavItem)}</ul>
               </>
             )}
@@ -138,7 +142,10 @@ export default function UniversalSidebar({
       >
         {navigation.length > 0 && (
           <>
-            <h2 className="text-lg font-semibold mb-4 capitalize font-sans">Navigation</h2>
+            <div className='flex items-center justify-between mb-4'>
+            <h2 className="text-lg font-semibold capitalize font-sans">Navigation</h2>
+            <ThemeNav />
+            </div>
             <ul>{navigation.map(renderNavItem)}</ul>
           </>
         )}

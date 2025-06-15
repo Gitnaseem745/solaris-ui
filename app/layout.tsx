@@ -7,6 +7,7 @@ import { siteMetadata, structuredData } from "@/config/site";
 import Script from "next/script";
 import { Poppins } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import DocsAlert from "@/components/site/Alert";
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <DocsAlert />
                     <NavbarHandler />
                     <div>
                         {children}
