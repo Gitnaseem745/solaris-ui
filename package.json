@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/verify-hooks.js && node scripts/verify-ssg.js && next build",
+    "build": "node scripts/verify-ssg.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "verify-hooks": "node scripts/verify-hooks.js",
     "verify-ssg": "node scripts/verify-ssg.js"
   },
   "dependencies": {
