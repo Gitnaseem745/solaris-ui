@@ -1,4 +1,5 @@
 import { themeColors } from "@/types/themes"
+import Image from "next/image"
 import {
     Check, Copy, Palette, Home, Info, Phone, HelpCircle, ArrowRight, Star, Zap, Shield, MapPin, PhoneCall, Mail,
 } from "lucide-react"
@@ -663,7 +664,7 @@ const TestimonialCard = ({
                 </p>
             </div>
             <div className="flex items-center gap-3">
-                <img src={"/user_img.jpg"} alt={testimonial.name} className="w-10 h-10 rounded-full" />
+                <Image src={"/user_img.jpg"} alt={testimonial.name} width={40} height={40} className="w-10 h-10 rounded-full" />
                 <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
                     <p className="text-sm" style={{ color: themeColors["muted-foreground"] }}>

@@ -1,8 +1,8 @@
 import UniversalSidebar from "@/components/site/UniversalSidebar";
 import { siteConfig } from "@/config/site";
-import { allHooks } from "./page";
+import { allHooks } from "@/lib/getHooks";
 
-export async function generateMetadata({ params }: { params: { hook: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ hook: string }> }) {
     const { hook } = await params;
     const title = `${hook} - Solaris UI`;
     const description = `Ready to use Production grade ${hook} hook by Solaris UI`;

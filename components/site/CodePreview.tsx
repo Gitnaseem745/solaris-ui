@@ -7,7 +7,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export interface PreviewProps {
-  componentName: string;
+  componentName?: string;
+  demoSource?: string | null;
   language?: string;
   theme?: 'dark' | 'light';
   children?: React.ReactNode;
@@ -15,16 +16,28 @@ export interface PreviewProps {
 
 export default function CodePreview({
   componentName,
+  demoSource,
   language = 'tsx',
   theme = 'dark',
   children,
 }: PreviewProps) {
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview');
   const [copied, setCopied] = useState(false);
-  const [code, setCode] = useState<string>('');
+  const [code, setCode] = useState<string>(demoSource || '');
   const [error, setError] = useState<string | null>(null);
 
+  // Only fetch if no demoSource provided and componentName exists (backward compatibility)
   useEffect(() => {
+    if (demoSource) {
+      setCode(demoSource);
+      return;
+    }
+
+    if (!componentName) {
+      setError('No demo source or component name provided');
+      return;
+    }
+
     const fetchSourceCode = async () => {
       const apiUrl = `/api/fetch-demo?componentName=${componentName}`;
       try {
@@ -43,7 +56,7 @@ export default function CodePreview({
     };
 
     fetchSourceCode();
-  }, [componentName]);
+  }, [componentName, demoSource]);
 
   const copyToClipboard = async () => {
     try {
@@ -64,7 +77,7 @@ export default function CodePreview({
       <div className="py-4">
         {activeTab === 'preview' ? (
           <PreviewSection
-            componentName={componentName}
+            componentName={componentName || 'Unknown Component'}
             onCopy={copyToClipboard}
             copied={copied}
             theme={theme}

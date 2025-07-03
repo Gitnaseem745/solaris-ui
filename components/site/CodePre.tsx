@@ -11,7 +11,7 @@ import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/pris
 interface CodePreProps {
   code?: string;
   language?: string;
-    lineNumbers?: boolean;
+  lineNumbers?: boolean;
   componentName?: string;
   expandable?: boolean;
   theme?: 'dark' | 'light';
@@ -29,13 +29,16 @@ export default function CodePre({
   const [code, setCode] = useState<string>(initialCode || '');
   const [error, setError] = useState<string | null>(null);
   const [expand, setExpand] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(!initialCode && !!componentName);
 
   const selectedTheme = theme === 'dark' ? oneDark : oneLight;
 
-  // Fetch source code if `componentName` is provided
+  // Fetch source code if `componentName` is provided and no initial code
   useEffect(() => {
-    if (!componentName) return;
+    if (!componentName || initialCode) {
+      setLoading(false);
+      return;
+    }
 
     const fetchSourceCode = async () => {
       const apiUrl = `/api/fetch-source?componentName=${componentName}`;
@@ -55,7 +58,7 @@ export default function CodePre({
     };
 
     fetchSourceCode();
-  }, [componentName]);
+  }, [componentName, initialCode]);
 
   // Copy code to clipboard
   const copyToClipboard = () => {

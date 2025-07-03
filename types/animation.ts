@@ -6,5 +6,5 @@ export interface Animation {
   name: string;
   description: string;
   demo: FC;
-  preset: Variants | ((...args: any[]) => Variants);
+  preset: Variants | ((...args: number[]) => Variants);
 } 

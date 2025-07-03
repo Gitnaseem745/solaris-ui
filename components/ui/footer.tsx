@@ -163,7 +163,7 @@ FooterDivider.displayName = "FooterDivider"
  * @returns {JSX.Element} The rendered FooterCopyright component.
  */
 const FooterCopyright = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
-  ({ className, ...props }, ref) => {
+  ({ className }, ref) => {
     const currentYear = new Date().getFullYear()
     const companyName = "Your Company, Inc."
     const rights = "All rights reserved."

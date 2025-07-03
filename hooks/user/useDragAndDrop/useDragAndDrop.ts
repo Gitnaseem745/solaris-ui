@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react'
 
-export interface DraggableItem<T = any> {
+export interface DraggableItem<T = Record<string, unknown>> {
   id: string
   data: T
 }
 
-export interface UseDragAndDropProps<T = any> {
+export interface UseDragAndDropProps<T = Record<string, unknown>> {
   items: DraggableItem<T>[]
   onDrop: (items: DraggableItem<T>[]) => void
 }

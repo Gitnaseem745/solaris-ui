@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaGreaterThan } from "react-icons/fa";
 
 const DocsAlert: React.FC = () => {
   return (

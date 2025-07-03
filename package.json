@@ -1,13 +1,14 @@
 {
   "name": "solaris-ui",
-  "version": "4.0.0",
+  "version": "4.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/verify-hooks.js && next build",
+    "build": "node scripts/verify-hooks.js && node scripts/verify-ssg.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "verify-hooks": "node scripts/verify-hooks.js"
+    "verify-hooks": "node scripts/verify-hooks.js",
+    "verify-ssg": "node scripts/verify-ssg.js"
   },
   "dependencies": {
     "@next/mdx": "^15.3.0",
@@ -16,13 +17,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.14.4",
-    "fs": "^0.0.1-security",
-    "fs-extra": "^11.2.0",
     "lucide-react": "^0.487.0",
     "next": "15.0.4",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.4",
-    "path": "^0.12.7",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -40,6 +38,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
+    "fs-extra": "^11.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

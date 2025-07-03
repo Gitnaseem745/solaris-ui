@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronRight, Check, Palette, Repeat, Sparkles } from "lucide-react"
+import { ChevronDown, ChevronRight, Check, Repeat, Sparkles } from "lucide-react"
 import { useState } from "react"
 import { predefinedThemes, theme } from "@/themes/themes"
 import { themeColors } from "@/types/themes"

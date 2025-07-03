@@ -1,3 +1,4 @@
+import typography from '@tailwindcss/typography';
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,7 +60,7 @@ export default {
       opacity: {
         "85": "var(--opacity)",
       },
-      typography: (theme) => ({
+      typography: (theme: (path: string) => string) => ({
         DEFAULT: {
           css: {
             color: theme('colors.foreground'),
@@ -119,5 +120,5 @@ export default {
       }),
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [typography],
 } satisfies Config;

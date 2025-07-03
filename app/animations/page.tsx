@@ -1,28 +1,8 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import { animations } from '@/animations/animations';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/site/tabs";
 import CodePre from '@/components/site/CodePre';
 import TopButton from '@/components/ui/top-button';
-import AnimationsSidebar from '@/components/site/AnimationsSidebar';
-import UniversalSidebar from '@/components/site/UniversalSidebar';
-
-// Function to get source code for animations
-export async function getSourceCode(id: string, type: 'demo' | 'preset') {
-  try {
-    const filePath = path.join(
-      process.cwd(),
-      'animations',
-      type === 'demo' ? 'demos' : 'presets',
-      `${id}.${type === 'demo' ? 'tsx' : 'ts'}`
-    );
-    const source = await fs.readFile(filePath, 'utf8');
-    return source;
-  } catch (error) {
-    console.error(`Error reading ${type} file for ${id}:`, error);
-    return null;
-  }
-}
+import { getSourceCode } from '@/lib/getAnimationCode';
 
 export default async function AnimationPage() {
   // Fetch all source code upfront
@@ -153,7 +133,7 @@ export default async function AnimationPage() {
                     <code>amount: 0.3</code> - How much of the element needs to be in view (0-1)
                   </li>
                   <li>
-                    <code>margin: "100px"</code> - Margin around the element to consider it in view
+                    <code>margin: &quot;100px&quot;</code> - Margin around the element to consider it in view
                   </li>
                 </ul>
               </div>

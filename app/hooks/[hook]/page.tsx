@@ -8,12 +8,8 @@ import rehypeSlug from 'rehype-slug'
 import 'highlight.js/styles/github.css'
 import CodePre from '@/components/site/CodePre'
 import TopButton from '@/components/ui/top-button'
-
-const hooksDir = path.join(process.cwd(), 'hooks', 'user')
-const hookDirs = fs.readdirSync(hooksDir).filter((file) =>
-    fs.lstatSync(path.join(hooksDir, file)).isDirectory()
-)
-export const allHooks = hookDirs.map((dir) => ({ id: dir, name: dir, href: `/hooks/${dir}` }))
+import { allHooks } from '@/lib/getHooks'
+import { mdxComponents } from '@/lib/mdxComponents'
 
 // Generate static paths for all hooks
 export async function generateStaticParams() {
@@ -22,8 +18,8 @@ export async function generateStaticParams() {
     }))
 }
 
-export default async function HookDocPage({ params }: { params: { hook: string } }) {
-    const { hook } = params
+export default async function HookDocPage({ params }: { params: Promise<{ hook: string }> }) {
+    const { hook } = await params
     const docPath = path.join(process.cwd(), 'hooks', 'user', hook, 'README.md')
     const codePath = path.join(process.cwd(), 'hooks', 'user', hook, `${hook}.ts`)
 
@@ -63,24 +59,7 @@ export default async function HookDocPage({ params }: { params: { hook: string }
                             </p>
                             <CodePre language="ts" code={hookSource} />
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div>            </div>
+        </div>
     )
-}
-
-// override MDX <code> blocks
-export const mdxComponents = {
-    code: ({ className = '', children, ...props }: any) => {
-        const language = className.replace('language-', '') || 'tsx'
-
-        const codeString =
-            typeof children === 'string'
-                ? children.trim()
-                : Array.isArray(children)
-                    ? children.map(child => (typeof child === 'string' ? child : '')).join('').trim()
-                    : ''
-
-        return <CodePre language={language} code={codeString} {...props} />
-    },
 }

@@ -105,7 +105,11 @@ const FAQList = ({ children }: FAQListProps) => {
   return (
     <div className="space-y-4 flex flex-col items-center">
       {children.map((child, index) =>
-        React.cloneElement(child, {
+        React.cloneElement(child as React.ReactElement<{
+          index?: number;
+          isOpen?: boolean;
+          onToggle?: () => void;
+        }>, {
           index,
           isOpen: openIndex === index,
           onToggle: () => toggleFAQ(index),

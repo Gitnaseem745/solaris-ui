@@ -14,12 +14,12 @@ const nextConfig: NextConfig = {
     ],
   },
   eslint: {
-    // Disable ESLint during builds
-    ignoreDuringBuilds: true,
+    // Enable ESLint during builds
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    // Disable TypeScript errors during builds
-    ignoreBuildErrors: true,
+    // Enable TypeScript errors during builds
+    ignoreBuildErrors: false,
   },
   pageExtensions: ["ts", "tsx", "md", "mdx"], // Add support for MD and MDX files
   // Add experimental features to improve static generation

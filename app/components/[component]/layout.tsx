@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 import { components } from "@/docs/components";
 import { toCapitalCase } from "@/lib/utils";
 
-export async function generateMetadata({ params }: { params: { component: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ component: string }> }) {
     const { component } = await params;
     const comp = components.find((c) => c.id === component);
 

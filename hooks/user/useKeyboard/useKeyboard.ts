@@ -22,7 +22,7 @@ interface UseKeyboardOptions {
   /**
    * Whether the listener should be global (on window) or scoped to an element.
    */
-  target?: HTMLElement | null;
+  target?: HTMLElement | Window | null;
 
   /**
    * Set to true if you want the event to trigger only once until released.
@@ -48,31 +48,32 @@ export function useKeyboard({
 
     const combo = Array.isArray(keys) ? keys.map(k => k.toLowerCase()) : [keys.toLowerCase()];
 
-    const handler = (event: KeyboardEvent) => {
-      const pressedKey = event.key.toLowerCase();
+    const handler = (event: Event) => {
+      const keyEvent = event as KeyboardEvent;
+      const pressedKey = keyEvent.key.toLowerCase();
 
       // If it's a multi-key combo, check all keys are pressed
       const comboMatch = combo.every(key => {
         switch (key) {
           case "ctrl":
           case "control":
-            return event.ctrlKey;
+            return keyEvent.ctrlKey;
           case "shift":
-            return event.shiftKey;
+            return keyEvent.shiftKey;
           case "alt":
-            return event.altKey;
+            return keyEvent.altKey;
           case "meta":
           case "cmd":
           case "command":
-            return event.metaKey;
+            return keyEvent.metaKey;
           default:
             return key === pressedKey;
         }
       });
 
       if (comboMatch) {
-        if (preventDefault) event.preventDefault();
-        callback(event);
+        if (preventDefault) keyEvent.preventDefault();
+        callback(keyEvent);
         if (once) target.removeEventListener(eventType, handler);
       }
     };

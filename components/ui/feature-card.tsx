@@ -41,7 +41,7 @@ const FeatureCard = ({ children, className }: FeatureCardProps) => {
             
             {/* Inject hovered state into all children */}
             {React.Children.map(children, (child) =>
-                React.isValidElement(child) ? cloneElement(child as ReactElement<any>, { hovered }) : child
+                React.isValidElement(child) ? cloneElement(child as ReactElement<{ hovered?: boolean }>, { hovered }) : child
             )}
         </div>
     );

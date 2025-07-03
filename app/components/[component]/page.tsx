@@ -3,6 +3,54 @@ import CodePre from '@/components/site/CodePre';
 import PropsTable from '@/components/site/PropsTable';
 import CodePreview from '@/components/site/CodePreview';
 import { components } from '@/docs/components';
+import { allComponents } from '@/lib/getComponents';
+import { getAllSourceCode } from '@/lib/getSourceCode';
+
+// Generate static paths for all components
+export async function generateStaticParams() {
+    return allComponents.map((component) => ({
+        component: component.id,
+    }))
+}
+
+// Generate metadata for each component page
+export async function generateMetadata({ params }: {
+    params: Promise<{ component: string }>
+}) {
+    const { component } = await params;
+    const componentData = components.find((c: ComponentType) => c.id === component);
+    
+    if (!componentData) {
+        return {
+            title: 'Component Not Found',
+            description: 'The requested component could not be found.'
+        };
+    }
+
+    return {
+        title: `${componentData.name} - Solaris UI Component`,
+        description: componentData.description,
+        keywords: [
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'Component',
+            componentData.name,
+            'UI Library',
+            'Solaris UI'
+        ],
+        openGraph: {
+            title: `${componentData.name} - Solaris UI`,
+            description: componentData.description,
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${componentData.name} - Solaris UI`,
+            description: componentData.description,
+        }
+    };
+}
 
 export default async function Page({ params }: {
     params: Promise<{ component: string }>
@@ -12,6 +60,9 @@ export default async function Page({ params }: {
     if (!componentData) {
         return notFound();
     }
+
+    // Get source code at build time instead of runtime API calls
+    const { componentSource, demoSource } = await getAllSourceCode(component);
 
     const utils = `import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -35,12 +86,12 @@ export function cn(...inputs: Parameters<typeof clsx>) {
         {
             name: `Copy ${componentData.name} Code`,
             Component: CodePre,
-            props: { language: 'tsx', componentName: componentData.id },
+            props: { code: componentSource || 'Component source not found', language: 'tsx', lineNumbers: false },
         },
         {
             name: 'Props',
             Component: PropsTable,
-            props: { props: componentData?.props },
+            props: { components: componentData?.props || [] },
         },
     ];
 
@@ -57,7 +108,7 @@ export function cn(...inputs: Parameters<typeof clsx>) {
 
                         <CodePreview
                             language="tsx"
-                            componentName={componentData.id}
+                            demoSource={demoSource}
                         >
                             <componentData.Component />
                         </CodePreview>
@@ -78,7 +129,7 @@ export function cn(...inputs: Parameters<typeof clsx>) {
                             <h2 className="text-2xl max-sm:text-xl font-semibold mb-4 text-foreground">
                                 {sections[2]?.name}
                             </h2>
-                            <PropsTable components={componentData.props as any} />
+                            <PropsTable components={componentData.props || []} />
                         </section>
                     </div>
                 </main>

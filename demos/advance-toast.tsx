@@ -3,8 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import AdvanceToast from "@/components/ui/advance-toast";
-import { UpgradeButton } from "@/components/ui/upgrade-modal";
-import CodePreviewDemo from "./code-preview";
+import Image from "next/image";
 
 export default function AdvanceToastDemo() {
     const [isToastOpen, setToastOpen] = useState(false);
@@ -34,10 +33,12 @@ export default function AdvanceToastDemo() {
 
                     {/* Avatar or image section */}
                     <div className="flex-shrink-0">
-                        <img
+                        <Image
                             className="w-10 h-10 rounded-full"
                             src="/user_img.jpg"
                             alt="Avatar"
+                            width={40}
+                            height={40}
                         />
                     </div>
 
@@ -47,7 +48,7 @@ export default function AdvanceToastDemo() {
                             John Doe
                         </h1>
                         <p className="text-sm text-muted-foreground">
-                            You're invited by John Doe.
+                            You&apos;re invited by John Doe.
                         </p>
                     </div>
                 </div>

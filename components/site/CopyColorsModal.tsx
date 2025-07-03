@@ -34,8 +34,8 @@ export default function CopyColorsModal({ themeColors }: CopyColorsModalProps) {
       const max = Math.max(r, g, b);
       const min = Math.min(r, g, b);
       let h = 0,
-        s = 0,
-        lightness = (max + min) / 2; // Renamed `l` to `lightness`
+        s = 0;
+      const lightness = (max + min) / 2; // Renamed `l` to `lightness`
   
       if (max !== min) {
         const d = max - min;

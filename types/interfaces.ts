@@ -24,21 +24,15 @@ interface ComponentType {
     dependencies?: string;
     props?: ComponentProps[];
     new?: boolean;
-    Component: React.FC<any>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Component: React.ComponentType<any>;
 }
 
 type Section = {
     name: string;
-    Component: React.FC<any>;
-    props: {
-        code?: string;
-        language?: string;
-        props?: ComponentProps[];
-        examples?: Example[];
-        componentName?: string;
-        lineNumbers?: boolean;
-        theme?: string;
-    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Component: React.ComponentType<any>;
+    props: Record<string, unknown>;
 };
 
 interface ComponentProps {

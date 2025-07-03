@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import Image from "next/image";
 
 interface NotificationProps {
   children: ReactNode;
@@ -38,7 +39,7 @@ export const Notification = ({ children, className }: NotificationProps) => {
  */
 const Avatar = ({ imgUrl, className }: { imgUrl: string, className?: string }) => (
   <div className={cn("w-10 h-10 max-sm:w-8 max-sm:h-8 relative flex-shrink-0", className)}>
-    <img src={imgUrl} alt="User Avatar" className="w-full h-full object-cover rounded-full" />
+    <Image src={imgUrl} alt="User Avatar" width={40} height={40} className="w-full h-full object-cover rounded-full" />
     <div className="bg-green-600 w-3 h-3 absolute bottom-0 right-0 rounded-full border-2 border-white"></div>
   </div>
 );
